@@ -9,7 +9,11 @@
     <title>ทริปนี้ต้องมีภาษาจีนติดตัว</title>
 
     <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
     <script src="/_sdk/element_sdk.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -944,61 +948,33 @@
 
         }
     </style>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    animation: {
-                        'spin-slow': 'spin 3s linear infinite',
-                        'bounce-slow': 'bounce 2s infinite',
-                    }
-                }
-            }
-        }
-        function toggleTheme() {
-            const html = document.documentElement;
-            if (html.classList.contains('dark')) {
-                html.classList.remove('dark');
-                localStorage.theme = 'light';
-                document.getElementById('theme-toggle-icon').innerText = '🌙';
-            } else {
-                html.classList.add('dark');
-                localStorage.theme = 'dark';
-                document.getElementById('theme-toggle-icon').innerText = '☀️';
-            }
-        }
-        // Initial setup
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
-            document.addEventListener('DOMContentLoaded', () => {
-                let el = document.getElementById('theme-toggle-icon');
-                if(el) el.innerText = '☀️';
-            });
-        }
-    </script>
 </head>
 
-<body class="via-gray-50 duration-500 bg-gradient-to-br h-full dark:via-gray-900 dark:to-gray-950 to-slate-100 dark:text-gray-100 transition-colors dark:from-gray-950 from-slate-50">
+<body class="h-full bg-gradient-to-br from-slate-50 via-gray-50 to-slate-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300 text-gray-900 dark:text-gray-100">
 
-    <div id="app" class="h-full overflow-auto w-full">
+    <div id="app" class="h-full w-full overflow-auto dark:bg-gray-900/50">
 
         <!-- Header -->
 
-        <header class="relative overflow-hidden shadow-xl via-red-600 from-red-700 text-white py-8 px-4 bg-gradient-to-r to-red-700">
-            <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.05\' fill-rule=\'evenodd\'%3E%3Ccircle cx=\'3\' cy=\'3\' r=\'3\'/%3E%3Ccircle cx=\'13\' cy=\'13\' r=\'3\'/%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
-            <button onclick="toggleTheme()" class="absolute top-4 right-4 bg-white/20 hover:bg-white/30 backdrop-blur-md rounded-full w-10 h-10 flex items-center justify-center transition-all shadow-sm hover:scale-110 active:scale-95 z-10" aria-label="Toggle Dark Mode">
-                <span id="theme-toggle-icon" class="text-xl filter drop-shadow-md">🌙</span>
+        <header class="bg-gradient-to-r from-red-700 via-red-600 to-red-700 text-white py-8 px-4 shadow-xl relative">
+            <button onclick="toggleTheme()" class="absolute top-4 right-4 w-16 h-8 rounded-full bg-gray-200 shadow-inner flex items-center p-1 transition-colors duration-300 focus:outline-none" title="เปลี่ยนธีม">
+                <div id="theme-thumb" class="w-6 h-6 rounded-full bg-white shadow-md transform transition-transform duration-300 flex items-center justify-center">
+                    <svg id="theme-sun" class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 3.22a1 1 0 011.415 0l.708.708a1 1 0 01-1.414 1.414l-.708-.708a1 1 0 010-1.414zM16 10a1 1 0 011 1h1a1 1 0 110-2h-1a1 1 0 01-1 1zm-3.22 4.22a1 1 0 010 1.415l-.708.708a1 1 0 11-1.414-1.414l.708-.708a1 1 0 011.415 0zM10 16a1 1 0 01-1 1v1a1 1 0 112 0v-1a1 1 0 01-1-1zm-4.22-3.22a1 1 0 01-1.415 0l-.708-.708a1 1 0 011.414-1.414l.708.708a1 1 0 010 1.415zM4 10a1 1 0 01-1-1H2a1 1 0 110 2h1a1 1 0 011-1zM7.28 5.636a1 1 0 010-1.415l-.708-.708a1 1 0 011.414-1.414l.708.708a1 1 0 01-1.415 0zM10 5a5 5 0 100 10 5 5 0 000-10z" clip-rule="evenodd"></path>
+                    </svg>
+                    <svg id="theme-moon" class="w-4 h-4 text-white hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                </div>
             </button>
+            <div class="max-w-3xl mx-auto text-center">
 
-            <div class="mx-auto text-center max-w-3xl">
-
-                <h1 id="main-title" class="tracking-wide text-3xl md:text-4xl mb-2 font-bold">ทริปนี้ต้องมีภาษาจีนติดตัว
+                <h1 id="main-title" class="text-3xl md:text-4xl font-bold mb-2 tracking-wide">ทริปนี้ต้องมีภาษาจีนติดตัว
                 </h1>
 
-                <p id="subtitle" class="opacity-95 text-lg">สำหรับนักท่องเที่ยวไทยในประเทศจีน</p>
+                <p id="subtitle" class="text-lg opacity-95">สำหรับนักท่องเที่ยวไทยในประเทศจีน</p>
 
-                <div class="text-3xl mt-4 justify-center flex gap-3">
+                <div class="mt-4 flex justify-center gap-3 text-3xl">
 
                     <span>🇨🇳</span> <span>💬</span> <span>🇹🇭</span>
 
@@ -1008,43 +984,43 @@
 
         </header><!-- Instructions -->
 
-        <div class="py-4 mx-auto px-4 max-w-3xl">
+        <div class="max-w-3xl mx-auto px-4 py-4">
 
-            <div class="bg-red-50 dark:border-red-500 p-4 hover:scale-[1.02] dark:bg-gray-800/90 transform duration-300 rounded-xl shadow-sm border-red-600 transition-all border-l-4">
+            <div class="bg-red-50 dark:bg-gray-800 rounded-xl p-4 shadow-sm border-l-4 border-red-600 transition-colors">
 
-                <p class="dark:text-gray-300 text-center text-gray-700 text-sm">🔊 กดปุ่ม <span
-                        class="h-6 inline-flex w-6 justify-center rounded-full text-white bg-red-600 text-xs items-center font-bold">▶</span>
+                <p class="text-gray-700 dark:text-gray-300 text-sm text-center">🔊 กดปุ่ม <span
+                        class="inline-flex items-center justify-center w-6 h-6 bg-red-600 text-white rounded-full text-xs font-bold">▶</span>
                     เพื่อฟังเสียงภาษาจีน</p>
 
             </div>
 
         </div><!-- Categories Container -->
 
-        <main class="pb-8 px-4 mx-auto space-y-4 max-w-3xl" id="categories-container">
+        <main class="max-w-3xl mx-auto px-4 pb-8 space-y-4" id="categories-container">
 
             <section
-                class="hover:shadow-xl transform bg-white shadow-md border-gray-300 dark:backdrop-blur-sm dark:border-gray-700/50 hover:-translate-y-1 duration-300 dark:bg-gray-800/80 dark:border-gray-700 rounded-2xl transition-colors hover:border-red-400 border overflow-hidden">
+                class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-300 hover:border-red-400 transition-colors">
 
                 <button onclick="toggleCategory('basic')"
-                    class="w-full transition-colors active:bg-red-100/20 px-6 dark:active:bg-gray-600/50 justify-between dark:hover:bg-gray-700/50 hover:bg-red-50/30 flex py-5 items-center">
+                    class="w-full px-6 py-5 flex items-center justify-between hover:bg-red-50/30 transition-colors active:bg-red-100/20">
 
-                    <div class="items-center flex gap-4 flex-1">
+                    <div class="flex items-center gap-4 flex-1">
 
                         <span class="text-3xl flex-shrink-0">💬</span>
 
                         <div class="text-left flex-1">
 
-                            <h2 class="text-xl text-gray-800 font-bold dark:text-gray-200">บทสนทนาพื้นฐาน</h2>
+                            <h2 class="text-xl font-bold text-gray-800">บทสนทนาพื้นฐาน</h2>
 
-                            <p class="dark:text-gray-400 text-gray-600 font-medium text-sm">16 ประโยค</p>
+                            <p class="text-sm text-gray-600 font-medium">16 ประโยค</p>
 
                         </div>
 
                     </div>
 
-                    <div class="ml-4 flex flex-shrink-0 items-center gap-2">
+                    <div class="flex items-center gap-2 flex-shrink-0 ml-4">
 
-                        <span class="text-gray-400 transition-transform rotate-180 duration-300 text-xl font-bold dark:text-gray-500">
+                        <span class="text-gray-400 transition-transform duration-300 text-xl font-bold rotate-180">
 
                             ▼
 
@@ -1058,33 +1034,33 @@
 
 
 
-                <div class="px-6 bg-gray-50 border-gray-200 dark:bg-gray-900/50 space-y-3 animate-fadeIn border-t dark:border-gray-700 pb-6">
+                <div class="px-6 pb-6 space-y-3 bg-gray-50 border-t border-gray-200 animate-fadeIn">
 
 
 
                     <div
-                        class="dark:bg-gray-800/90 bg-white border-gray-200 dark:border-gray-700/60 transform rounded-xl hover:border-red-300 dark:hover:border-red-500 shadow-sm p-5 hover:shadow-md hover:-translate-y-1 transition-all dark:border-gray-700 border group">
+                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
 
-                        <div class="justify-between flex items-start gap-4">
+                        <div class="flex items-start justify-between gap-4">
 
-                            <div class="min-w-0 flex-1">
+                            <div class="flex-1 min-w-0">
 
-                                <div class="mb-3 flex items-start gap-3">
+                                <div class="flex items-start gap-3 mb-3">
 
                                     <button onclick="speak('我来自泰国，是泰国人。')"
-                                        class="bg-gradient-to-br shadow-md w-10 active:scale-95 hover:from-red-600 hover:to-red-700 items-center group-hover:scale-110 shadow-red-500/30 group-hover:rotate-12 dark:shadow-red-900/50 dark:from-red-600 dark:to-red-800 group-hover:scale-105 text-white h-10 flex flex-shrink-0 to-red-600 rounded-full from-red-500 duration-300 duration-200 justify-center transition-colors hover:shadow-lg"
+                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
                                         title="ฟังเสียงจีน">
 
-                                        <span class="font-bold text-sm">▶</span>
+                                        <span class="text-sm font-bold">▶</span>
 
                                     </button>
 
-                                    <div class="min-w-0 flex-1">
+                                    <div class="flex-1 min-w-0">
 
-                                        <p class="chinese-text break-words text-xl dark:text-gray-100 font-bold text-gray-900">我来自泰国，是泰国人。
+                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">我来自泰国，是泰国人。
                                         </p>
 
-                                        <p class="text-red-600 font-medium mt-1 text-sm">Wǒ láizì Tàiguó, shì Tàiguó
+                                        <p class="text-red-600 font-medium text-sm mt-1">Wǒ láizì Tàiguó, shì Tàiguó
                                             rén.</p>
 
                                     </div>
@@ -1097,9 +1073,9 @@
 
 
 
-                        <div class="pl-13 pt-4 border-gray-200 mt-4 border-t dark:border-gray-700">
+                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
 
-                            <p class="font-semibold text-gray-800 leading-relaxed dark:text-gray-200">ฉันมาจากประเทศไทย เป็นคนไทย</p>
+                            <p class="text-gray-800 font-semibold leading-relaxed">ฉันมาจากประเทศไทย เป็นคนไทย</p>
 
                         </div>
 
@@ -1108,27 +1084,27 @@
 
 
                     <div
-                        class="dark:bg-gray-800/90 bg-white border-gray-200 dark:border-gray-700/60 transform rounded-xl hover:border-red-300 dark:hover:border-red-500 shadow-sm p-5 hover:shadow-md hover:-translate-y-1 transition-all dark:border-gray-700 border group">
+                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
 
-                        <div class="justify-between flex items-start gap-4">
+                        <div class="flex items-start justify-between gap-4">
 
-                            <div class="min-w-0 flex-1">
+                            <div class="flex-1 min-w-0">
 
-                                <div class="mb-3 flex items-start gap-3">
+                                <div class="flex items-start gap-3 mb-3">
 
                                     <button onclick="speak('你是从哪里来的？')"
-                                        class="bg-gradient-to-br shadow-md w-10 active:scale-95 hover:from-red-600 hover:to-red-700 items-center group-hover:scale-110 shadow-red-500/30 group-hover:rotate-12 dark:shadow-red-900/50 dark:from-red-600 dark:to-red-800 group-hover:scale-105 text-white h-10 flex flex-shrink-0 to-red-600 rounded-full from-red-500 duration-300 duration-200 justify-center transition-colors hover:shadow-lg"
+                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
                                         title="ฟังเสียงจีน">
 
-                                        <span class="font-bold text-sm">▶</span>
+                                        <span class="text-sm font-bold">▶</span>
 
                                     </button>
 
-                                    <div class="min-w-0 flex-1">
+                                    <div class="flex-1 min-w-0">
 
-                                        <p class="chinese-text break-words text-xl dark:text-gray-100 font-bold text-gray-900">你是从哪里来的？</p>
+                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">你是从哪里来的？</p>
 
-                                        <p class="text-red-600 font-medium mt-1 text-sm">Nǐ shì cóng nǎlǐ lái de?</p>
+                                        <p class="text-red-600 font-medium text-sm mt-1">Nǐ shì cóng nǎlǐ lái de?</p>
 
                                     </div>
 
@@ -1140,9 +1116,9 @@
 
 
 
-                        <div class="pl-13 pt-4 border-gray-200 mt-4 border-t dark:border-gray-700">
+                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
 
-                            <p class="font-semibold text-gray-800 leading-relaxed dark:text-gray-200">คุณมาจากที่ไหนเหรอ?</p>
+                            <p class="text-gray-800 font-semibold leading-relaxed">คุณมาจากที่ไหนเหรอ?</p>
 
                         </div>
 
@@ -1151,28 +1127,28 @@
 
 
                     <div
-                        class="dark:bg-gray-800/90 bg-white border-gray-200 dark:border-gray-700/60 transform rounded-xl hover:border-red-300 dark:hover:border-red-500 shadow-sm p-5 hover:shadow-md hover:-translate-y-1 transition-all dark:border-gray-700 border group">
+                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
 
-                        <div class="justify-between flex items-start gap-4">
+                        <div class="flex items-start justify-between gap-4">
 
-                            <div class="min-w-0 flex-1">
+                            <div class="flex-1 min-w-0">
 
-                                <div class="mb-3 flex items-start gap-3">
+                                <div class="flex items-start gap-3 mb-3">
 
                                     <button onclick="speak('请问，我可以问你一个问题吗？')"
-                                        class="bg-gradient-to-br shadow-md w-10 active:scale-95 hover:from-red-600 hover:to-red-700 items-center group-hover:scale-110 shadow-red-500/30 group-hover:rotate-12 dark:shadow-red-900/50 dark:from-red-600 dark:to-red-800 group-hover:scale-105 text-white h-10 flex flex-shrink-0 to-red-600 rounded-full from-red-500 duration-300 duration-200 justify-center transition-colors hover:shadow-lg"
+                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
                                         title="ฟังเสียงจีน">
 
-                                        <span class="font-bold text-sm">▶</span>
+                                        <span class="text-sm font-bold">▶</span>
 
                                     </button>
 
-                                    <div class="min-w-0 flex-1">
+                                    <div class="flex-1 min-w-0">
 
-                                        <p class="chinese-text break-words text-xl dark:text-gray-100 font-bold text-gray-900">
+                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
                                             请问，我可以问你一个问题吗？</p>
 
-                                        <p class="text-red-600 font-medium mt-1 text-sm">Qǐngwèn, wǒ kěyǐ wèn nǐ yí gè
+                                        <p class="text-red-600 font-medium text-sm mt-1">Qǐngwèn, wǒ kěyǐ wèn nǐ yí gè
                                             wèntí ma?</p>
 
                                     </div>
@@ -1185,9 +1161,9 @@
 
 
 
-                        <div class="pl-13 pt-4 border-gray-200 mt-4 border-t dark:border-gray-700">
+                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
 
-                            <p class="font-semibold text-gray-800 leading-relaxed dark:text-gray-200">ขอถามหน่อย
+                            <p class="text-gray-800 font-semibold leading-relaxed">ขอถามหน่อย
                                 ฉันขอถามอะไรคุณสักอย่างได้ไหม</p>
 
                         </div>
@@ -1197,28 +1173,28 @@
 
 
                     <div
-                        class="dark:bg-gray-800/90 bg-white border-gray-200 dark:border-gray-700/60 transform rounded-xl hover:border-red-300 dark:hover:border-red-500 shadow-sm p-5 hover:shadow-md hover:-translate-y-1 transition-all dark:border-gray-700 border group">
+                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
 
-                        <div class="justify-between flex items-start gap-4">
+                        <div class="flex items-start justify-between gap-4">
 
-                            <div class="min-w-0 flex-1">
+                            <div class="flex-1 min-w-0">
 
-                                <div class="mb-3 flex items-start gap-3">
+                                <div class="flex items-start gap-3 mb-3">
 
                                     <button onclick="speak('不好意思，我听不懂，可以再解释一下吗？')"
-                                        class="bg-gradient-to-br shadow-md w-10 active:scale-95 hover:from-red-600 hover:to-red-700 items-center group-hover:scale-110 shadow-red-500/30 group-hover:rotate-12 dark:shadow-red-900/50 dark:from-red-600 dark:to-red-800 group-hover:scale-105 text-white h-10 flex flex-shrink-0 to-red-600 rounded-full from-red-500 duration-300 duration-200 justify-center transition-colors hover:shadow-lg"
+                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
                                         title="ฟังเสียงจีน">
 
-                                        <span class="font-bold text-sm">▶</span>
+                                        <span class="text-sm font-bold">▶</span>
 
                                     </button>
 
-                                    <div class="min-w-0 flex-1">
+                                    <div class="flex-1 min-w-0">
 
-                                        <p class="chinese-text break-words text-xl dark:text-gray-100 font-bold text-gray-900">
+                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
                                             不好意思，我听不懂，可以再解释一下吗？</p>
 
-                                        <p class="text-red-600 font-medium mt-1 text-sm">Bù hǎoyìsi, wǒ tīng bù dǒng,
+                                        <p class="text-red-600 font-medium text-sm mt-1">Bù hǎoyìsi, wǒ tīng bù dǒng,
                                             kěyǐ zài jiěshì yíxià ma?</p>
 
                                     </div>
@@ -1231,9 +1207,9 @@
 
 
 
-                        <div class="pl-13 pt-4 border-gray-200 mt-4 border-t dark:border-gray-700">
+                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
 
-                            <p class="font-semibold text-gray-800 leading-relaxed dark:text-gray-200">ขอโทษนะ ฉันฟังไม่เข้าใจ
+                            <p class="text-gray-800 font-semibold leading-relaxed">ขอโทษนะ ฉันฟังไม่เข้าใจ
                                 ช่วยอธิบายอีกครั้งได้ไหม</p>
 
                         </div>
@@ -1243,28 +1219,28 @@
 
 
                     <div
-                        class="dark:bg-gray-800/90 bg-white border-gray-200 dark:border-gray-700/60 transform rounded-xl hover:border-red-300 dark:hover:border-red-500 shadow-sm p-5 hover:shadow-md hover:-translate-y-1 transition-all dark:border-gray-700 border group">
+                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
 
-                        <div class="justify-between flex items-start gap-4">
+                        <div class="flex items-start justify-between gap-4">
 
-                            <div class="min-w-0 flex-1">
+                            <div class="flex-1 min-w-0">
 
-                                <div class="mb-3 flex items-start gap-3">
+                                <div class="flex items-start gap-3 mb-3">
 
                                     <button onclick="speak('请问，你会说英文吗？我中文不太好。')"
-                                        class="bg-gradient-to-br shadow-md w-10 active:scale-95 hover:from-red-600 hover:to-red-700 items-center group-hover:scale-110 shadow-red-500/30 group-hover:rotate-12 dark:shadow-red-900/50 dark:from-red-600 dark:to-red-800 group-hover:scale-105 text-white h-10 flex flex-shrink-0 to-red-600 rounded-full from-red-500 duration-300 duration-200 justify-center transition-colors hover:shadow-lg"
+                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
                                         title="ฟังเสียงจีน">
 
-                                        <span class="font-bold text-sm">▶</span>
+                                        <span class="text-sm font-bold">▶</span>
 
                                     </button>
 
-                                    <div class="min-w-0 flex-1">
+                                    <div class="flex-1 min-w-0">
 
-                                        <p class="chinese-text break-words text-xl dark:text-gray-100 font-bold text-gray-900">
+                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
                                             请问，你会说英文吗？我中文不太好。</p>
 
-                                        <p class="text-red-600 font-medium mt-1 text-sm">Qǐngwèn, nǐ huì shuō Yīngwén
+                                        <p class="text-red-600 font-medium text-sm mt-1">Qǐngwèn, nǐ huì shuō Yīngwén
                                             ma? Wǒ Zhōngwén bú tài hǎo.</p>
 
                                     </div>
@@ -1277,9 +1253,9 @@
 
 
 
-                        <div class="pl-13 pt-4 border-gray-200 mt-4 border-t dark:border-gray-700">
+                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
 
-                            <p class="font-semibold text-gray-800 leading-relaxed dark:text-gray-200">ขอถามหน่อย คุณพูดภาษาอังกฤษได้ไหม
+                            <p class="text-gray-800 font-semibold leading-relaxed">ขอถามหน่อย คุณพูดภาษาอังกฤษได้ไหม
                                 ภาษาจีนฉันยังไม่ค่อยดี</p>
 
                         </div>
@@ -1289,28 +1265,28 @@
 
 
                     <div
-                        class="dark:bg-gray-800/90 bg-white border-gray-200 dark:border-gray-700/60 transform rounded-xl hover:border-red-300 dark:hover:border-red-500 shadow-sm p-5 hover:shadow-md hover:-translate-y-1 transition-all dark:border-gray-700 border group">
+                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
 
-                        <div class="justify-between flex items-start gap-4">
+                        <div class="flex items-start justify-between gap-4">
 
-                            <div class="min-w-0 flex-1">
+                            <div class="flex-1 min-w-0">
 
-                                <div class="mb-3 flex items-start gap-3">
+                                <div class="flex items-start gap-3 mb-3">
 
                                     <button onclick="speak('不好意思，可以帮我一下吗？')"
-                                        class="bg-gradient-to-br shadow-md w-10 active:scale-95 hover:from-red-600 hover:to-red-700 items-center group-hover:scale-110 shadow-red-500/30 group-hover:rotate-12 dark:shadow-red-900/50 dark:from-red-600 dark:to-red-800 group-hover:scale-105 text-white h-10 flex flex-shrink-0 to-red-600 rounded-full from-red-500 duration-300 duration-200 justify-center transition-colors hover:shadow-lg"
+                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
                                         title="ฟังเสียงจีน">
 
-                                        <span class="font-bold text-sm">▶</span>
+                                        <span class="text-sm font-bold">▶</span>
 
                                     </button>
 
-                                    <div class="min-w-0 flex-1">
+                                    <div class="flex-1 min-w-0">
 
-                                        <p class="chinese-text break-words text-xl dark:text-gray-100 font-bold text-gray-900">
+                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
                                             不好意思，可以帮我一下吗？</p>
 
-                                        <p class="text-red-600 font-medium mt-1 text-sm">Bù hǎoyìsi, kěyǐ bāng wǒ yíxià
+                                        <p class="text-red-600 font-medium text-sm mt-1">Bù hǎoyìsi, kěyǐ bāng wǒ yíxià
                                             ma?</p>
 
                                     </div>
@@ -1323,9 +1299,9 @@
 
 
 
-                        <div class="pl-13 pt-4 border-gray-200 mt-4 border-t dark:border-gray-700">
+                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
 
-                            <p class="font-semibold text-gray-800 leading-relaxed dark:text-gray-200">ขอโทษนะ ช่วยฉันหน่อยได้ไหม</p>
+                            <p class="text-gray-800 font-semibold leading-relaxed">ขอโทษนะ ช่วยฉันหน่อยได้ไหม</p>
 
                         </div>
 
@@ -1334,28 +1310,28 @@
 
 
                     <div
-                        class="dark:bg-gray-800/90 bg-white border-gray-200 dark:border-gray-700/60 transform rounded-xl hover:border-red-300 dark:hover:border-red-500 shadow-sm p-5 hover:shadow-md hover:-translate-y-1 transition-all dark:border-gray-700 border group">
+                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
 
-                        <div class="justify-between flex items-start gap-4">
+                        <div class="flex items-start justify-between gap-4">
 
-                            <div class="min-w-0 flex-1">
+                            <div class="flex-1 min-w-0">
 
-                                <div class="mb-3 flex items-start gap-3">
+                                <div class="flex items-start gap-3 mb-3">
 
                                     <button onclick="speak('如果方便的话，可以给我你的联系方式吗？')"
-                                        class="bg-gradient-to-br shadow-md w-10 active:scale-95 hover:from-red-600 hover:to-red-700 items-center group-hover:scale-110 shadow-red-500/30 group-hover:rotate-12 dark:shadow-red-900/50 dark:from-red-600 dark:to-red-800 group-hover:scale-105 text-white h-10 flex flex-shrink-0 to-red-600 rounded-full from-red-500 duration-300 duration-200 justify-center transition-colors hover:shadow-lg"
+                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
                                         title="ฟังเสียงจีน">
 
-                                        <span class="font-bold text-sm">▶</span>
+                                        <span class="text-sm font-bold">▶</span>
 
                                     </button>
 
-                                    <div class="min-w-0 flex-1">
+                                    <div class="flex-1 min-w-0">
 
-                                        <p class="chinese-text break-words text-xl dark:text-gray-100 font-bold text-gray-900">
+                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
                                             如果方便的话，可以给我你的联系方式吗？</p>
 
-                                        <p class="text-red-600 font-medium mt-1 text-sm">Rúguǒ fāngbiàn de huà, kěyǐ gěi
+                                        <p class="text-red-600 font-medium text-sm mt-1">Rúguǒ fāngbiàn de huà, kěyǐ gěi
                                             wǒ nǐ de liánxì fāngshì ma?</p>
 
                                     </div>
@@ -1368,9 +1344,9 @@
 
 
 
-                        <div class="pl-13 pt-4 border-gray-200 mt-4 border-t dark:border-gray-700">
+                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
 
-                            <p class="font-semibold text-gray-800 leading-relaxed dark:text-gray-200">ถ้าสะดวก ขอช่องทางติดต่อของคุณได้ไหม
+                            <p class="text-gray-800 font-semibold leading-relaxed">ถ้าสะดวก ขอช่องทางติดต่อของคุณได้ไหม
                             </p>
 
                         </div>
@@ -1380,28 +1356,28 @@
 
 
                     <div
-                        class="dark:bg-gray-800/90 bg-white border-gray-200 dark:border-gray-700/60 transform rounded-xl hover:border-red-300 dark:hover:border-red-500 shadow-sm p-5 hover:shadow-md hover:-translate-y-1 transition-all dark:border-gray-700 border group">
+                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
 
-                        <div class="justify-between flex items-start gap-4">
+                        <div class="flex items-start justify-between gap-4">
 
-                            <div class="min-w-0 flex-1">
+                            <div class="flex-1 min-w-0">
 
-                                <div class="mb-3 flex items-start gap-3">
+                                <div class="flex items-start gap-3 mb-3">
 
                                     <button onclick="speak('不好意思，请说慢一点，我听得不太清楚。')"
-                                        class="bg-gradient-to-br shadow-md w-10 active:scale-95 hover:from-red-600 hover:to-red-700 items-center group-hover:scale-110 shadow-red-500/30 group-hover:rotate-12 dark:shadow-red-900/50 dark:from-red-600 dark:to-red-800 group-hover:scale-105 text-white h-10 flex flex-shrink-0 to-red-600 rounded-full from-red-500 duration-300 duration-200 justify-center transition-colors hover:shadow-lg"
+                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
                                         title="ฟังเสียงจีน">
 
-                                        <span class="font-bold text-sm">▶</span>
+                                        <span class="text-sm font-bold">▶</span>
 
                                     </button>
 
-                                    <div class="min-w-0 flex-1">
+                                    <div class="flex-1 min-w-0">
 
-                                        <p class="chinese-text break-words text-xl dark:text-gray-100 font-bold text-gray-900">
+                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
                                             不好意思，请说慢一点，我听得不太清楚。</p>
 
-                                        <p class="text-red-600 font-medium mt-1 text-sm">Bù hǎoyìsi, qǐng shuō màn
+                                        <p class="text-red-600 font-medium text-sm mt-1">Bù hǎoyìsi, qǐng shuō màn
                                             yìdiǎn, wǒ tīng de bú tài qīngchu.</p>
 
                                     </div>
@@ -1414,9 +1390,9 @@
 
 
 
-                        <div class="pl-13 pt-4 border-gray-200 mt-4 border-t dark:border-gray-700">
+                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
 
-                            <p class="font-semibold text-gray-800 leading-relaxed dark:text-gray-200">ขอโทษนะ ช่วยพูดช้าหน่อย
+                            <p class="text-gray-800 font-semibold leading-relaxed">ขอโทษนะ ช่วยพูดช้าหน่อย
                                 ฉันฟังไม่ค่อยชัด</p>
 
                         </div>
@@ -1426,28 +1402,28 @@
 
 
                     <div
-                        class="dark:bg-gray-800/90 bg-white border-gray-200 dark:border-gray-700/60 transform rounded-xl hover:border-red-300 dark:hover:border-red-500 shadow-sm p-5 hover:shadow-md hover:-translate-y-1 transition-all dark:border-gray-700 border group">
+                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
 
-                        <div class="justify-between flex items-start gap-4">
+                        <div class="flex items-start justify-between gap-4">
 
-                            <div class="min-w-0 flex-1">
+                            <div class="flex-1 min-w-0">
 
-                                <div class="mb-3 flex items-start gap-3">
+                                <div class="flex items-start gap-3 mb-3">
 
                                     <button onclick="speak('可以给我看一下具体的内容吗？')"
-                                        class="bg-gradient-to-br shadow-md w-10 active:scale-95 hover:from-red-600 hover:to-red-700 items-center group-hover:scale-110 shadow-red-500/30 group-hover:rotate-12 dark:shadow-red-900/50 dark:from-red-600 dark:to-red-800 group-hover:scale-105 text-white h-10 flex flex-shrink-0 to-red-600 rounded-full from-red-500 duration-300 duration-200 justify-center transition-colors hover:shadow-lg"
+                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
                                         title="ฟังเสียงจีน">
 
-                                        <span class="font-bold text-sm">▶</span>
+                                        <span class="text-sm font-bold">▶</span>
 
                                     </button>
 
-                                    <div class="min-w-0 flex-1">
+                                    <div class="flex-1 min-w-0">
 
-                                        <p class="chinese-text break-words text-xl dark:text-gray-100 font-bold text-gray-900">
+                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
                                             可以给我看一下具体的内容吗？</p>
 
-                                        <p class="text-red-600 font-medium mt-1 text-sm">Kěyǐ gěi wǒ kàn yíxià jùtǐ de
+                                        <p class="text-red-600 font-medium text-sm mt-1">Kěyǐ gěi wǒ kàn yíxià jùtǐ de
                                             nèiróng ma?</p>
 
                                     </div>
@@ -1460,9 +1436,9 @@
 
 
 
-                        <div class="pl-13 pt-4 border-gray-200 mt-4 border-t dark:border-gray-700">
+                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
 
-                            <p class="font-semibold text-gray-800 leading-relaxed dark:text-gray-200">ขอดูรายละเอียดหน่อยได้ไหม</p>
+                            <p class="text-gray-800 font-semibold leading-relaxed">ขอดูรายละเอียดหน่อยได้ไหม</p>
 
                         </div>
 
@@ -1471,28 +1447,28 @@
 
 
                     <div
-                        class="dark:bg-gray-800/90 bg-white border-gray-200 dark:border-gray-700/60 transform rounded-xl hover:border-red-300 dark:hover:border-red-500 shadow-sm p-5 hover:shadow-md hover:-translate-y-1 transition-all dark:border-gray-700 border group">
+                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
 
-                        <div class="justify-between flex items-start gap-4">
+                        <div class="flex items-start justify-between gap-4">
 
-                            <div class="min-w-0 flex-1">
+                            <div class="flex-1 min-w-0">
 
-                                <div class="mb-3 flex items-start gap-3">
+                                <div class="flex items-start gap-3 mb-3">
 
                                     <button onclick="speak('如果可以的话，能写下来给我吗？')"
-                                        class="bg-gradient-to-br shadow-md w-10 active:scale-95 hover:from-red-600 hover:to-red-700 items-center group-hover:scale-110 shadow-red-500/30 group-hover:rotate-12 dark:shadow-red-900/50 dark:from-red-600 dark:to-red-800 group-hover:scale-105 text-white h-10 flex flex-shrink-0 to-red-600 rounded-full from-red-500 duration-300 duration-200 justify-center transition-colors hover:shadow-lg"
+                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
                                         title="ฟังเสียงจีน">
 
-                                        <span class="font-bold text-sm">▶</span>
+                                        <span class="text-sm font-bold">▶</span>
 
                                     </button>
 
-                                    <div class="min-w-0 flex-1">
+                                    <div class="flex-1 min-w-0">
 
-                                        <p class="chinese-text break-words text-xl dark:text-gray-100 font-bold text-gray-900">
+                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
                                             如果可以的话，能写下来给我吗？</p>
 
-                                        <p class="text-red-600 font-medium mt-1 text-sm">Rúguǒ kěyǐ de huà, néng xiě
+                                        <p class="text-red-600 font-medium text-sm mt-1">Rúguǒ kěyǐ de huà, néng xiě
                                             xiàlái gěi wǒ ma?</p>
 
                                     </div>
@@ -1505,9 +1481,9 @@
 
 
 
-                        <div class="pl-13 pt-4 border-gray-200 mt-4 border-t dark:border-gray-700">
+                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
 
-                            <p class="font-semibold text-gray-800 leading-relaxed dark:text-gray-200">หากไม่รบกวนช่วยเขียนให้ฉันหน่อยได้ไหม
+                            <p class="text-gray-800 font-semibold leading-relaxed">หากไม่รบกวนช่วยเขียนให้ฉันหน่อยได้ไหม
                             </p>
 
                         </div>
@@ -1517,28 +1493,28 @@
 
 
                     <div
-                        class="dark:bg-gray-800/90 bg-white border-gray-200 dark:border-gray-700/60 transform rounded-xl hover:border-red-300 dark:hover:border-red-500 shadow-sm p-5 hover:shadow-md hover:-translate-y-1 transition-all dark:border-gray-700 border group">
+                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
 
-                        <div class="justify-between flex items-start gap-4">
+                        <div class="flex items-start justify-between gap-4">
 
-                            <div class="min-w-0 flex-1">
+                            <div class="flex-1 min-w-0">
 
-                                <div class="mb-3 flex items-start gap-3">
+                                <div class="flex items-start gap-3 mb-3">
 
                                     <button onclick="speak('请问，这里可以拍照留念吗？')"
-                                        class="bg-gradient-to-br shadow-md w-10 active:scale-95 hover:from-red-600 hover:to-red-700 items-center group-hover:scale-110 shadow-red-500/30 group-hover:rotate-12 dark:shadow-red-900/50 dark:from-red-600 dark:to-red-800 group-hover:scale-105 text-white h-10 flex flex-shrink-0 to-red-600 rounded-full from-red-500 duration-300 duration-200 justify-center transition-colors hover:shadow-lg"
+                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
                                         title="ฟังเสียงจีน">
 
-                                        <span class="font-bold text-sm">▶</span>
+                                        <span class="text-sm font-bold">▶</span>
 
                                     </button>
 
-                                    <div class="min-w-0 flex-1">
+                                    <div class="flex-1 min-w-0">
 
-                                        <p class="chinese-text break-words text-xl dark:text-gray-100 font-bold text-gray-900">
+                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
                                             请问，这里可以拍照留念吗？</p>
 
-                                        <p class="text-red-600 font-medium mt-1 text-sm">Qǐngwèn, zhèlǐ kěyǐ pāizhào
+                                        <p class="text-red-600 font-medium text-sm mt-1">Qǐngwèn, zhèlǐ kěyǐ pāizhào
                                             liúniàn ma?</p>
 
                                     </div>
@@ -1551,9 +1527,9 @@
 
 
 
-                        <div class="pl-13 pt-4 border-gray-200 mt-4 border-t dark:border-gray-700">
+                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
 
-                            <p class="font-semibold text-gray-800 leading-relaxed dark:text-gray-200">ขอถามหน่อย
+                            <p class="text-gray-800 font-semibold leading-relaxed">ขอถามหน่อย
                                 ที่นี่สามารถถ่ายรูปเป็นที่ระลึกได้ไหม</p>
 
                         </div>
@@ -1563,28 +1539,28 @@
 
 
                     <div
-                        class="dark:bg-gray-800/90 bg-white border-gray-200 dark:border-gray-700/60 transform rounded-xl hover:border-red-300 dark:hover:border-red-500 shadow-sm p-5 hover:shadow-md hover:-translate-y-1 transition-all dark:border-gray-700 border group">
+                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
 
-                        <div class="justify-between flex items-start gap-4">
+                        <div class="flex items-start justify-between gap-4">
 
-                            <div class="min-w-0 flex-1">
+                            <div class="flex-1 min-w-0">
 
-                                <div class="mb-3 flex items-start gap-3">
+                                <div class="flex items-start gap-3 mb-3">
 
                                     <button onclick="speak('可以帮我看看这个东西应该怎么用吗？')"
-                                        class="bg-gradient-to-br shadow-md w-10 active:scale-95 hover:from-red-600 hover:to-red-700 items-center group-hover:scale-110 shadow-red-500/30 group-hover:rotate-12 dark:shadow-red-900/50 dark:from-red-600 dark:to-red-800 group-hover:scale-105 text-white h-10 flex flex-shrink-0 to-red-600 rounded-full from-red-500 duration-300 duration-200 justify-center transition-colors hover:shadow-lg"
+                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
                                         title="ฟังเสียงจีน">
 
-                                        <span class="font-bold text-sm">▶</span>
+                                        <span class="text-sm font-bold">▶</span>
 
                                     </button>
 
-                                    <div class="min-w-0 flex-1">
+                                    <div class="flex-1 min-w-0">
 
-                                        <p class="chinese-text break-words text-xl dark:text-gray-100 font-bold text-gray-900">
+                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
                                             可以帮我看看这个东西应该怎么用吗？</p>
 
-                                        <p class="text-red-600 font-medium mt-1 text-sm">Kěyǐ bāng wǒ kàn kan zhège
+                                        <p class="text-red-600 font-medium text-sm mt-1">Kěyǐ bāng wǒ kàn kan zhège
                                             dōngxi yīnggāi zěnme yòng ma?</p>
 
                                     </div>
@@ -1597,9 +1573,9 @@
 
 
 
-                        <div class="pl-13 pt-4 border-gray-200 mt-4 border-t dark:border-gray-700">
+                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
 
-                            <p class="font-semibold text-gray-800 leading-relaxed dark:text-gray-200">ช่วยดูให้หน่อยว่าสิ่งนี้ควรใช้อย่างไร
+                            <p class="text-gray-800 font-semibold leading-relaxed">ช่วยดูให้หน่อยว่าสิ่งนี้ควรใช้อย่างไร
                             </p>
 
                         </div>
@@ -1609,28 +1585,28 @@
 
 
                     <div
-                        class="dark:bg-gray-800/90 bg-white border-gray-200 dark:border-gray-700/60 transform rounded-xl hover:border-red-300 dark:hover:border-red-500 shadow-sm p-5 hover:shadow-md hover:-translate-y-1 transition-all dark:border-gray-700 border group">
+                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
 
-                        <div class="justify-between flex items-start gap-4">
+                        <div class="flex items-start justify-between gap-4">
 
-                            <div class="min-w-0 flex-1">
+                            <div class="flex-1 min-w-0">
 
-                                <div class="mb-3 flex items-start gap-3">
+                                <div class="flex items-start gap-3 mb-3">
 
                                     <button onclick="speak('请问，这附近有什么值得去的地方推荐吗？')"
-                                        class="bg-gradient-to-br shadow-md w-10 active:scale-95 hover:from-red-600 hover:to-red-700 items-center group-hover:scale-110 shadow-red-500/30 group-hover:rotate-12 dark:shadow-red-900/50 dark:from-red-600 dark:to-red-800 group-hover:scale-105 text-white h-10 flex flex-shrink-0 to-red-600 rounded-full from-red-500 duration-300 duration-200 justify-center transition-colors hover:shadow-lg"
+                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
                                         title="ฟังเสียงจีน">
 
-                                        <span class="font-bold text-sm">▶</span>
+                                        <span class="text-sm font-bold">▶</span>
 
                                     </button>
 
-                                    <div class="min-w-0 flex-1">
+                                    <div class="flex-1 min-w-0">
 
-                                        <p class="chinese-text break-words text-xl dark:text-gray-100 font-bold text-gray-900">
+                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
                                             请问，这附近有什么值得去的地方推荐吗？</p>
 
-                                        <p class="text-red-600 font-medium mt-1 text-sm">Qǐngwèn, zhè fùjìn yǒu shénme
+                                        <p class="text-red-600 font-medium text-sm mt-1">Qǐngwèn, zhè fùjìn yǒu shénme
                                             zhídé qù de dìfang tuījiàn ma?</p>
 
                                     </div>
@@ -1643,9 +1619,9 @@
 
 
 
-                        <div class="pl-13 pt-4 border-gray-200 mt-4 border-t dark:border-gray-700">
+                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
 
-                            <p class="font-semibold text-gray-800 leading-relaxed dark:text-gray-200">แถวนี้มีสถานที่น่าเที่ยวที่แนะนำไหม
+                            <p class="text-gray-800 font-semibold leading-relaxed">แถวนี้มีสถานที่น่าเที่ยวที่แนะนำไหม
                             </p>
 
                         </div>
@@ -1655,28 +1631,28 @@
 
 
                     <div
-                        class="dark:bg-gray-800/90 bg-white border-gray-200 dark:border-gray-700/60 transform rounded-xl hover:border-red-300 dark:hover:border-red-500 shadow-sm p-5 hover:shadow-md hover:-translate-y-1 transition-all dark:border-gray-700 border group">
+                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
 
-                        <div class="justify-between flex items-start gap-4">
+                        <div class="flex items-start justify-between gap-4">
 
-                            <div class="min-w-0 flex-1">
+                            <div class="flex-1 min-w-0">
 
-                                <div class="mb-3 flex items-start gap-3">
+                                <div class="flex items-start gap-3 mb-3">
 
                                     <button onclick="speak('如果以后有问题，我可以再联系你吗？')"
-                                        class="bg-gradient-to-br shadow-md w-10 active:scale-95 hover:from-red-600 hover:to-red-700 items-center group-hover:scale-110 shadow-red-500/30 group-hover:rotate-12 dark:shadow-red-900/50 dark:from-red-600 dark:to-red-800 group-hover:scale-105 text-white h-10 flex flex-shrink-0 to-red-600 rounded-full from-red-500 duration-300 duration-200 justify-center transition-colors hover:shadow-lg"
+                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
                                         title="ฟังเสียงจีน">
 
-                                        <span class="font-bold text-sm">▶</span>
+                                        <span class="text-sm font-bold">▶</span>
 
                                     </button>
 
-                                    <div class="min-w-0 flex-1">
+                                    <div class="flex-1 min-w-0">
 
-                                        <p class="chinese-text break-words text-xl dark:text-gray-100 font-bold text-gray-900">
+                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
                                             如果以后有问题，我可以再联系你吗？</p>
 
-                                        <p class="text-red-600 font-medium mt-1 text-sm">Rúguǒ yǐhòu yǒu wèntí, wǒ kěyǐ
+                                        <p class="text-red-600 font-medium text-sm mt-1">Rúguǒ yǐhòu yǒu wèntí, wǒ kěyǐ
                                             zài liánxì nǐ ma?</p>
 
                                     </div>
@@ -1689,9 +1665,9 @@
 
 
 
-                        <div class="pl-13 pt-4 border-gray-200 mt-4 border-t dark:border-gray-700">
+                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
 
-                            <p class="font-semibold text-gray-800 leading-relaxed dark:text-gray-200">ถ้าในภายหลังมีปัญหา
+                            <p class="text-gray-800 font-semibold leading-relaxed">ถ้าในภายหลังมีปัญหา
                                 ฉันสามารถติดต่อคุณอีกได้ไหม</p>
 
                         </div>
@@ -1701,28 +1677,28 @@
 
 
                     <div
-                        class="dark:bg-gray-800/90 bg-white border-gray-200 dark:border-gray-700/60 transform rounded-xl hover:border-red-300 dark:hover:border-red-500 shadow-sm p-5 hover:shadow-md hover:-translate-y-1 transition-all dark:border-gray-700 border group">
+                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
 
-                        <div class="justify-between flex items-start gap-4">
+                        <div class="flex items-start justify-between gap-4">
 
-                            <div class="min-w-0 flex-1">
+                            <div class="flex-1 min-w-0">
 
-                                <div class="mb-3 flex items-start gap-3">
+                                <div class="flex items-start gap-3 mb-3">
 
                                     <button onclick="speak('如果现在不方便的话，也没有关系。')"
-                                        class="bg-gradient-to-br shadow-md w-10 active:scale-95 hover:from-red-600 hover:to-red-700 items-center group-hover:scale-110 shadow-red-500/30 group-hover:rotate-12 dark:shadow-red-900/50 dark:from-red-600 dark:to-red-800 group-hover:scale-105 text-white h-10 flex flex-shrink-0 to-red-600 rounded-full from-red-500 duration-300 duration-200 justify-center transition-colors hover:shadow-lg"
+                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
                                         title="ฟังเสียงจีน">
 
-                                        <span class="font-bold text-sm">▶</span>
+                                        <span class="text-sm font-bold">▶</span>
 
                                     </button>
 
-                                    <div class="min-w-0 flex-1">
+                                    <div class="flex-1 min-w-0">
 
-                                        <p class="chinese-text break-words text-xl dark:text-gray-100 font-bold text-gray-900">
+                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
                                             如果现在不方便的话，也没有关系。</p>
 
-                                        <p class="text-red-600 font-medium mt-1 text-sm">Rúguǒ xiànzài bù fāngbiàn de
+                                        <p class="text-red-600 font-medium text-sm mt-1">Rúguǒ xiànzài bù fāngbiàn de
                                             huà, yě méiyǒu guānxi.</p>
 
                                     </div>
@@ -1735,9 +1711,9 @@
 
 
 
-                        <div class="pl-13 pt-4 border-gray-200 mt-4 border-t dark:border-gray-700">
+                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
 
-                            <p class="font-semibold text-gray-800 leading-relaxed dark:text-gray-200">ถ้าตอนนี้ไม่สะดวก ก็ไม่เป็นไร</p>
+                            <p class="text-gray-800 font-semibold leading-relaxed">ถ้าตอนนี้ไม่สะดวก ก็ไม่เป็นไร</p>
 
                         </div>
 
@@ -1746,28 +1722,28 @@
 
 
                     <div
-                        class="dark:bg-gray-800/90 bg-white border-gray-200 dark:border-gray-700/60 transform rounded-xl hover:border-red-300 dark:hover:border-red-500 shadow-sm p-5 hover:shadow-md hover:-translate-y-1 transition-all dark:border-gray-700 border group">
+                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
 
-                        <div class="justify-between flex items-start gap-4">
+                        <div class="flex items-start justify-between gap-4">
 
-                            <div class="min-w-0 flex-1">
+                            <div class="flex-1 min-w-0">
 
-                                <div class="mb-3 flex items-start gap-3">
+                                <div class="flex items-start gap-3 mb-3">
 
                                     <button onclick="speak('如果方便的话，可以麻烦你带我过去一下吗？')"
-                                        class="bg-gradient-to-br shadow-md w-10 active:scale-95 hover:from-red-600 hover:to-red-700 items-center group-hover:scale-110 shadow-red-500/30 group-hover:rotate-12 dark:shadow-red-900/50 dark:from-red-600 dark:to-red-800 group-hover:scale-105 text-white h-10 flex flex-shrink-0 to-red-600 rounded-full from-red-500 duration-300 duration-200 justify-center transition-colors hover:shadow-lg"
+                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
                                         title="ฟังเสียงจีน">
 
-                                        <span class="font-bold text-sm">▶</span>
+                                        <span class="text-sm font-bold">▶</span>
 
                                     </button>
 
-                                    <div class="min-w-0 flex-1">
+                                    <div class="flex-1 min-w-0">
 
-                                        <p class="chinese-text break-words text-xl dark:text-gray-100 font-bold text-gray-900">
+                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
                                             如果方便的话，可以麻烦你带我过去一下吗？</p>
 
-                                        <p class="text-red-600 font-medium mt-1 text-sm">Rúguǒ fāngbiàn de huà, kěyǐ
+                                        <p class="text-red-600 font-medium text-sm mt-1">Rúguǒ fāngbiàn de huà, kěyǐ
                                             máfan nǐ dài wǒ guòqù yíxià ma?</p>
 
                                     </div>
@@ -1780,9 +1756,9 @@
 
 
 
-                        <div class="pl-13 pt-4 border-gray-200 mt-4 border-t dark:border-gray-700">
+                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
 
-                            <p class="font-semibold text-gray-800 leading-relaxed dark:text-gray-200">ถ้าสะดวก รบกวนพาฉันไปหน่อยได้ไหม</p>
+                            <p class="text-gray-800 font-semibold leading-relaxed">ถ้าสะดวก รบกวนพาฉันไปหน่อยได้ไหม</p>
 
                         </div>
 
@@ -1799,28 +1775,28 @@
 
 
             <section
-                class="hover:shadow-xl transform bg-white shadow-md border-gray-300 dark:backdrop-blur-sm dark:border-gray-700/50 hover:-translate-y-1 duration-300 dark:bg-gray-800/80 dark:border-gray-700 rounded-2xl transition-colors hover:border-red-400 border overflow-hidden">
+                class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-300 hover:border-red-400 transition-colors">
 
                 <button onclick="toggleCategory('shopping')"
-                    class="w-full transition-colors active:bg-red-100/20 px-6 dark:active:bg-gray-600/50 justify-between dark:hover:bg-gray-700/50 hover:bg-red-50/30 flex py-5 items-center">
+                    class="w-full px-6 py-5 flex items-center justify-between hover:bg-red-50/30 transition-colors active:bg-red-100/20">
 
-                    <div class="items-center flex gap-4 flex-1">
+                    <div class="flex items-center gap-4 flex-1">
 
                         <span class="text-3xl flex-shrink-0">🛍️</span>
 
                         <div class="text-left flex-1">
 
-                            <h2 class="text-xl text-gray-800 font-bold dark:text-gray-200">การช้อปปิ้ง</h2>
+                            <h2 class="text-xl font-bold text-gray-800">การช้อปปิ้ง</h2>
 
-                            <p class="dark:text-gray-400 text-gray-600 font-medium text-sm">20 ประโยค</p>
+                            <p class="text-sm text-gray-600 font-medium">20 ประโยค</p>
 
                         </div>
 
                     </div>
 
-                    <div class="ml-4 flex flex-shrink-0 items-center gap-2">
+                    <div class="flex items-center gap-2 flex-shrink-0 ml-4">
 
-                        <span class="text-gray-400 transition-transform rotate-180 duration-300 text-xl font-bold dark:text-gray-500">
+                        <span class="text-gray-400 transition-transform duration-300 text-xl font-bold rotate-180">
 
                             ▼
 
@@ -1834,33 +1810,33 @@
 
 
 
-                <div class="px-6 bg-gray-50 border-gray-200 dark:bg-gray-900/50 space-y-3 animate-fadeIn border-t dark:border-gray-700 pb-6">
+                <div class="px-6 pb-6 space-y-3 bg-gray-50 border-t border-gray-200 animate-fadeIn">
 
 
 
                     <div
-                        class="dark:bg-gray-800/90 bg-white border-gray-200 dark:border-gray-700/60 transform rounded-xl hover:border-red-300 dark:hover:border-red-500 shadow-sm p-5 hover:shadow-md hover:-translate-y-1 transition-all dark:border-gray-700 border group">
+                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
 
-                        <div class="justify-between flex items-start gap-4">
+                        <div class="flex items-start justify-between gap-4">
 
-                            <div class="min-w-0 flex-1">
+                            <div class="flex-1 min-w-0">
 
-                                <div class="mb-3 flex items-start gap-3">
+                                <div class="flex items-start gap-3 mb-3">
 
                                     <button onclick="speak('这个可以便宜一点吗？')"
-                                        class="bg-gradient-to-br shadow-md w-10 active:scale-95 hover:from-red-600 hover:to-red-700 items-center group-hover:scale-110 shadow-red-500/30 group-hover:rotate-12 dark:shadow-red-900/50 dark:from-red-600 dark:to-red-800 group-hover:scale-105 text-white h-10 flex flex-shrink-0 to-red-600 rounded-full from-red-500 duration-300 duration-200 justify-center transition-colors hover:shadow-lg"
+                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
                                         title="ฟังเสียงจีน">
 
-                                        <span class="font-bold text-sm">▶</span>
+                                        <span class="text-sm font-bold">▶</span>
 
                                     </button>
 
-                                    <div class="min-w-0 flex-1">
+                                    <div class="flex-1 min-w-0">
 
-                                        <p class="chinese-text break-words text-xl dark:text-gray-100 font-bold text-gray-900">这个可以便宜一点吗？
+                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">这个可以便宜一点吗？
                                         </p>
 
-                                        <p class="text-red-600 font-medium mt-1 text-sm">Zhège kěyǐ piányí yìdiǎn ma?
+                                        <p class="text-red-600 font-medium text-sm mt-1">Zhège kěyǐ piányí yìdiǎn ma?
                                         </p>
 
                                     </div>
@@ -1873,9 +1849,9 @@
 
 
 
-                        <div class="pl-13 pt-4 border-gray-200 mt-4 border-t dark:border-gray-700">
+                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
 
-                            <p class="font-semibold text-gray-800 leading-relaxed dark:text-gray-200">อันนี้ลดราคาได้อีกหน่อยไหม</p>
+                            <p class="text-gray-800 font-semibold leading-relaxed">อันนี้ลดราคาได้อีกหน่อยไหม</p>
 
                         </div>
 
@@ -1884,28 +1860,28 @@
 
 
                     <div
-                        class="dark:bg-gray-800/90 bg-white border-gray-200 dark:border-gray-700/60 transform rounded-xl hover:border-red-300 dark:hover:border-red-500 shadow-sm p-5 hover:shadow-md hover:-translate-y-1 transition-all dark:border-gray-700 border group">
+                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
 
-                        <div class="justify-between flex items-start gap-4">
+                        <div class="flex items-start justify-between gap-4">
 
-                            <div class="min-w-0 flex-1">
+                            <div class="flex-1 min-w-0">
 
-                                <div class="mb-3 flex items-start gap-3">
+                                <div class="flex items-start gap-3 mb-3">
 
                                     <button onclick="speak('便宜一点，我马上付款。')"
-                                        class="bg-gradient-to-br shadow-md w-10 active:scale-95 hover:from-red-600 hover:to-red-700 items-center group-hover:scale-110 shadow-red-500/30 group-hover:rotate-12 dark:shadow-red-900/50 dark:from-red-600 dark:to-red-800 group-hover:scale-105 text-white h-10 flex flex-shrink-0 to-red-600 rounded-full from-red-500 duration-300 duration-200 justify-center transition-colors hover:shadow-lg"
+                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
                                         title="ฟังเสียงจีน">
 
-                                        <span class="font-bold text-sm">▶</span>
+                                        <span class="text-sm font-bold">▶</span>
 
                                     </button>
 
-                                    <div class="min-w-0 flex-1">
+                                    <div class="flex-1 min-w-0">
 
-                                        <p class="chinese-text break-words text-xl dark:text-gray-100 font-bold text-gray-900">便宜一点，我马上付款。
+                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">便宜一点，我马上付款。
                                         </p>
 
-                                        <p class="text-red-600 font-medium mt-1 text-sm">Piányi yìdiǎn, wǒ mǎshàng
+                                        <p class="text-red-600 font-medium text-sm mt-1">Piányi yìdiǎn, wǒ mǎshàng
                                             fùkuǎn.</p>
 
                                     </div>
@@ -1918,9 +1894,9 @@
 
 
 
-                        <div class="pl-13 pt-4 border-gray-200 mt-4 border-t dark:border-gray-700">
+                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
 
-                            <p class="font-semibold text-gray-800 leading-relaxed dark:text-gray-200">ลดอีกหน่อย เดี๋ยวจ่ายเลย</p>
+                            <p class="text-gray-800 font-semibold leading-relaxed">ลดอีกหน่อย เดี๋ยวจ่ายเลย</p>
 
                         </div>
 
@@ -1929,28 +1905,28 @@
 
 
                     <div
-                        class="dark:bg-gray-800/90 bg-white border-gray-200 dark:border-gray-700/60 transform rounded-xl hover:border-red-300 dark:hover:border-red-500 shadow-sm p-5 hover:shadow-md hover:-translate-y-1 transition-all dark:border-gray-700 border group">
+                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
 
-                        <div class="justify-between flex items-start gap-4">
+                        <div class="flex items-start justify-between gap-4">
 
-                            <div class="min-w-0 flex-1">
+                            <div class="flex-1 min-w-0">
 
-                                <div class="mb-3 flex items-start gap-3">
+                                <div class="flex items-start gap-3 mb-3">
 
                                     <button onclick="speak('请问，这个款式有小号吗？')"
-                                        class="bg-gradient-to-br shadow-md w-10 active:scale-95 hover:from-red-600 hover:to-red-700 items-center group-hover:scale-110 shadow-red-500/30 group-hover:rotate-12 dark:shadow-red-900/50 dark:from-red-600 dark:to-red-800 group-hover:scale-105 text-white h-10 flex flex-shrink-0 to-red-600 rounded-full from-red-500 duration-300 duration-200 justify-center transition-colors hover:shadow-lg"
+                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
                                         title="ฟังเสียงจีน">
 
-                                        <span class="font-bold text-sm">▶</span>
+                                        <span class="text-sm font-bold">▶</span>
 
                                     </button>
 
-                                    <div class="min-w-0 flex-1">
+                                    <div class="flex-1 min-w-0">
 
-                                        <p class="chinese-text break-words text-xl dark:text-gray-100 font-bold text-gray-900">请问，这个款式有小号吗？
+                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">请问，这个款式有小号吗？
                                         </p>
 
-                                        <p class="text-red-600 font-medium mt-1 text-sm">Qǐngwèn, zhège kuǎnshì yǒu xiǎo
+                                        <p class="text-red-600 font-medium text-sm mt-1">Qǐngwèn, zhège kuǎnshì yǒu xiǎo
                                             hào ma?</p>
 
                                     </div>
@@ -1963,9 +1939,9 @@
 
 
 
-                        <div class="pl-13 pt-4 border-gray-200 mt-4 border-t dark:border-gray-700">
+                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
 
-                            <p class="font-semibold text-gray-800 leading-relaxed dark:text-gray-200">ขอสอบถาม รุ่นนี้มีไซซ์เล็กไหม</p>
+                            <p class="text-gray-800 font-semibold leading-relaxed">ขอสอบถาม รุ่นนี้มีไซซ์เล็กไหม</p>
 
                         </div>
 
@@ -1974,28 +1950,28 @@
 
 
                     <div
-                        class="dark:bg-gray-800/90 bg-white border-gray-200 dark:border-gray-700/60 transform rounded-xl hover:border-red-300 dark:hover:border-red-500 shadow-sm p-5 hover:shadow-md hover:-translate-y-1 transition-all dark:border-gray-700 border group">
+                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
 
-                        <div class="justify-between flex items-start gap-4">
+                        <div class="flex items-start justify-between gap-4">
 
-                            <div class="min-w-0 flex-1">
+                            <div class="flex-1 min-w-0">
 
-                                <div class="mb-3 flex items-start gap-3">
+                                <div class="flex items-start gap-3 mb-3">
 
                                     <button onclick="speak('这个有大号的吗？我想试一下。')"
-                                        class="bg-gradient-to-br shadow-md w-10 active:scale-95 hover:from-red-600 hover:to-red-700 items-center group-hover:scale-110 shadow-red-500/30 group-hover:rotate-12 dark:shadow-red-900/50 dark:from-red-600 dark:to-red-800 group-hover:scale-105 text-white h-10 flex flex-shrink-0 to-red-600 rounded-full from-red-500 duration-300 duration-200 justify-center transition-colors hover:shadow-lg"
+                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
                                         title="ฟังเสียงจีน">
 
-                                        <span class="font-bold text-sm">▶</span>
+                                        <span class="text-sm font-bold">▶</span>
 
                                     </button>
 
-                                    <div class="min-w-0 flex-1">
+                                    <div class="flex-1 min-w-0">
 
-                                        <p class="chinese-text break-words text-xl dark:text-gray-100 font-bold text-gray-900">
+                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
                                             这个有大号的吗？我想试一下。</p>
 
-                                        <p class="text-red-600 font-medium mt-1 text-sm">Zhège yǒu dà hào de ma? Wǒ
+                                        <p class="text-red-600 font-medium text-sm mt-1">Zhège yǒu dà hào de ma? Wǒ
                                             xiǎng shì yíxià.</p>
 
                                     </div>
@@ -2008,9 +1984,9 @@
 
 
 
-                        <div class="pl-13 pt-4 border-gray-200 mt-4 border-t dark:border-gray-700">
+                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
 
-                            <p class="font-semibold text-gray-800 leading-relaxed dark:text-gray-200">รุ่นนี้มีไซซ์ใหญ่ไหม ฉันอยากลองดู</p>
+                            <p class="text-gray-800 font-semibold leading-relaxed">รุ่นนี้มีไซซ์ใหญ่ไหม ฉันอยากลองดู</p>
 
                         </div>
 
@@ -2019,28 +1995,28 @@
 
 
                     <div
-                        class="dark:bg-gray-800/90 bg-white border-gray-200 dark:border-gray-700/60 transform rounded-xl hover:border-red-300 dark:hover:border-red-500 shadow-sm p-5 hover:shadow-md hover:-translate-y-1 transition-all dark:border-gray-700 border group">
+                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
 
-                        <div class="justify-between flex items-start gap-4">
+                        <div class="flex items-start justify-between gap-4">
 
-                            <div class="min-w-0 flex-1">
+                            <div class="flex-1 min-w-0">
 
-                                <div class="mb-3 flex items-start gap-3">
+                                <div class="flex items-start gap-3 mb-3">
 
                                     <button onclick="speak('请问，我可以试穿一下这件衣服吗？')"
-                                        class="bg-gradient-to-br shadow-md w-10 active:scale-95 hover:from-red-600 hover:to-red-700 items-center group-hover:scale-110 shadow-red-500/30 group-hover:rotate-12 dark:shadow-red-900/50 dark:from-red-600 dark:to-red-800 group-hover:scale-105 text-white h-10 flex flex-shrink-0 to-red-600 rounded-full from-red-500 duration-300 duration-200 justify-center transition-colors hover:shadow-lg"
+                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
                                         title="ฟังเสียงจีน">
 
-                                        <span class="font-bold text-sm">▶</span>
+                                        <span class="text-sm font-bold">▶</span>
 
                                     </button>
 
-                                    <div class="min-w-0 flex-1">
+                                    <div class="flex-1 min-w-0">
 
-                                        <p class="chinese-text break-words text-xl dark:text-gray-100 font-bold text-gray-900">
+                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
                                             请问，我可以试穿一下这件衣服吗？</p>
 
-                                        <p class="text-red-600 font-medium mt-1 text-sm">Qǐngwèn, wǒ kěyǐ shìchuān yíxià
+                                        <p class="text-red-600 font-medium text-sm mt-1">Qǐngwèn, wǒ kěyǐ shìchuān yíxià
                                             zhè jiàn yīfu ma?</p>
 
                                     </div>
@@ -2053,9 +2029,9 @@
 
 
 
-                        <div class="pl-13 pt-4 border-gray-200 mt-4 border-t dark:border-gray-700">
+                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
 
-                            <p class="font-semibold text-gray-800 leading-relaxed dark:text-gray-200">ขออนุญาตลองเสื้อตัวนี้ได้ไหม</p>
+                            <p class="text-gray-800 font-semibold leading-relaxed">ขออนุญาตลองเสื้อตัวนี้ได้ไหม</p>
 
                         </div>
 
@@ -2064,28 +2040,28 @@
 
 
                     <div
-                        class="dark:bg-gray-800/90 bg-white border-gray-200 dark:border-gray-700/60 transform rounded-xl hover:border-red-300 dark:hover:border-red-500 shadow-sm p-5 hover:shadow-md hover:-translate-y-1 transition-all dark:border-gray-700 border group">
+                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
 
-                        <div class="justify-between flex items-start gap-4">
+                        <div class="flex items-start justify-between gap-4">
 
-                            <div class="min-w-0 flex-1">
+                            <div class="flex-1 min-w-0">
 
-                                <div class="mb-3 flex items-start gap-3">
+                                <div class="flex items-start gap-3 mb-3">
 
                                     <button onclick="speak('这个款式还有别的颜色可以选择吗？')"
-                                        class="bg-gradient-to-br shadow-md w-10 active:scale-95 hover:from-red-600 hover:to-red-700 items-center group-hover:scale-110 shadow-red-500/30 group-hover:rotate-12 dark:shadow-red-900/50 dark:from-red-600 dark:to-red-800 group-hover:scale-105 text-white h-10 flex flex-shrink-0 to-red-600 rounded-full from-red-500 duration-300 duration-200 justify-center transition-colors hover:shadow-lg"
+                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
                                         title="ฟังเสียงจีน">
 
-                                        <span class="font-bold text-sm">▶</span>
+                                        <span class="text-sm font-bold">▶</span>
 
                                     </button>
 
-                                    <div class="min-w-0 flex-1">
+                                    <div class="flex-1 min-w-0">
 
-                                        <p class="chinese-text break-words text-xl dark:text-gray-100 font-bold text-gray-900">
+                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
                                             这个款式还有别的颜色可以选择吗？</p>
 
-                                        <p class="text-red-600 font-medium mt-1 text-sm">Zhège kuǎnshì hái yǒu bié de
+                                        <p class="text-red-600 font-medium text-sm mt-1">Zhège kuǎnshì hái yǒu bié de
                                             yánsè kěyǐ xuǎnzé ma?</p>
 
                                     </div>
@@ -2098,9 +2074,9 @@
 
 
 
-                        <div class="pl-13 pt-4 border-gray-200 mt-4 border-t dark:border-gray-700">
+                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
 
-                            <p class="font-semibold text-gray-800 leading-relaxed dark:text-gray-200">รุ่นนี้มีสีอื่นให้เลือกไหม</p>
+                            <p class="text-gray-800 font-semibold leading-relaxed">รุ่นนี้มีสีอื่นให้เลือกไหม</p>
 
                         </div>
 
@@ -2109,28 +2085,28 @@
 
 
                     <div
-                        class="dark:bg-gray-800/90 bg-white border-gray-200 dark:border-gray-700/60 transform rounded-xl hover:border-red-300 dark:hover:border-red-500 shadow-sm p-5 hover:shadow-md hover:-translate-y-1 transition-all dark:border-gray-700 border group">
+                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
 
-                        <div class="justify-between flex items-start gap-4">
+                        <div class="flex items-start justify-between gap-4">
 
-                            <div class="min-w-0 flex-1">
+                            <div class="flex-1 min-w-0">
 
-                                <div class="mb-3 flex items-start gap-3">
+                                <div class="flex items-start gap-3 mb-3">
 
                                     <button onclick="speak('我要这个尺寸的，请帮我拿一件新的。')"
-                                        class="bg-gradient-to-br shadow-md w-10 active:scale-95 hover:from-red-600 hover:to-red-700 items-center group-hover:scale-110 shadow-red-500/30 group-hover:rotate-12 dark:shadow-red-900/50 dark:from-red-600 dark:to-red-800 group-hover:scale-105 text-white h-10 flex flex-shrink-0 to-red-600 rounded-full from-red-500 duration-300 duration-200 justify-center transition-colors hover:shadow-lg"
+                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
                                         title="ฟังเสียงจีน">
 
-                                        <span class="font-bold text-sm">▶</span>
+                                        <span class="text-sm font-bold">▶</span>
 
                                     </button>
 
-                                    <div class="min-w-0 flex-1">
+                                    <div class="flex-1 min-w-0">
 
-                                        <p class="chinese-text break-words text-xl dark:text-gray-100 font-bold text-gray-900">
+                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
                                             我要这个尺寸的，请帮我拿一件新的。</p>
 
-                                        <p class="text-red-600 font-medium mt-1 text-sm">Wǒ yào zhège chǐcùn de, qǐng
+                                        <p class="text-red-600 font-medium text-sm mt-1">Wǒ yào zhège chǐcùn de, qǐng
                                             bāng wǒ ná yí jiàn xīn de.</p>
 
                                     </div>
@@ -2143,9 +2119,9 @@
 
 
 
-                        <div class="pl-13 pt-4 border-gray-200 mt-4 border-t dark:border-gray-700">
+                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
 
-                            <p class="font-semibold text-gray-800 leading-relaxed dark:text-gray-200">ฉันเอาไซส์นี้ ช่วยหยิบตัวใหม่ให้หน่อย
+                            <p class="text-gray-800 font-semibold leading-relaxed">ฉันเอาไซส์นี้ ช่วยหยิบตัวใหม่ให้หน่อย
                             </p>
 
                         </div>
@@ -2155,28 +2131,28 @@
 
 
                     <div
-                        class="dark:bg-gray-800/90 bg-white border-gray-200 dark:border-gray-700/60 transform rounded-xl hover:border-red-300 dark:hover:border-red-500 shadow-sm p-5 hover:shadow-md hover:-translate-y-1 transition-all dark:border-gray-700 border group">
+                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
 
-                        <div class="justify-between flex items-start gap-4">
+                        <div class="flex items-start justify-between gap-4">
 
-                            <div class="min-w-0 flex-1">
+                            <div class="flex-1 min-w-0">
 
-                                <div class="mb-3 flex items-start gap-3">
+                                <div class="flex items-start gap-3 mb-3">
 
                                     <button onclick="speak('如果不合适，可以退货或者换货吗？')"
-                                        class="bg-gradient-to-br shadow-md w-10 active:scale-95 hover:from-red-600 hover:to-red-700 items-center group-hover:scale-110 shadow-red-500/30 group-hover:rotate-12 dark:shadow-red-900/50 dark:from-red-600 dark:to-red-800 group-hover:scale-105 text-white h-10 flex flex-shrink-0 to-red-600 rounded-full from-red-500 duration-300 duration-200 justify-center transition-colors hover:shadow-lg"
+                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
                                         title="ฟังเสียงจีน">
 
-                                        <span class="font-bold text-sm">▶</span>
+                                        <span class="text-sm font-bold">▶</span>
 
                                     </button>
 
-                                    <div class="min-w-0 flex-1">
+                                    <div class="flex-1 min-w-0">
 
-                                        <p class="chinese-text break-words text-xl dark:text-gray-100 font-bold text-gray-900">
+                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
                                             如果不合适，可以退货或者换货吗？</p>
 
-                                        <p class="text-red-600 font-medium mt-1 text-sm">Rúguǒ bú héshì, kěyǐ tuìhuò
+                                        <p class="text-red-600 font-medium text-sm mt-1">Rúguǒ bú héshì, kěyǐ tuìhuò
                                             huòzhě huàn huò ma?</p>
 
                                     </div>
@@ -2189,9 +2165,9 @@
 
 
 
-                        <div class="pl-13 pt-4 border-gray-200 mt-4 border-t dark:border-gray-700">
+                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
 
-                            <p class="font-semibold text-gray-800 leading-relaxed dark:text-gray-200">ถ้าใส่ไม่พอดี
+                            <p class="text-gray-800 font-semibold leading-relaxed">ถ้าใส่ไม่พอดี
                                 สามารถคืนหรือเปลี่ยนได้ไหม</p>
 
                         </div>
@@ -2201,28 +2177,28 @@
 
 
                     <div
-                        class="dark:bg-gray-800/90 bg-white border-gray-200 dark:border-gray-700/60 transform rounded-xl hover:border-red-300 dark:hover:border-red-500 shadow-sm p-5 hover:shadow-md hover:-translate-y-1 transition-all dark:border-gray-700 border group">
+                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
 
-                        <div class="justify-between flex items-start gap-4">
+                        <div class="flex items-start justify-between gap-4">
 
-                            <div class="min-w-0 flex-1">
+                            <div class="flex-1 min-w-0">
 
-                                <div class="mb-3 flex items-start gap-3">
+                                <div class="flex items-start gap-3 mb-3">
 
                                     <button onclick="speak('如果我多买几件，可以再给我优惠吗？')"
-                                        class="bg-gradient-to-br shadow-md w-10 active:scale-95 hover:from-red-600 hover:to-red-700 items-center group-hover:scale-110 shadow-red-500/30 group-hover:rotate-12 dark:shadow-red-900/50 dark:from-red-600 dark:to-red-800 group-hover:scale-105 text-white h-10 flex flex-shrink-0 to-red-600 rounded-full from-red-500 duration-300 duration-200 justify-center transition-colors hover:shadow-lg"
+                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
                                         title="ฟังเสียงจีน">
 
-                                        <span class="font-bold text-sm">▶</span>
+                                        <span class="text-sm font-bold">▶</span>
 
                                     </button>
 
-                                    <div class="min-w-0 flex-1">
+                                    <div class="flex-1 min-w-0">
 
-                                        <p class="chinese-text break-words text-xl dark:text-gray-100 font-bold text-gray-900">
+                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
                                             如果我多买几件，可以再给我优惠吗？</p>
 
-                                        <p class="text-red-600 font-medium mt-1 text-sm">Rúguǒ wǒ duō mǎi jǐ jiàn, kěyǐ
+                                        <p class="text-red-600 font-medium text-sm mt-1">Rúguǒ wǒ duō mǎi jǐ jiàn, kěyǐ
                                             zài gěi wǒ yōuhuì ma?</p>
 
                                     </div>
@@ -2235,9 +2211,9 @@
 
 
 
-                        <div class="pl-13 pt-4 border-gray-200 mt-4 border-t dark:border-gray-700">
+                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
 
-                            <p class="font-semibold text-gray-800 leading-relaxed dark:text-gray-200">ถ้าฉันซื้อหลายชิ้น
+                            <p class="text-gray-800 font-semibold leading-relaxed">ถ้าฉันซื้อหลายชิ้น
                                 สามารถลดเพิ่มได้ไหม</p>
 
                         </div>
@@ -2247,28 +2223,28 @@
 
 
                     <div
-                        class="dark:bg-gray-800/90 bg-white border-gray-200 dark:border-gray-700/60 transform rounded-xl hover:border-red-300 dark:hover:border-red-500 shadow-sm p-5 hover:shadow-md hover:-translate-y-1 transition-all dark:border-gray-700 border group">
+                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
 
-                        <div class="justify-between flex items-start gap-4">
+                        <div class="flex items-start justify-between gap-4">
 
-                            <div class="min-w-0 flex-1">
+                            <div class="flex-1 min-w-0">
 
-                                <div class="mb-3 flex items-start gap-3">
+                                <div class="flex items-start gap-3 mb-3">
 
                                     <button onclick="speak('这个产品的质量有保证吗？')"
-                                        class="bg-gradient-to-br shadow-md w-10 active:scale-95 hover:from-red-600 hover:to-red-700 items-center group-hover:scale-110 shadow-red-500/30 group-hover:rotate-12 dark:shadow-red-900/50 dark:from-red-600 dark:to-red-800 group-hover:scale-105 text-white h-10 flex flex-shrink-0 to-red-600 rounded-full from-red-500 duration-300 duration-200 justify-center transition-colors hover:shadow-lg"
+                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
                                         title="ฟังเสียงจีน">
 
-                                        <span class="font-bold text-sm">▶</span>
+                                        <span class="text-sm font-bold">▶</span>
 
                                     </button>
 
-                                    <div class="min-w-0 flex-1">
+                                    <div class="flex-1 min-w-0">
 
-                                        <p class="chinese-text break-words text-xl dark:text-gray-100 font-bold text-gray-900">这个产品的质量有保证吗？
+                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">这个产品的质量有保证吗？
                                         </p>
 
-                                        <p class="text-red-600 font-medium mt-1 text-sm">Zhège chǎnpǐn de zhìliàng yǒu
+                                        <p class="text-red-600 font-medium text-sm mt-1">Zhège chǎnpǐn de zhìliàng yǒu
                                             bǎozhèng ma?</p>
 
                                     </div>
@@ -2281,9 +2257,9 @@
 
 
 
-                        <div class="pl-13 pt-4 border-gray-200 mt-4 border-t dark:border-gray-700">
+                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
 
-                            <p class="font-semibold text-gray-800 leading-relaxed dark:text-gray-200">สินค้านี้มีการรับประกันคุณภาพไหม</p>
+                            <p class="text-gray-800 font-semibold leading-relaxed">สินค้านี้มีการรับประกันคุณภาพไหม</p>
 
                         </div>
 
@@ -2292,28 +2268,28 @@
 
 
                     <div
-                        class="dark:bg-gray-800/90 bg-white border-gray-200 dark:border-gray-700/60 transform rounded-xl hover:border-red-300 dark:hover:border-red-500 shadow-sm p-5 hover:shadow-md hover:-translate-y-1 transition-all dark:border-gray-700 border group">
+                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
 
-                        <div class="justify-between flex items-start gap-4">
+                        <div class="flex items-start justify-between gap-4">
 
-                            <div class="min-w-0 flex-1">
+                            <div class="flex-1 min-w-0">
 
-                                <div class="mb-3 flex items-start gap-3">
+                                <div class="flex items-start gap-3 mb-3">
 
                                     <button onclick="speak('请问，可以帮我开一张收据吗？')"
-                                        class="bg-gradient-to-br shadow-md w-10 active:scale-95 hover:from-red-600 hover:to-red-700 items-center group-hover:scale-110 shadow-red-500/30 group-hover:rotate-12 dark:shadow-red-900/50 dark:from-red-600 dark:to-red-800 group-hover:scale-105 text-white h-10 flex flex-shrink-0 to-red-600 rounded-full from-red-500 duration-300 duration-200 justify-center transition-colors hover:shadow-lg"
+                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
                                         title="ฟังเสียงจีน">
 
-                                        <span class="font-bold text-sm">▶</span>
+                                        <span class="text-sm font-bold">▶</span>
 
                                     </button>
 
-                                    <div class="min-w-0 flex-1">
+                                    <div class="flex-1 min-w-0">
 
-                                        <p class="chinese-text break-words text-xl dark:text-gray-100 font-bold text-gray-900">
+                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
                                             请问，可以帮我开一张收据吗？</p>
 
-                                        <p class="text-red-600 font-medium mt-1 text-sm">Qǐngwèn, kěyǐ bāng wǒ kāi yì
+                                        <p class="text-red-600 font-medium text-sm mt-1">Qǐngwèn, kěyǐ bāng wǒ kāi yì
                                             zhāng shōujù ma?</p>
 
                                     </div>
@@ -2326,9 +2302,9 @@
 
 
 
-                        <div class="pl-13 pt-4 border-gray-200 mt-4 border-t dark:border-gray-700">
+                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
 
-                            <p class="font-semibold text-gray-800 leading-relaxed dark:text-gray-200">ช่วยออกใบเสร็จให้หน่อยได้ไหม</p>
+                            <p class="text-gray-800 font-semibold leading-relaxed">ช่วยออกใบเสร็จให้หน่อยได้ไหม</p>
 
                         </div>
 
@@ -2337,28 +2313,28 @@
 
 
                     <div
-                        class="dark:bg-gray-800/90 bg-white border-gray-200 dark:border-gray-700/60 transform rounded-xl hover:border-red-300 dark:hover:border-red-500 shadow-sm p-5 hover:shadow-md hover:-translate-y-1 transition-all dark:border-gray-700 border group">
+                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
 
-                        <div class="justify-between flex items-start gap-4">
+                        <div class="flex items-start justify-between gap-4">
 
-                            <div class="min-w-0 flex-1">
+                            <div class="flex-1 min-w-0">
 
-                                <div class="mb-3 flex items-start gap-3">
+                                <div class="flex items-start gap-3 mb-3">
 
                                     <button onclick="speak('可以帮我量一下尺寸，看看合不合适吗？')"
-                                        class="bg-gradient-to-br shadow-md w-10 active:scale-95 hover:from-red-600 hover:to-red-700 items-center group-hover:scale-110 shadow-red-500/30 group-hover:rotate-12 dark:shadow-red-900/50 dark:from-red-600 dark:to-red-800 group-hover:scale-105 text-white h-10 flex flex-shrink-0 to-red-600 rounded-full from-red-500 duration-300 duration-200 justify-center transition-colors hover:shadow-lg"
+                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
                                         title="ฟังเสียงจีน">
 
-                                        <span class="font-bold text-sm">▶</span>
+                                        <span class="text-sm font-bold">▶</span>
 
                                     </button>
 
-                                    <div class="min-w-0 flex-1">
+                                    <div class="flex-1 min-w-0">
 
-                                        <p class="chinese-text break-words text-xl dark:text-gray-100 font-bold text-gray-900">
+                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
                                             可以帮我量一下尺寸，看看合不合适吗？</p>
 
-                                        <p class="text-red-600 font-medium mt-1 text-sm">Kěyǐ bāng wǒ liáng yíxià
+                                        <p class="text-red-600 font-medium text-sm mt-1">Kěyǐ bāng wǒ liáng yíxià
                                             chǐcùn, kàn kan hé bú héshì ma?</p>
 
                                     </div>
@@ -2371,9 +2347,9 @@
 
 
 
-                        <div class="pl-13 pt-4 border-gray-200 mt-4 border-t dark:border-gray-700">
+                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
 
-                            <p class="font-semibold text-gray-800 leading-relaxed dark:text-gray-200">ช่วยวัดไซส์ให้หน่อย ดูว่าเหมาะไหม</p>
+                            <p class="text-gray-800 font-semibold leading-relaxed">ช่วยวัดไซส์ให้หน่อย ดูว่าเหมาะไหม</p>
 
                         </div>
 
@@ -2382,28 +2358,28 @@
 
 
                     <div
-                        class="dark:bg-gray-800/90 bg-white border-gray-200 dark:border-gray-700/60 transform rounded-xl hover:border-red-300 dark:hover:border-red-500 shadow-sm p-5 hover:shadow-md hover:-translate-y-1 transition-all dark:border-gray-700 border group">
+                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
 
-                        <div class="justify-between flex items-start gap-4">
+                        <div class="flex items-start justify-between gap-4">
 
-                            <div class="min-w-0 flex-1">
+                            <div class="flex-1 min-w-0">
 
-                                <div class="mb-3 flex items-start gap-3">
+                                <div class="flex items-start gap-3 mb-3">
 
                                     <button onclick="speak('这个有现货吗？还是需要预订？')"
-                                        class="bg-gradient-to-br shadow-md w-10 active:scale-95 hover:from-red-600 hover:to-red-700 items-center group-hover:scale-110 shadow-red-500/30 group-hover:rotate-12 dark:shadow-red-900/50 dark:from-red-600 dark:to-red-800 group-hover:scale-105 text-white h-10 flex flex-shrink-0 to-red-600 rounded-full from-red-500 duration-300 duration-200 justify-center transition-colors hover:shadow-lg"
+                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
                                         title="ฟังเสียงจีน">
 
-                                        <span class="font-bold text-sm">▶</span>
+                                        <span class="text-sm font-bold">▶</span>
 
                                     </button>
 
-                                    <div class="min-w-0 flex-1">
+                                    <div class="flex-1 min-w-0">
 
-                                        <p class="chinese-text break-words text-xl dark:text-gray-100 font-bold text-gray-900">
+                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
                                             这个有现货吗？还是需要预订？</p>
 
-                                        <p class="text-red-600 font-medium mt-1 text-sm">Zhège yǒu xiànhuò ma? Háishi
+                                        <p class="text-red-600 font-medium text-sm mt-1">Zhège yǒu xiànhuò ma? Háishi
                                             xūyào yùdìng?</p>
 
                                     </div>
@@ -2416,9 +2392,9 @@
 
 
 
-                        <div class="pl-13 pt-4 border-gray-200 mt-4 border-t dark:border-gray-700">
+                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
 
-                            <p class="font-semibold text-gray-800 leading-relaxed dark:text-gray-200">อันนี้มีของพร้อมขายไหม
+                            <p class="text-gray-800 font-semibold leading-relaxed">อันนี้มีของพร้อมขายไหม
                                 หรือว่าต้องสั่งจอง</p>
 
                         </div>
@@ -2428,28 +2404,28 @@
 
 
                     <div
-                        class="dark:bg-gray-800/90 bg-white border-gray-200 dark:border-gray-700/60 transform rounded-xl hover:border-red-300 dark:hover:border-red-500 shadow-sm p-5 hover:shadow-md hover:-translate-y-1 transition-all dark:border-gray-700 border group">
+                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
 
-                        <div class="justify-between flex items-start gap-4">
+                        <div class="flex items-start justify-between gap-4">
 
-                            <div class="min-w-0 flex-1">
+                            <div class="flex-1 min-w-0">
 
-                                <div class="mb-3 flex items-start gap-3">
+                                <div class="flex items-start gap-3 mb-3">
 
                                     <button onclick="speak('这是最后的价格吗？还能再便宜一点吗？')"
-                                        class="bg-gradient-to-br shadow-md w-10 active:scale-95 hover:from-red-600 hover:to-red-700 items-center group-hover:scale-110 shadow-red-500/30 group-hover:rotate-12 dark:shadow-red-900/50 dark:from-red-600 dark:to-red-800 group-hover:scale-105 text-white h-10 flex flex-shrink-0 to-red-600 rounded-full from-red-500 duration-300 duration-200 justify-center transition-colors hover:shadow-lg"
+                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
                                         title="ฟังเสียงจีน">
 
-                                        <span class="font-bold text-sm">▶</span>
+                                        <span class="text-sm font-bold">▶</span>
 
                                     </button>
 
-                                    <div class="min-w-0 flex-1">
+                                    <div class="flex-1 min-w-0">
 
-                                        <p class="chinese-text break-words text-xl dark:text-gray-100 font-bold text-gray-900">
+                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
                                             这是最后的价格吗？还能再便宜一点吗？</p>
 
-                                        <p class="text-red-600 font-medium mt-1 text-sm">Zhè shì zuìhòu de jiàgé ma? Hái
+                                        <p class="text-red-600 font-medium text-sm mt-1">Zhè shì zuìhòu de jiàgé ma? Hái
                                             néng zài piányí yìdiǎn ma?</p>
 
                                     </div>
@@ -2462,9 +2438,9 @@
 
 
 
-                        <div class="pl-13 pt-4 border-gray-200 mt-4 border-t dark:border-gray-700">
+                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
 
-                            <p class="font-semibold text-gray-800 leading-relaxed dark:text-gray-200">นี่ราคาสุดท้ายแล้วใช่ไหม
+                            <p class="text-gray-800 font-semibold leading-relaxed">นี่ราคาสุดท้ายแล้วใช่ไหม
                                 ยังลดได้อีกไหม</p>
 
                         </div>
@@ -2474,28 +2450,28 @@
 
 
                     <div
-                        class="dark:bg-gray-800/90 bg-white border-gray-200 dark:border-gray-700/60 transform rounded-xl hover:border-red-300 dark:hover:border-red-500 shadow-sm p-5 hover:shadow-md hover:-translate-y-1 transition-all dark:border-gray-700 border group">
+                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
 
-                        <div class="justify-between flex items-start gap-4">
+                        <div class="flex items-start justify-between gap-4">
 
-                            <div class="min-w-0 flex-1">
+                            <div class="flex-1 min-w-0">
 
-                                <div class="mb-3 flex items-start gap-3">
+                                <div class="flex items-start gap-3 mb-3">
 
                                     <button onclick="speak('如果产品有问题，可以免费换货吗？')"
-                                        class="bg-gradient-to-br shadow-md w-10 active:scale-95 hover:from-red-600 hover:to-red-700 items-center group-hover:scale-110 shadow-red-500/30 group-hover:rotate-12 dark:shadow-red-900/50 dark:from-red-600 dark:to-red-800 group-hover:scale-105 text-white h-10 flex flex-shrink-0 to-red-600 rounded-full from-red-500 duration-300 duration-200 justify-center transition-colors hover:shadow-lg"
+                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
                                         title="ฟังเสียงจีน">
 
-                                        <span class="font-bold text-sm">▶</span>
+                                        <span class="text-sm font-bold">▶</span>
 
                                     </button>
 
-                                    <div class="min-w-0 flex-1">
+                                    <div class="flex-1 min-w-0">
 
-                                        <p class="chinese-text break-words text-xl dark:text-gray-100 font-bold text-gray-900">
+                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
                                             如果产品有问题，可以免费换货吗？</p>
 
-                                        <p class="text-red-600 font-medium mt-1 text-sm">Rúguǒ chǎnpǐn yǒu wèntí, kěyǐ
+                                        <p class="text-red-600 font-medium text-sm mt-1">Rúguǒ chǎnpǐn yǒu wèntí, kěyǐ
                                             miǎnfèi huàn huò ma?</p>
 
                                     </div>
@@ -2508,9 +2484,9 @@
 
 
 
-                        <div class="pl-13 pt-4 border-gray-200 mt-4 border-t dark:border-gray-700">
+                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
 
-                            <p class="font-semibold text-gray-800 leading-relaxed dark:text-gray-200">ถ้าสินค้ามีปัญหา
+                            <p class="text-gray-800 font-semibold leading-relaxed">ถ้าสินค้ามีปัญหา
                                 สามารถเปลี่ยนฟรีได้ไหม</p>
 
                         </div>
@@ -2520,28 +2496,28 @@
 
 
                     <div
-                        class="dark:bg-gray-800/90 bg-white border-gray-200 dark:border-gray-700/60 transform rounded-xl hover:border-red-300 dark:hover:border-red-500 shadow-sm p-5 hover:shadow-md hover:-translate-y-1 transition-all dark:border-gray-700 border group">
+                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
 
-                        <div class="justify-between flex items-start gap-4">
+                        <div class="flex items-start justify-between gap-4">
 
-                            <div class="min-w-0 flex-1">
+                            <div class="flex-1 min-w-0">
 
-                                <div class="mb-3 flex items-start gap-3">
+                                <div class="flex items-start gap-3 mb-3">
 
                                     <button onclick="speak('可以帮我算一下总共多少钱吗？')"
-                                        class="bg-gradient-to-br shadow-md w-10 active:scale-95 hover:from-red-600 hover:to-red-700 items-center group-hover:scale-110 shadow-red-500/30 group-hover:rotate-12 dark:shadow-red-900/50 dark:from-red-600 dark:to-red-800 group-hover:scale-105 text-white h-10 flex flex-shrink-0 to-red-600 rounded-full from-red-500 duration-300 duration-200 justify-center transition-colors hover:shadow-lg"
+                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
                                         title="ฟังเสียงจีน">
 
-                                        <span class="font-bold text-sm">▶</span>
+                                        <span class="text-sm font-bold">▶</span>
 
                                     </button>
 
-                                    <div class="min-w-0 flex-1">
+                                    <div class="flex-1 min-w-0">
 
-                                        <p class="chinese-text break-words text-xl dark:text-gray-100 font-bold text-gray-900">
+                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
                                             可以帮我算一下总共多少钱吗？</p>
 
-                                        <p class="text-red-600 font-medium mt-1 text-sm">Kěyǐ bāng wǒ suàn yíxià
+                                        <p class="text-red-600 font-medium text-sm mt-1">Kěyǐ bāng wǒ suàn yíxià
                                             zǒnggòng duōshǎo qián ma?</p>
 
                                     </div>
@@ -2554,9 +2530,9 @@
 
 
 
-                        <div class="pl-13 pt-4 border-gray-200 mt-4 border-t dark:border-gray-700">
+                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
 
-                            <p class="font-semibold text-gray-800 leading-relaxed dark:text-gray-200">ช่วยคำนวณราคารวมให้หน่อยได้ไหม</p>
+                            <p class="text-gray-800 font-semibold leading-relaxed">ช่วยคำนวณราคารวมให้หน่อยได้ไหม</p>
 
                         </div>
 
@@ -2565,27 +2541,27 @@
 
 
                     <div
-                        class="dark:bg-gray-800/90 bg-white border-gray-200 dark:border-gray-700/60 transform rounded-xl hover:border-red-300 dark:hover:border-red-500 shadow-sm p-5 hover:shadow-md hover:-translate-y-1 transition-all dark:border-gray-700 border group">
+                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
 
-                        <div class="justify-between flex items-start gap-4">
+                        <div class="flex items-start justify-between gap-4">
 
-                            <div class="min-w-0 flex-1">
+                            <div class="flex-1 min-w-0">
 
-                                <div class="mb-3 flex items-start gap-3">
+                                <div class="flex items-start gap-3 mb-3">
 
                                     <button onclick="speak('这个有保修期吗？')"
-                                        class="bg-gradient-to-br shadow-md w-10 active:scale-95 hover:from-red-600 hover:to-red-700 items-center group-hover:scale-110 shadow-red-500/30 group-hover:rotate-12 dark:shadow-red-900/50 dark:from-red-600 dark:to-red-800 group-hover:scale-105 text-white h-10 flex flex-shrink-0 to-red-600 rounded-full from-red-500 duration-300 duration-200 justify-center transition-colors hover:shadow-lg"
+                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
                                         title="ฟังเสียงจีน">
 
-                                        <span class="font-bold text-sm">▶</span>
+                                        <span class="text-sm font-bold">▶</span>
 
                                     </button>
 
-                                    <div class="min-w-0 flex-1">
+                                    <div class="flex-1 min-w-0">
 
-                                        <p class="chinese-text break-words text-xl dark:text-gray-100 font-bold text-gray-900">这个有保修期吗？</p>
+                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">这个有保修期吗？</p>
 
-                                        <p class="text-red-600 font-medium mt-1 text-sm">Zhège yǒu bǎoxiū qī ma?</p>
+                                        <p class="text-red-600 font-medium text-sm mt-1">Zhège yǒu bǎoxiū qī ma?</p>
 
                                     </div>
 
@@ -2597,9 +2573,9 @@
 
 
 
-                        <div class="pl-13 pt-4 border-gray-200 mt-4 border-t dark:border-gray-700">
+                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
 
-                            <p class="font-semibold text-gray-800 leading-relaxed dark:text-gray-200">อันนี้มีระยะเวลารับประกันไหม</p>
+                            <p class="text-gray-800 font-semibold leading-relaxed">อันนี้มีระยะเวลารับประกันไหม</p>
 
                         </div>
 
@@ -2608,28 +2584,28 @@
 
 
                     <div
-                        class="dark:bg-gray-800/90 bg-white border-gray-200 dark:border-gray-700/60 transform rounded-xl hover:border-red-300 dark:hover:border-red-500 shadow-sm p-5 hover:shadow-md hover:-translate-y-1 transition-all dark:border-gray-700 border group">
+                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
 
-                        <div class="justify-between flex items-start gap-4">
+                        <div class="flex items-start justify-between gap-4">
 
-                            <div class="min-w-0 flex-1">
+                            <div class="flex-1 min-w-0">
 
-                                <div class="mb-3 flex items-start gap-3">
+                                <div class="flex items-start gap-3 mb-3">
 
                                     <button onclick="speak('我想先看看其他款式，再做决定。')"
-                                        class="bg-gradient-to-br shadow-md w-10 active:scale-95 hover:from-red-600 hover:to-red-700 items-center group-hover:scale-110 shadow-red-500/30 group-hover:rotate-12 dark:shadow-red-900/50 dark:from-red-600 dark:to-red-800 group-hover:scale-105 text-white h-10 flex flex-shrink-0 to-red-600 rounded-full from-red-500 duration-300 duration-200 justify-center transition-colors hover:shadow-lg"
+                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
                                         title="ฟังเสียงจีน">
 
-                                        <span class="font-bold text-sm">▶</span>
+                                        <span class="text-sm font-bold">▶</span>
 
                                     </button>
 
-                                    <div class="min-w-0 flex-1">
+                                    <div class="flex-1 min-w-0">
 
-                                        <p class="chinese-text break-words text-xl dark:text-gray-100 font-bold text-gray-900">
+                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
                                             我想先看看其他款式，再做决定。</p>
 
-                                        <p class="text-red-600 font-medium mt-1 text-sm">Wǒ xiǎng xiān kàn kan qítā
+                                        <p class="text-red-600 font-medium text-sm mt-1">Wǒ xiǎng xiān kàn kan qítā
                                             kuǎnshì, zài zuò juédìng.</p>
 
                                     </div>
@@ -2642,9 +2618,9 @@
 
 
 
-                        <div class="pl-13 pt-4 border-gray-200 mt-4 border-t dark:border-gray-700">
+                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
 
-                            <p class="font-semibold text-gray-800 leading-relaxed dark:text-gray-200">ฉันอยากดูรุ่นอื่นก่อน
+                            <p class="text-gray-800 font-semibold leading-relaxed">ฉันอยากดูรุ่นอื่นก่อน
                                 แล้วค่อยตัดสินใจ</p>
 
                         </div>
@@ -2654,28 +2630,28 @@
 
 
                     <div
-                        class="dark:bg-gray-800/90 bg-white border-gray-200 dark:border-gray-700/60 transform rounded-xl hover:border-red-300 dark:hover:border-red-500 shadow-sm p-5 hover:shadow-md hover:-translate-y-1 transition-all dark:border-gray-700 border group">
+                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
 
-                        <div class="justify-between flex items-start gap-4">
+                        <div class="flex items-start justify-between gap-4">
 
-                            <div class="min-w-0 flex-1">
+                            <div class="flex-1 min-w-0">
 
-                                <div class="mb-3 flex items-start gap-3">
+                                <div class="flex items-start gap-3 mb-3">
 
                                     <button onclick="speak('我再考虑一下，谢谢。')"
-                                        class="bg-gradient-to-br shadow-md w-10 active:scale-95 hover:from-red-600 hover:to-red-700 items-center group-hover:scale-110 shadow-red-500/30 group-hover:rotate-12 dark:shadow-red-900/50 dark:from-red-600 dark:to-red-800 group-hover:scale-105 text-white h-10 flex flex-shrink-0 to-red-600 rounded-full from-red-500 duration-300 duration-200 justify-center transition-colors hover:shadow-lg"
+                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
                                         title="ฟังเสียงจีน">
 
-                                        <span class="font-bold text-sm">▶</span>
+                                        <span class="text-sm font-bold">▶</span>
 
                                     </button>
 
-                                    <div class="min-w-0 flex-1">
+                                    <div class="flex-1 min-w-0">
 
-                                        <p class="chinese-text break-words text-xl dark:text-gray-100 font-bold text-gray-900">我再考虑一下，谢谢。
+                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">我再考虑一下，谢谢。
                                         </p>
 
-                                        <p class="text-red-600 font-medium mt-1 text-sm">Wǒ zài kǎolǜ yíxià, xièxie.</p>
+                                        <p class="text-red-600 font-medium text-sm mt-1">Wǒ zài kǎolǜ yíxià, xièxie.</p>
 
                                     </div>
 
@@ -2687,9 +2663,9 @@
 
 
 
-                        <div class="pl-13 pt-4 border-gray-200 mt-4 border-t dark:border-gray-700">
+                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
 
-                            <p class="font-semibold text-gray-800 leading-relaxed dark:text-gray-200">ฉันขอคิดดูก่อน ขอบคุณนะ</p>
+                            <p class="text-gray-800 font-semibold leading-relaxed">ฉันขอคิดดูก่อน ขอบคุณนะ</p>
 
                         </div>
 
@@ -2698,28 +2674,28 @@
 
 
                     <div
-                        class="dark:bg-gray-800/90 bg-white border-gray-200 dark:border-gray-700/60 transform rounded-xl hover:border-red-300 dark:hover:border-red-500 shadow-sm p-5 hover:shadow-md hover:-translate-y-1 transition-all dark:border-gray-700 border group">
+                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
 
-                        <div class="justify-between flex items-start gap-4">
+                        <div class="flex items-start justify-between gap-4">
 
-                            <div class="min-w-0 flex-1">
+                            <div class="flex-1 min-w-0">
 
-                                <div class="mb-3 flex items-start gap-3">
+                                <div class="flex items-start gap-3 mb-3">
 
                                     <button onclick="speak('可以帮我包一下吗？我要送人。')"
-                                        class="bg-gradient-to-br shadow-md w-10 active:scale-95 hover:from-red-600 hover:to-red-700 items-center group-hover:scale-110 shadow-red-500/30 group-hover:rotate-12 dark:shadow-red-900/50 dark:from-red-600 dark:to-red-800 group-hover:scale-105 text-white h-10 flex flex-shrink-0 to-red-600 rounded-full from-red-500 duration-300 duration-200 justify-center transition-colors hover:shadow-lg"
+                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
                                         title="ฟังเสียงจีน">
 
-                                        <span class="font-bold text-sm">▶</span>
+                                        <span class="text-sm font-bold">▶</span>
 
                                     </button>
 
-                                    <div class="min-w-0 flex-1">
+                                    <div class="flex-1 min-w-0">
 
-                                        <p class="chinese-text break-words text-xl dark:text-gray-100 font-bold text-gray-900">
+                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
                                             可以帮我包一下吗？我要送人。</p>
 
-                                        <p class="text-red-600 font-medium mt-1 text-sm">Kěyǐ bāng wǒ bāo yíxià ma? Wǒ
+                                        <p class="text-red-600 font-medium text-sm mt-1">Kěyǐ bāng wǒ bāo yíxià ma? Wǒ
                                             yào sòng rén.</p>
 
                                     </div>
@@ -2732,9 +2708,9 @@
 
 
 
-                        <div class="pl-13 pt-4 border-gray-200 mt-4 border-t dark:border-gray-700">
+                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
 
-                            <p class="font-semibold text-gray-800 leading-relaxed dark:text-gray-200">ช่วยห่อให้หน่อยได้ไหม
+                            <p class="text-gray-800 font-semibold leading-relaxed">ช่วยห่อให้หน่อยได้ไหม
                                 ฉันจะเอาไปเป็นของขวัญ</p>
 
                         </div>
@@ -2752,28 +2728,28 @@
 
 
             <section
-                class="hover:shadow-xl transform bg-white shadow-md border-gray-300 dark:backdrop-blur-sm dark:border-gray-700/50 hover:-translate-y-1 duration-300 dark:bg-gray-800/80 dark:border-gray-700 rounded-2xl transition-colors hover:border-red-400 border overflow-hidden">
+                class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-300 hover:border-red-400 transition-colors">
 
                 <button onclick="toggleCategory('restaurant')"
-                    class="w-full transition-colors active:bg-red-100/20 px-6 dark:active:bg-gray-600/50 justify-between dark:hover:bg-gray-700/50 hover:bg-red-50/30 flex py-5 items-center">
+                    class="w-full px-6 py-5 flex items-center justify-between hover:bg-red-50/30 transition-colors active:bg-red-100/20">
 
-                    <div class="items-center flex gap-4 flex-1">
+                    <div class="flex items-center gap-4 flex-1">
 
                         <span class="text-3xl flex-shrink-0">🍜</span>
 
                         <div class="text-left flex-1">
 
-                            <h2 class="text-xl text-gray-800 font-bold dark:text-gray-200">ร้านอาหาร</h2>
+                            <h2 class="text-xl font-bold text-gray-800">ร้านอาหาร</h2>
 
-                            <p class="dark:text-gray-400 text-gray-600 font-medium text-sm">20 ประโยค</p>
+                            <p class="text-sm text-gray-600 font-medium">20 ประโยค</p>
 
                         </div>
 
                     </div>
 
-                    <div class="ml-4 flex flex-shrink-0 items-center gap-2">
+                    <div class="flex items-center gap-2 flex-shrink-0 ml-4">
 
-                        <span class="text-gray-400 transition-transform duration-300 text-xl font-bold dark:text-gray-500">
+                        <span class="text-gray-400 transition-transform duration-300 text-xl font-bold ">
 
                             ▼
 
@@ -2792,28 +2768,28 @@
 
 
             <section
-                class="hover:shadow-xl transform bg-white shadow-md border-gray-300 dark:backdrop-blur-sm dark:border-gray-700/50 hover:-translate-y-1 duration-300 dark:bg-gray-800/80 dark:border-gray-700 rounded-2xl transition-colors hover:border-red-400 border overflow-hidden">
+                class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-300 hover:border-red-400 transition-colors">
 
                 <button onclick="toggleCategory('hotel')"
-                    class="w-full transition-colors active:bg-red-100/20 px-6 dark:active:bg-gray-600/50 justify-between dark:hover:bg-gray-700/50 hover:bg-red-50/30 flex py-5 items-center">
+                    class="w-full px-6 py-5 flex items-center justify-between hover:bg-red-50/30 transition-colors active:bg-red-100/20">
 
-                    <div class="items-center flex gap-4 flex-1">
+                    <div class="flex items-center gap-4 flex-1">
 
                         <span class="text-3xl flex-shrink-0">🏨</span>
 
                         <div class="text-left flex-1">
 
-                            <h2 class="text-xl text-gray-800 font-bold dark:text-gray-200">โรงแรม</h2>
+                            <h2 class="text-xl font-bold text-gray-800">โรงแรม</h2>
 
-                            <p class="dark:text-gray-400 text-gray-600 font-medium text-sm">20 ประโยค</p>
+                            <p class="text-sm text-gray-600 font-medium">20 ประโยค</p>
 
                         </div>
 
                     </div>
 
-                    <div class="ml-4 flex flex-shrink-0 items-center gap-2">
+                    <div class="flex items-center gap-2 flex-shrink-0 ml-4">
 
-                        <span class="text-gray-400 transition-transform duration-300 text-xl font-bold dark:text-gray-500">
+                        <span class="text-gray-400 transition-transform duration-300 text-xl font-bold ">
 
                             ▼
 
@@ -2832,28 +2808,28 @@
 
 
             <section
-                class="hover:shadow-xl transform bg-white shadow-md border-gray-300 dark:backdrop-blur-sm dark:border-gray-700/50 hover:-translate-y-1 duration-300 dark:bg-gray-800/80 dark:border-gray-700 rounded-2xl transition-colors hover:border-red-400 border overflow-hidden">
+                class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-300 hover:border-red-400 transition-colors">
 
                 <button onclick="toggleCategory('transport')"
-                    class="w-full transition-colors active:bg-red-100/20 px-6 dark:active:bg-gray-600/50 justify-between dark:hover:bg-gray-700/50 hover:bg-red-50/30 flex py-5 items-center">
+                    class="w-full px-6 py-5 flex items-center justify-between hover:bg-red-50/30 transition-colors active:bg-red-100/20">
 
-                    <div class="items-center flex gap-4 flex-1">
+                    <div class="flex items-center gap-4 flex-1">
 
                         <span class="text-3xl flex-shrink-0">🚄</span>
 
                         <div class="text-left flex-1">
 
-                            <h2 class="text-xl text-gray-800 font-bold dark:text-gray-200">การเดินทาง</h2>
+                            <h2 class="text-xl font-bold text-gray-800">การเดินทาง</h2>
 
-                            <p class="dark:text-gray-400 text-gray-600 font-medium text-sm">15 ประโยค</p>
+                            <p class="text-sm text-gray-600 font-medium">15 ประโยค</p>
 
                         </div>
 
                     </div>
 
-                    <div class="ml-4 flex flex-shrink-0 items-center gap-2">
+                    <div class="flex items-center gap-2 flex-shrink-0 ml-4">
 
-                        <span class="text-gray-400 transition-transform duration-300 text-xl font-bold dark:text-gray-500">
+                        <span class="text-gray-400 transition-transform duration-300 text-xl font-bold ">
 
                             ▼
 
@@ -2872,28 +2848,28 @@
 
 
             <section
-                class="hover:shadow-xl transform bg-white shadow-md border-gray-300 dark:backdrop-blur-sm dark:border-gray-700/50 hover:-translate-y-1 duration-300 dark:bg-gray-800/80 dark:border-gray-700 rounded-2xl transition-colors hover:border-red-400 border overflow-hidden">
+                class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-300 hover:border-red-400 transition-colors">
 
                 <button onclick="toggleCategory('airport')"
-                    class="w-full transition-colors active:bg-red-100/20 px-6 dark:active:bg-gray-600/50 justify-between dark:hover:bg-gray-700/50 hover:bg-red-50/30 flex py-5 items-center">
+                    class="w-full px-6 py-5 flex items-center justify-between hover:bg-red-50/30 transition-colors active:bg-red-100/20">
 
-                    <div class="items-center flex gap-4 flex-1">
+                    <div class="flex items-center gap-4 flex-1">
 
                         <span class="text-3xl flex-shrink-0">✈️</span>
 
                         <div class="text-left flex-1">
 
-                            <h2 class="text-xl text-gray-800 font-bold dark:text-gray-200">สนามบิน</h2>
+                            <h2 class="text-xl font-bold text-gray-800">สนามบิน</h2>
 
-                            <p class="dark:text-gray-400 text-gray-600 font-medium text-sm">20 ประโยค</p>
+                            <p class="text-sm text-gray-600 font-medium">20 ประโยค</p>
 
                         </div>
 
                     </div>
 
-                    <div class="ml-4 flex flex-shrink-0 items-center gap-2">
+                    <div class="flex items-center gap-2 flex-shrink-0 ml-4">
 
-                        <span class="text-gray-400 transition-transform duration-300 text-xl font-bold dark:text-gray-500">
+                        <span class="text-gray-400 transition-transform duration-300 text-xl font-bold ">
 
                             ▼
 
@@ -2912,28 +2888,28 @@
 
 
             <section
-                class="hover:shadow-xl transform bg-white shadow-md border-gray-300 dark:backdrop-blur-sm dark:border-gray-700/50 hover:-translate-y-1 duration-300 dark:bg-gray-800/80 dark:border-gray-700 rounded-2xl transition-colors hover:border-red-400 border overflow-hidden">
+                class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-300 hover:border-red-400 transition-colors">
 
                 <button onclick="toggleCategory('Health')"
-                    class="w-full transition-colors active:bg-red-100/20 px-6 dark:active:bg-gray-600/50 justify-between dark:hover:bg-gray-700/50 hover:bg-red-50/30 flex py-5 items-center">
+                    class="w-full px-6 py-5 flex items-center justify-between hover:bg-red-50/30 transition-colors active:bg-red-100/20">
 
-                    <div class="items-center flex gap-4 flex-1">
+                    <div class="flex items-center gap-4 flex-1">
 
                         <span class="text-3xl flex-shrink-0">🏥</span>
 
                         <div class="text-left flex-1">
 
-                            <h2 class="text-xl text-gray-800 font-bold dark:text-gray-200">สุขภาพ</h2>
+                            <h2 class="text-xl font-bold text-gray-800">สุขภาพ</h2>
 
-                            <p class="dark:text-gray-400 text-gray-600 font-medium text-sm">20 ประโยค</p>
+                            <p class="text-sm text-gray-600 font-medium">20 ประโยค</p>
 
                         </div>
 
                     </div>
 
-                    <div class="ml-4 flex flex-shrink-0 items-center gap-2">
+                    <div class="flex items-center gap-2 flex-shrink-0 ml-4">
 
-                        <span class="text-gray-400 transition-transform duration-300 text-xl font-bold dark:text-gray-500">
+                        <span class="text-gray-400 transition-transform duration-300 text-xl font-bold ">
 
                             ▼
 
@@ -2952,28 +2928,28 @@
 
 
             <section
-                class="hover:shadow-xl transform bg-white shadow-md border-gray-300 dark:backdrop-blur-sm dark:border-gray-700/50 hover:-translate-y-1 duration-300 dark:bg-gray-800/80 dark:border-gray-700 rounded-2xl transition-colors hover:border-red-400 border overflow-hidden">
+                class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-300 hover:border-red-400 transition-colors">
 
                 <button onclick="toggleCategory('others')"
-                    class="w-full transition-colors active:bg-red-100/20 px-6 dark:active:bg-gray-600/50 justify-between dark:hover:bg-gray-700/50 hover:bg-red-50/30 flex py-5 items-center">
+                    class="w-full px-6 py-5 flex items-center justify-between hover:bg-red-50/30 transition-colors active:bg-red-100/20">
 
-                    <div class="items-center flex gap-4 flex-1">
+                    <div class="flex items-center gap-4 flex-1">
 
                         <span class="text-3xl flex-shrink-0">📌</span>
 
                         <div class="text-left flex-1">
 
-                            <h2 class="text-xl text-gray-800 font-bold dark:text-gray-200">สถานการณ์อื่นๆ</h2>
+                            <h2 class="text-xl font-bold text-gray-800">สถานการณ์อื่นๆ</h2>
 
-                            <p class="dark:text-gray-400 text-gray-600 font-medium text-sm">15 ประโยค</p>
+                            <p class="text-sm text-gray-600 font-medium">15 ประโยค</p>
 
                         </div>
 
                     </div>
 
-                    <div class="ml-4 flex flex-shrink-0 items-center gap-2">
+                    <div class="flex items-center gap-2 flex-shrink-0 ml-4">
 
-                        <span class="text-gray-400 transition-transform duration-300 text-xl font-bold dark:text-gray-500">
+                        <span class="text-gray-400 transition-transform duration-300 text-xl font-bold ">
 
                             ▼
 
@@ -2991,15 +2967,15 @@
 
         </main><!-- Footer -->
 
-        <footer class="dark:border-red-500 text-gray-100 py-10 bg-gray-900 border-red-600 border-t-4 px-4">
+        <footer class="bg-gray-900 text-gray-100 py-10 px-4 border-t-4 border-red-600">
 
             <div class="max-w-5xl mx-auto">
 
-                <div class="grid-cols-1 grid mb-8 md:grid-cols-2 gap-8"><!-- Left Column -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8"><!-- Left Column -->
 
-                    <div class="pr-6 border-gray-700 border-r">
+                    <div class="border-r border-gray-700 pr-6">
 
-                        <h3 class="mb-3 font-bold text-red-500 text-lg">เที่ยวจีนกับเรา</h3>
+                        <h3 class="text-red-500 font-bold text-lg mb-3">เที่ยวจีนกับเรา</h3>
 
                         <p class="font-semibold text-white mb-2">บริษัท รีจอยนิ่ง จำกัด</p>
 
@@ -3007,12 +2983,12 @@
 
                     <div class="pl-6">
 
-                        <h3 class="mb-3 font-bold text-red-500 text-lg">ติดต่อเรา</h3>
+                        <h3 class="text-red-500 font-bold text-lg mb-3">ติดต่อเรา</h3>
 
-                        <p class="text-sm"><span class="text-gray-400 dark:text-gray-500">📞</span> <span
+                        <p class="text-sm"><span class="text-gray-400">📞</span> <span
                                 class="text-gray-300">083-786-5287, 096-257-6446 (จันทร์-พฤหัสบดี)</span></p>
 
-                        <p class="mt-2 text-sm"><span class="text-gray-400 dark:text-gray-500">✉️</span> <span
+                        <p class="text-sm mt-2"><span class="text-gray-400">✉️</span> <span
                                 class="text-gray-300">contact@rejoiningtravel.com</span></p>
 
                     </div>
@@ -3021,7 +2997,7 @@
 
                 <div class="border-t border-gray-700 pt-6">
 
-                    <p class="text-gray-500 text-center text-xs dark:text-gray-400">
+                    <p class="text-center text-gray-500 text-xs">
                         ขอให้การเดินทางของคุณเต็มไปด้วยความสุขและช่วงเวลาที่น่าประทับใจ</p>
 
                 </div>
@@ -3511,7 +3487,27 @@
 
         let expandedCategories = {"basic": true, "shopping": false, "restaurant": false, "hotel": false, "transport": false};
 
-        let currentAudio = null;
+        let currentPlayingId = null;
+
+        function toggleTheme() {
+            document.documentElement.classList.toggle('dark');
+            const isDark = document.documentElement.classList.contains('dark');
+            const thumb = document.getElementById('theme-thumb');
+            const sun = document.getElementById('theme-sun');
+            const moon = document.getElementById('theme-moon');
+            
+            if(isDark) {
+                thumb.classList.add('translate-x-8', 'bg-gray-800');
+                thumb.classList.remove('bg-white');
+                sun.classList.add('hidden');
+                moon.classList.remove('hidden');
+            } else {
+                thumb.classList.remove('translate-x-8', 'bg-gray-800');
+                thumb.classList.add('bg-white');
+                sun.classList.remove('hidden');
+                moon.classList.add('hidden');
+            }
+        }
 
         var ttsAudio = document.createElement('audio');
 
@@ -3519,30 +3515,69 @@
 
         document.body && document.body.appendChild(ttsAudio);
 
+        ttsAudio.addEventListener('ended', function() {
+            if (currentPlayingId) {
+                const btn = document.getElementById(currentPlayingId);
+                if (btn) btn.innerHTML = '<span class="text-sm font-bold">▶</span>';
+                currentPlayingId = null;
+            }
+        });
+        ttsAudio.addEventListener('pause', function() {
+            if (currentPlayingId) {
+                const btn = document.getElementById(currentPlayingId);
+                if (btn) btn.innerHTML = '<span class="text-sm font-bold">▶</span>';
+            }
+        });
+        ttsAudio.addEventListener('play', function() {
+            if (currentPlayingId) {
+                const btn = document.getElementById(currentPlayingId);
+                if (btn) btn.innerHTML = '<span class="text-sm font-bold">⏸</span>';
+            }
+        });
+        function playAudio(filename, btnId) {
+            if (currentPlayingId === btnId) {
+                if (ttsAudio.paused) {
+                    let p = ttsAudio.play();
+                    if (p && p.catch) {
+                        p.catch(function(e) {
+                            console.error("Playback failed:", e);
+                            const btn = document.getElementById(currentPlayingId);
+                            if (btn) btn.innerHTML = '<span class="text-sm font-bold">▶</span>';
+                            currentPlayingId = null;
+                        });
+                    }
+                } else {
+                    ttsAudio.pause();
+                }
+                return;
+            }
 
+            if (currentPlayingId && currentPlayingId !== btnId) {
+                const oldBtn = document.getElementById(currentPlayingId);
+                if (oldBtn) oldBtn.innerHTML = '<span class="text-sm font-bold">▶</span>';
+            }
 
-        function playAudio(filename) {
-
+            currentPlayingId = btnId;
             ttsAudio.pause();
-
-            ttsAudio.currentTime = 0;
-
             ttsAudio.src = filename;
+            ttsAudio.currentTime = 0;
 
             ttsAudio.onerror = function() {
                 console.error("Failed to load audio:", filename);
+                const btn = document.getElementById(currentPlayingId);
+                if (btn) btn.innerHTML = '<span class="text-sm font-bold">▶</span>';
+                currentPlayingId = null;
             };
 
-            var p = ttsAudio.play();
-
+            let p = ttsAudio.play();
             if (p && p.catch) {
-
                 p.catch(function(e) {
                     console.error("Playback failed:", e);
+                    const btn = document.getElementById(currentPlayingId);
+                    if (btn) btn.innerHTML = '<span class="text-sm font-bold">▶</span>';
+                    currentPlayingId = null;
                 });
-
             }
-
         }
 
 
@@ -3558,28 +3593,31 @@
 
 
         function createSentenceItem(sentence, index, categoryId) {
+            const btnId = `play-btn-${categoryId}-${index}`;
+            const isPlaying = currentPlayingId === btnId && !ttsAudio.paused;
+            const icon = isPlaying ? '⏸' : '▶';
 
             return `
 
-        <div class="dark:bg-gray-800/90 bg-white border-gray-200 dark:border-gray-700/60 transform rounded-xl hover:border-red-300 dark:hover:border-red-500 shadow-sm p-5 hover:shadow-md hover:-translate-y-1 transition-all dark:border-gray-700 border group">
+        <div class="bg-white dark:bg-gray-800 rounded-xl p-5 shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md hover:border-red-300 dark:hover:border-red-500 transition-all">
 
-          <div class="justify-between flex items-start gap-4">
+          <div class="flex items-start justify-between gap-4">
 
-            <div class="min-w-0 flex-1">
+            <div class="flex-1 min-w-0">
 
-              <div class="mb-3 flex items-start gap-3">
+              <div class="flex items-start gap-3 mb-3">
 
-                <button onclick="playAudio('audio/${categoryId}_${index}.mp3')" class="bg-gradient-to-br shadow-md w-10 active:scale-95 hover:from-red-600 hover:to-red-700 items-center group-hover:scale-110 shadow-red-500/30 group-hover:rotate-12 dark:shadow-red-900/50 dark:from-red-600 dark:to-red-800 group-hover:scale-105 text-white h-10 flex flex-shrink-0 to-red-600 rounded-full from-red-500 duration-300 duration-200 justify-center transition-colors hover:shadow-lg" title="ฟังเสียงจีน">
+                <button id="${btnId}" onclick="playAudio('audio/${categoryId}_${index}.mp3', '${btnId}')" class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg" title="ฟังเสียงจีน">
 
-                  <span class="font-bold text-sm">▶</span>
+                  <span class="text-sm font-bold">${icon}</span>
 
                 </button>
 
-                <div class="min-w-0 flex-1">
+                <div class="flex-1 min-w-0">
 
-                  <p class="chinese-text break-words text-xl dark:text-gray-100 font-bold text-gray-900">${sentence.chinese}</p>
+                  <p class="chinese-text text-xl font-bold text-gray-900 dark:text-gray-100 break-words">${sentence.chinese}</p>
 
-                  <p class="text-red-600 font-medium mt-1 text-sm">${sentence.pinyin}</p>
+                  <p class="text-red-600 dark:text-red-400 font-medium text-sm mt-1">${sentence.pinyin}</p>
 
                 </div>
 
@@ -3591,9 +3629,9 @@
 
           
 
-          <div class="pl-13 pt-4 border-gray-200 mt-4 border-t dark:border-gray-700">
+          <div class="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700 pl-13">
 
-            <p class="font-semibold text-gray-800 leading-relaxed dark:text-gray-200">${sentence.thai}</p>
+            <p class="text-gray-800 dark:text-gray-300 font-semibold leading-relaxed">${sentence.thai}</p>
 
           </div>
 
@@ -3615,27 +3653,27 @@
 
             return `
 
-        <section class="hover:shadow-xl transform bg-white shadow-md border-gray-300 dark:backdrop-blur-sm dark:border-gray-700/50 hover:-translate-y-1 duration-300 dark:bg-gray-800/80 dark:border-gray-700 rounded-2xl transition-colors hover:border-red-400 border overflow-hidden">
+        <section class="bg-white dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden border border-gray-300 dark:border-gray-700 hover:border-red-400 transition-colors">
 
-          <button onclick="toggleCategory('${categoryId}')" class="w-full transition-colors active:bg-red-100/20 px-6 dark:active:bg-gray-600/50 justify-between dark:hover:bg-gray-700/50 hover:bg-red-50/30 flex py-5 items-center">
+          <button onclick="toggleCategory('${categoryId}')" class="w-full px-6 py-5 flex items-center justify-between hover:bg-red-50/30 dark:hover:bg-gray-700/50 transition-colors active:bg-red-100/20 dark:active:bg-gray-700/80">
 
-            <div class="items-center flex gap-4 flex-1">
+            <div class="flex items-center gap-4 flex-1">
 
               <span class="text-3xl flex-shrink-0">${category.icon}</span>
 
               <div class="text-left flex-1">
 
-                <h2 class="text-xl text-gray-800 font-bold dark:text-gray-200">${category.title}</h2>
+                <h2 class="text-xl font-bold text-gray-800 dark:text-gray-100">${category.title}</h2>
 
-                <p class="dark:text-gray-400 text-gray-600 font-medium text-sm">${category.sentences.length} ประโยค</p>
+                <p class="text-sm text-gray-600 dark:text-gray-400 font-medium">${category.sentences.length} ประโยค</p>
 
               </div>
 
             </div>
 
-            <div class="ml-4 flex flex-shrink-0 items-center gap-2">
+            <div class="flex items-center gap-2 flex-shrink-0 ml-4">
 
-              <span class="text-gray-400 transition-transform ''} 'rotate-180' duration-300 : ${isExpanded ? text-xl font-bold dark:text-gray-500">
+              <span class="text-gray-400 dark:text-gray-500 transition-transform duration-300 text-xl font-bold ${isExpanded ? 'rotate-180' : ''}">
 
                 ▼
 
@@ -3649,7 +3687,7 @@
 
           ${isExpanded ? `
 
-            <div class="px-6 bg-gray-50 border-gray-200 dark:bg-gray-900/50 space-y-3 animate-fadeIn border-t dark:border-gray-700 pb-6">
+            <div class="px-6 pb-6 space-y-3 bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 animate-fadeIn">
 
               ${itemsHtml}
 

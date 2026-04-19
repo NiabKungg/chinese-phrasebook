@@ -1,13 +1,10 @@
+<!DOCTYPE html>
 <html lang="th" class="h-full">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>ทริปนี้ต้องมีภาษาจีนติดตัว</title>
-
     <script src="https://cdn.tailwindcss.com/3.4.17"></script>
     <script>
         tailwind.config = {
@@ -15,14 +12,9 @@
         }
     </script>
     <script src="/_sdk/element_sdk.js"></script>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&amp;family=Noto+Sans+SC:wght@300;400;500;700&amp;display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <style>
         * {
@@ -32,3462 +24,301 @@
         .chinese-text {
             font-family: 'Noto Sans SC', 'Noto Sans Thai', sans-serif;
         }
-    </style>
 
-    <style>
-        body {
-            box-sizing: border-box;
-        }
-    </style>
-
-    <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
-
-    <style>
-        *,
-        ::before,
-        ::after {
-            --tw-border-spacing-x: 0;
-            --tw-border-spacing-y: 0;
-            --tw-translate-x: 0;
-            --tw-translate-y: 0;
-            --tw-rotate: 0;
-            --tw-skew-x: 0;
-            --tw-skew-y: 0;
-            --tw-scale-x: 1;
-            --tw-scale-y: 1;
-            --tw-pan-x: ;
-            --tw-pan-y: ;
-            --tw-pinch-zoom: ;
-            --tw-scroll-snap-strictness: proximity;
-            --tw-gradient-from-position: ;
-            --tw-gradient-via-position: ;
-            --tw-gradient-to-position: ;
-            --tw-ordinal: ;
-            --tw-slashed-zero: ;
-            --tw-numeric-figure: ;
-            --tw-numeric-spacing: ;
-            --tw-numeric-fraction: ;
-            --tw-ring-inset: ;
-            --tw-ring-offset-width: 0px;
-            --tw-ring-offset-color: #fff;
-            --tw-ring-color: rgb(59 130 246 / 0.5);
-            --tw-ring-offset-shadow: 0 0 #0000;
-            --tw-ring-shadow: 0 0 #0000;
-            --tw-shadow: 0 0 #0000;
-            --tw-shadow-colored: 0 0 #0000;
-            --tw-blur: ;
-            --tw-brightness: ;
-            --tw-contrast: ;
-            --tw-grayscale: ;
-            --tw-hue-rotate: ;
-            --tw-invert: ;
-            --tw-saturate: ;
-            --tw-sepia: ;
-            --tw-drop-shadow: ;
-            --tw-backdrop-blur: ;
-            --tw-backdrop-brightness: ;
-            --tw-backdrop-contrast: ;
-            --tw-backdrop-grayscale: ;
-            --tw-backdrop-hue-rotate: ;
-            --tw-backdrop-invert: ;
-            --tw-backdrop-opacity: ;
-            --tw-backdrop-saturate: ;
-            --tw-backdrop-sepia: ;
-            --tw-contain-size: ;
-            --tw-contain-layout: ;
-            --tw-contain-paint: ;
-            --tw-contain-style:
-        }
-
-        ::backdrop {
-            --tw-border-spacing-x: 0;
-            --tw-border-spacing-y: 0;
-            --tw-translate-x: 0;
-            --tw-translate-y: 0;
-            --tw-rotate: 0;
-            --tw-skew-x: 0;
-            --tw-skew-y: 0;
-            --tw-scale-x: 1;
-            --tw-scale-y: 1;
-            --tw-pan-x: ;
-            --tw-pan-y: ;
-            --tw-pinch-zoom: ;
-            --tw-scroll-snap-strictness: proximity;
-            --tw-gradient-from-position: ;
-            --tw-gradient-via-position: ;
-            --tw-gradient-to-position: ;
-            --tw-ordinal: ;
-            --tw-slashed-zero: ;
-            --tw-numeric-figure: ;
-            --tw-numeric-spacing: ;
-            --tw-numeric-fraction: ;
-            --tw-ring-inset: ;
-            --tw-ring-offset-width: 0px;
-            --tw-ring-offset-color: #fff;
-            --tw-ring-color: rgb(59 130 246 / 0.5);
-            --tw-ring-offset-shadow: 0 0 #0000;
-            --tw-ring-shadow: 0 0 #0000;
-            --tw-shadow: 0 0 #0000;
-            --tw-shadow-colored: 0 0 #0000;
-            --tw-blur: ;
-            --tw-brightness: ;
-            --tw-contrast: ;
-            --tw-grayscale: ;
-            --tw-hue-rotate: ;
-            --tw-invert: ;
-            --tw-saturate: ;
-            --tw-sepia: ;
-            --tw-drop-shadow: ;
-            --tw-backdrop-blur: ;
-            --tw-backdrop-brightness: ;
-            --tw-backdrop-contrast: ;
-            --tw-backdrop-grayscale: ;
-            --tw-backdrop-hue-rotate: ;
-            --tw-backdrop-invert: ;
-            --tw-backdrop-opacity: ;
-            --tw-backdrop-saturate: ;
-            --tw-backdrop-sepia: ;
-            --tw-contain-size: ;
-            --tw-contain-layout: ;
-            --tw-contain-paint: ;
-            --tw-contain-style:
-        }
-
-        /* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */
-        *,
-        ::after,
-        ::before {
-            box-sizing: border-box;
-            border-width: 0;
-            border-style: solid;
-            border-color: #e5e7eb
-        }
-
-        ::after,
-        ::before {
-            --tw-content: ''
-        }
-
-        :host,
-        html {
-            line-height: 1.5;
-            -webkit-text-size-adjust: 100%;
-            -moz-tab-size: 4;
-            tab-size: 4;
-            font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-            font-feature-settings: normal;
-            font-variation-settings: normal;
-            -webkit-tap-highlight-color: transparent
-        }
-
-        body {
-            margin: 0;
-            line-height: inherit
-        }
-
-        hr {
-            height: 0;
-            color: inherit;
-            border-top-width: 1px
-        }
-
-        abbr:where([title]) {
-            -webkit-text-decoration: underline dotted;
-            text-decoration: underline dotted
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-size: inherit;
-            font-weight: inherit
-        }
-
-        a {
-            color: inherit;
-            text-decoration: inherit
-        }
-
-        b,
-        strong {
-            font-weight: bolder
-        }
-
-        code,
-        kbd,
-        pre,
-        samp {
-            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-            font-feature-settings: normal;
-            font-variation-settings: normal;
-            font-size: 1em
-        }
-
-        small {
-            font-size: 80%
-        }
-
-        sub,
-        sup {
-            font-size: 75%;
-            line-height: 0;
-            position: relative;
-            vertical-align: baseline
-        }
-
-        sub {
-            bottom: -.25em
-        }
-
-        sup {
-            top: -.5em
-        }
-
-        table {
-            text-indent: 0;
-            border-color: inherit;
-            border-collapse: collapse
-        }
-
-        button,
-        input,
-        optgroup,
-        select,
-        textarea {
-            font-family: inherit;
-            font-feature-settings: inherit;
-            font-variation-settings: inherit;
-            font-size: 100%;
-            font-weight: inherit;
-            line-height: inherit;
-            letter-spacing: inherit;
-            color: inherit;
-            margin: 0;
-            padding: 0
-        }
-
-        button,
-        select {
-            text-transform: none
-        }
-
-        button,
-        input:where([type=button]),
-        input:where([type=reset]),
-        input:where([type=submit]) {
-            -webkit-appearance: button;
-            background-color: transparent;
-            background-image: none
-        }
-
-        :-moz-focusring {
-            outline: auto
-        }
-
-        :-moz-ui-invalid {
-            box-shadow: none
-        }
-
-        progress {
-            vertical-align: baseline
-        }
-
-        ::-webkit-inner-spin-button,
-        ::-webkit-outer-spin-button {
-            height: auto
-        }
-
-        [type=search] {
-            -webkit-appearance: textfield;
-            outline-offset: -2px
-        }
-
-        ::-webkit-search-decoration {
-            -webkit-appearance: none
-        }
-
-        ::-webkit-file-upload-button {
-            -webkit-appearance: button;
-            font: inherit
-        }
-
-        summary {
-            display: list-item
-        }
-
-        blockquote,
-        dd,
-        dl,
-        figure,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        hr,
-        p,
-        pre {
-            margin: 0
-        }
-
-        fieldset {
-            margin: 0;
-            padding: 0
-        }
-
-        legend {
-            padding: 0
-        }
-
-        menu,
-        ol,
-        ul {
-            list-style: none;
-            margin: 0;
-            padding: 0
-        }
-
-        dialog {
-            padding: 0
-        }
-
-        textarea {
-            resize: vertical
-        }
-
-        input::placeholder,
-        textarea::placeholder {
-            opacity: 1;
-            color: #9ca3af
-        }
-
-        [role=button],
-        button {
-            cursor: pointer
-        }
-
-        :disabled {
-            cursor: default
-        }
-
-        audio,
-        canvas,
-        embed,
-        iframe,
-        img,
-        object,
-        svg,
-        video {
-            display: block;
-            vertical-align: middle
-        }
-
-        img,
-        video {
-            max-width: 100%;
-            height: auto
-        }
-
-        [hidden]:where(:not([hidden=until-found])) {
-            display: none
-        }
-
-        .mx-auto {
-            margin-left: auto;
-            margin-right: auto
-        }
-
-        .mb-2 {
-            margin-bottom: 0.5rem
-        }
-
-        .mb-3 {
-            margin-bottom: 0.75rem
-        }
-
-        .mb-8 {
-            margin-bottom: 2rem
-        }
-
-        .mt-2 {
-            margin-top: 0.5rem
-        }
-
-        .mt-4 {
-            margin-top: 1rem
-        }
-
-        .ml-4 {
-            margin-left: 1rem
-        }
-
-        .mt-1 {
-            margin-top: 0.25rem
-        }
-
-        .flex {
-            display: flex
-        }
-
-        .inline-flex {
-            display: inline-flex
-        }
-
-        .grid {
-            display: grid
-        }
-
-        .h-6 {
-            height: 1.5rem
-        }
-
-        .h-full {
-            height: 100%
-        }
-
-        .h-10 {
-            height: 2.5rem
-        }
-
-        .w-6 {
-            width: 1.5rem
-        }
-
-        .w-full {
-            width: 100%
-        }
-
-        .w-10 {
-            width: 2.5rem
-        }
-
-        .min-w-0 {
-            min-width: 0px
-        }
-
-        .max-w-3xl {
-            max-width: 48rem
-        }
-
-        .max-w-5xl {
-            max-width: 64rem
-        }
-
-        .flex-1 {
-            flex: 1 1 0%
-        }
-
-        .flex-shrink-0 {
-            flex-shrink: 0
-        }
-
-        .rotate-180 {
-            --tw-rotate: 180deg;
-            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
-        }
-
-        .grid-cols-1 {
-            grid-template-columns: repeat(1, minmax(0, 1fr))
-        }
-
-        .items-start {
-            align-items: flex-start
-        }
-
-        .items-center {
-            align-items: center
-        }
-
-        .justify-center {
-            justify-content: center
-        }
-
-        .justify-between {
-            justify-content: space-between
-        }
-
-        .gap-3 {
-            gap: 0.75rem
-        }
-
-        .gap-8 {
-            gap: 2rem
-        }
-
-        .gap-2 {
-            gap: 0.5rem
-        }
-
-        .gap-4 {
-            gap: 1rem
-        }
-
-        .space-y-4> :not([hidden])~ :not([hidden]) {
-            --tw-space-y-reverse: 0;
-            margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
-            margin-bottom: calc(1rem * var(--tw-space-y-reverse))
-        }
-
-        .space-y-3> :not([hidden])~ :not([hidden]) {
-            --tw-space-y-reverse: 0;
-            margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
-            margin-bottom: calc(0.75rem * var(--tw-space-y-reverse))
-        }
-
-        .overflow-auto {
-            overflow: auto
-        }
-
-        .overflow-hidden {
-            overflow: hidden
-        }
-
-        .break-words {
-            overflow-wrap: break-word
-        }
-
-        .rounded-full {
-            border-radius: 9999px
-        }
-
-        .rounded-xl {
-            border-radius: 0.75rem
-        }
-
-        .rounded-2xl {
-            border-radius: 1rem
-        }
-
-        .border {
-            border-width: 1px
-        }
-
-        .border-l-4 {
-            border-left-width: 4px
-        }
-
-        .border-r {
-            border-right-width: 1px
-        }
-
-        .border-t {
-            border-top-width: 1px
-        }
-
-        .border-t-4 {
-            border-top-width: 4px
-        }
-
-        .border-gray-700 {
-            --tw-border-opacity: 1;
-            border-color: rgb(55 65 81 / var(--tw-border-opacity, 1))
-        }
-
-        .border-red-600 {
-            --tw-border-opacity: 1;
-            border-color: rgb(220 38 38 / var(--tw-border-opacity, 1))
-        }
-
-        .border-gray-300 {
-            --tw-border-opacity: 1;
-            border-color: rgb(209 213 219 / var(--tw-border-opacity, 1))
-        }
-
-        .border-gray-200 {
-            --tw-border-opacity: 1;
-            border-color: rgb(229 231 235 / var(--tw-border-opacity, 1))
-        }
-
-        .bg-gray-900 {
-            --tw-bg-opacity: 1;
-            background-color: rgb(17 24 39 / var(--tw-bg-opacity, 1))
-        }
-
-        .bg-red-50 {
-            --tw-bg-opacity: 1;
-            background-color: rgb(254 242 242 / var(--tw-bg-opacity, 1))
-        }
-
-        .bg-red-600 {
-            --tw-bg-opacity: 1;
-            background-color: rgb(220 38 38 / var(--tw-bg-opacity, 1))
-        }
-
-        .bg-white {
-            --tw-bg-opacity: 1;
-            background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1))
-        }
-
-        .bg-gray-50 {
-            --tw-bg-opacity: 1;
-            background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1))
-        }
-
-        .bg-gradient-to-br {
-            background-image: linear-gradient(to bottom right, var(--tw-gradient-stops))
-        }
-
-        .bg-gradient-to-r {
-            background-image: linear-gradient(to right, var(--tw-gradient-stops))
-        }
-
-        .from-red-700 {
-            --tw-gradient-from: #b91c1c var(--tw-gradient-from-position);
-            --tw-gradient-to: rgb(185 28 28 / 0) var(--tw-gradient-to-position);
-            --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
-        }
-
-        .from-slate-50 {
-            --tw-gradient-from: #f8fafc var(--tw-gradient-from-position);
-            --tw-gradient-to: rgb(248 250 252 / 0) var(--tw-gradient-to-position);
-            --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
-        }
-
-        .via-gray-50 {
-            --tw-gradient-to: rgb(249 250 251 / 0) var(--tw-gradient-to-position);
-            --tw-gradient-stops: var(--tw-gradient-from), #f9fafb var(--tw-gradient-via-position), var(--tw-gradient-to)
-        }
-
-        .via-red-600 {
-            --tw-gradient-to: rgb(220 38 38 / 0) var(--tw-gradient-to-position);
-            --tw-gradient-stops: var(--tw-gradient-from), #dc2626 var(--tw-gradient-via-position), var(--tw-gradient-to)
-        }
-
-        .to-red-700 {
-            --tw-gradient-to: #b91c1c var(--tw-gradient-to-position)
-        }
-
-        .to-slate-100 {
-            --tw-gradient-to: #f1f5f9 var(--tw-gradient-to-position)
-        }
-
-        .p-4 {
-            padding: 1rem
-        }
-
-        .p-5 {
-            padding: 1.25rem
-        }
-
-        .px-4 {
-            padding-left: 1rem;
-            padding-right: 1rem
-        }
-
-        .py-10 {
-            padding-top: 2.5rem;
-            padding-bottom: 2.5rem
-        }
-
-        .py-4 {
-            padding-top: 1rem;
-            padding-bottom: 1rem
-        }
-
-        .py-8 {
-            padding-top: 2rem;
-            padding-bottom: 2rem
-        }
-
-        .px-6 {
-            padding-left: 1.5rem;
-            padding-right: 1.5rem
-        }
-
-        .py-5 {
-            padding-top: 1.25rem;
-            padding-bottom: 1.25rem
-        }
-
-        .pb-8 {
-            padding-bottom: 2rem
-        }
-
-        .pl-6 {
-            padding-left: 1.5rem
-        }
-
-        .pr-6 {
-            padding-right: 1.5rem
-        }
-
-        .pt-6 {
-            padding-top: 1.5rem
-        }
-
-        .pb-6 {
-            padding-bottom: 1.5rem
-        }
-
-        .pt-4 {
-            padding-top: 1rem
-        }
-
-        .text-left {
-            text-align: left
-        }
-
-        .text-center {
-            text-align: center
-        }
-
-        .text-3xl {
-            font-size: 1.875rem;
-            line-height: 2.25rem
-        }
-
-        .text-lg {
-            font-size: 1.125rem;
-            line-height: 1.75rem
-        }
-
-        .text-sm {
-            font-size: 0.875rem;
-            line-height: 1.25rem
-        }
-
-        .text-xs {
-            font-size: 0.75rem;
-            line-height: 1rem
-        }
-
-        .text-xl {
-            font-size: 1.25rem;
-            line-height: 1.75rem
-        }
-
-        .font-bold {
-            font-weight: 700
-        }
-
-        .font-semibold {
-            font-weight: 600
-        }
-
-        .font-medium {
-            font-weight: 500
-        }
-
-        .leading-relaxed {
-            line-height: 1.625
-        }
-
-        .tracking-wide {
-            letter-spacing: 0.025em
-        }
-
-        .text-gray-100 {
-            --tw-text-opacity: 1;
-            color: rgb(243 244 246 / var(--tw-text-opacity, 1))
-        }
-
-        .text-gray-300 {
-            --tw-text-opacity: 1;
-            color: rgb(209 213 219 / var(--tw-text-opacity, 1))
-        }
-
-        .text-gray-400 {
-            --tw-text-opacity: 1;
-            color: rgb(156 163 175 / var(--tw-text-opacity, 1))
-        }
-
-        .text-gray-500 {
-            --tw-text-opacity: 1;
-            color: rgb(107 114 128 / var(--tw-text-opacity, 1))
-        }
-
-        .text-gray-700 {
-            --tw-text-opacity: 1;
-            color: rgb(55 65 81 / var(--tw-text-opacity, 1))
-        }
-
-        .text-red-500 {
-            --tw-text-opacity: 1;
-            color: rgb(239 68 68 / var(--tw-text-opacity, 1))
-        }
-
-        .text-white {
-            --tw-text-opacity: 1;
-            color: rgb(255 255 255 / var(--tw-text-opacity, 1))
-        }
-
-        .text-gray-600 {
-            --tw-text-opacity: 1;
-            color: rgb(75 85 99 / var(--tw-text-opacity, 1))
-        }
-
-        .text-gray-800 {
-            --tw-text-opacity: 1;
-            color: rgb(31 41 55 / var(--tw-text-opacity, 1))
-        }
-
-        .text-gray-900 {
-            --tw-text-opacity: 1;
-            color: rgb(17 24 39 / var(--tw-text-opacity, 1))
-        }
-
-        .text-red-600 {
-            --tw-text-opacity: 1;
-            color: rgb(220 38 38 / var(--tw-text-opacity, 1))
-        }
-
-        .opacity-95 {
-            opacity: 0.95
-        }
-
-        .shadow-sm {
-            --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-            --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
-            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
-        }
-
-        .shadow-xl {
-            --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-            --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
-            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
-        }
-
-        .shadow-md {
-            --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-            --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
-            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
-        }
-
-        .transition-colors {
-            transition-property: color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;
-            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-            transition-duration: 150ms
-        }
-
-        .transition-transform {
-            transition-property: transform;
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-            transition-duration: 150ms
-        }
-
-        .transition-all {
-            transition-property: all;
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-            transition-duration: 150ms
-        }
-
-        .duration-300 {
-            transition-duration: 300ms
-        }
-
-        .hover\:border-red-400:hover {
-            --tw-border-opacity: 1;
-            border-color: rgb(248 113 113 / var(--tw-border-opacity, 1))
-        }
-
-        .hover\:border-red-300:hover {
-            --tw-border-opacity: 1;
-            border-color: rgb(252 165 165 / var(--tw-border-opacity, 1))
-        }
-
-        .hover\:bg-red-50\/30:hover {
-            background-color: rgb(254 242 242 / 0.3)
-        }
-
-        .hover\:bg-red-700:hover {
-            --tw-bg-opacity: 1;
-            background-color: rgb(185 28 28 / var(--tw-bg-opacity, 1))
-        }
-
-        .hover\:shadow-lg:hover {
-            --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-            --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
-            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
-        }
-
-        .hover\:shadow-md:hover {
-            --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-            --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
-            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
-        }
-
-        .active\:bg-red-100\/20:active {
-            background-color: rgb(254 226 226 / 0.2)
-        }
-
-        @media (min-width: 768px) {
-            .md\:grid-cols-2 {
-                grid-template-columns: repeat(2, minmax(0, 1fr))
-            }
-
-            .md\:text-4xl {
-                font-size: 2.25rem;
-                line-height: 2.5rem
-            }
-        }
-    </style>
-    <style>
         @keyframes fadeIn {
-
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .animate-fadeIn {
-
             animation: fadeIn 0.3s ease-out;
+        }
 
+        .pl-13 {
+            padding-left: 3.25rem;
         }
     </style>
 </head>
 
-<body class="h-full bg-gradient-to-br from-slate-50 via-gray-50 to-slate-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300 text-gray-900 dark:text-gray-100">
-
-    <div id="app" class="h-full w-full overflow-auto dark:bg-gray-900/50">
-
+<body class="h-full bg-slate-50 dark:bg-gray-900 transition-colors duration-300 text-gray-900 dark:text-gray-100">
+    <div id="app" class="h-full w-full overflow-auto">
         <!-- Header -->
+        <header class="bg-gradient-to-r from-red-700 via-red-600 to-red-700 text-white pt-12 pb-8 px-4 shadow-xl relative">
+            <!-- Theme Toggle Button -->
+            <div class="absolute top-6 right-4">
+                <button onclick="toggleTheme()" class="w-16 h-8 rounded-full bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/30 flex items-center p-1 transition-all duration-300 focus:outline-none" title="เปลี่ยนธีม">
+                    <div id="theme-thumb" class="w-6 h-6 rounded-full bg-white shadow-md transform transition-transform duration-300 flex items-center justify-center">
+                        <svg id="theme-sun" class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 3.22a1 1 0 011.415 0l.708.708a1 1 0 01-1.414 1.414l-.708-.708a1 1 0 010-1.414zM16 10a1 1 0 011 1h1a1 1 0 110-2h-1a1 1 0 01-1 1zm-3.22 4.22a1 1 0 010 1.415l-.708.708a1 1 0 11-1.414-1.414l.708-.708a1 1 0 011.415 0zM10 16a1 1 0 01-1 1v1a1 1 0 112 0v-1a1 1 0 01-1-1zm-4.22-3.22a1 1 0 01-1.415 0l-.708-.708a1 1 0 011.414-1.414l.708.708a1 1 0 010 1.415zM4 10a1 1 0 01-1-1H2a1 1 0 110 2h1a1 1 0 011-1zM7.28 5.636a1 1 0 010-1.415l-.708-.708a1 1 0 011.414-1.414l.708.708a1 1 0 01-1.415 0zM10 5a5 5 0 100 10 5 5 0 000-10z" clip-rule="evenodd"></path></svg>
+                        <svg id="theme-moon" class="w-4 h-4 text-gray-800 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                    </div>
+                </button>
+            </div>
 
-        <header class="bg-gradient-to-r from-red-700 via-red-600 to-red-700 text-white py-8 px-4 shadow-xl relative">
-            <button onclick="toggleTheme()" class="absolute top-4 right-4 w-16 h-8 rounded-full bg-gray-200 shadow-inner flex items-center p-1 transition-colors duration-300 focus:outline-none" title="เปลี่ยนธีม">
-                <div id="theme-thumb" class="w-6 h-6 rounded-full bg-white shadow-md transform transition-transform duration-300 flex items-center justify-center">
-                    <svg id="theme-sun" class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 3.22a1 1 0 011.415 0l.708.708a1 1 0 01-1.414 1.414l-.708-.708a1 1 0 010-1.414zM16 10a1 1 0 011 1h1a1 1 0 110-2h-1a1 1 0 01-1 1zm-3.22 4.22a1 1 0 010 1.415l-.708.708a1 1 0 11-1.414-1.414l.708-.708a1 1 0 011.415 0zM10 16a1 1 0 01-1 1v1a1 1 0 112 0v-1a1 1 0 01-1-1zm-4.22-3.22a1 1 0 01-1.415 0l-.708-.708a1 1 0 011.414-1.414l.708.708a1 1 0 010 1.415zM4 10a1 1 0 01-1-1H2a1 1 0 110 2h1a1 1 0 011-1zM7.28 5.636a1 1 0 010-1.415l-.708-.708a1 1 0 011.414-1.414l.708.708a1 1 0 01-1.415 0zM10 5a5 5 0 100 10 5 5 0 000-10z" clip-rule="evenodd"></path>
-                    </svg>
-                    <svg id="theme-moon" class="w-4 h-4 text-white hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-                    </svg>
-                </div>
-            </button>
             <div class="max-w-3xl mx-auto text-center">
-
-                <h1 id="main-title" class="text-3xl md:text-4xl font-bold mb-2 tracking-wide">ทริปนี้ต้องมีภาษาจีนติดตัว
-                </h1>
-
-                <p id="subtitle" class="text-lg opacity-95">สำหรับนักท่องเที่ยวไทยในประเทศจีน</p>
-
+                <h1 id="main-title" class="text-3xl md:text-4xl font-bold mb-2 tracking-wide">ทริปนี้ต้องมีภาษาจีนติดตัว</h1>
+                <p id="subtitle" class="text-lg opacity-95">รวมประโยคที่จำเป็นต้องใช้ สำหรับนักท่องเที่ยวไทย</p>
                 <div class="mt-4 flex justify-center gap-3 text-3xl">
-
                     <span>🇨🇳</span> <span>💬</span> <span>🇹🇭</span>
-
                 </div>
-
             </div>
+        </header>
 
-        </header><!-- Instructions -->
-
+        <!-- Instructions -->
         <div class="max-w-3xl mx-auto px-4 py-4">
-
             <div class="bg-red-50 dark:bg-gray-800 rounded-xl p-4 shadow-sm border-l-4 border-red-600 transition-colors">
-
-                <p class="text-gray-700 dark:text-gray-300 text-sm text-center">🔊 กดปุ่ม <span
-                        class="inline-flex items-center justify-center w-6 h-6 bg-red-600 text-white rounded-full text-xs font-bold">▶</span>
-                    เพื่อฟังเสียงภาษาจีน</p>
-
+                <p class="text-gray-700 dark:text-gray-300 text-sm text-center">🔊 กดปุ่ม <span class="inline-flex items-center justify-center w-6 h-6 bg-red-600 text-white rounded-full text-xs font-bold">▶</span> เพื่อฟังเสียงภาษาจีน</p>
             </div>
+        </div>
 
-        </div><!-- Categories Container -->
-
+        <!-- Categories Container -->
         <main class="max-w-3xl mx-auto px-4 pb-8 space-y-4" id="categories-container">
-
-            <section
-                class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-300 hover:border-red-400 transition-colors">
-
-                <button onclick="toggleCategory('basic')"
-                    class="w-full px-6 py-5 flex items-center justify-between hover:bg-red-50/30 transition-colors active:bg-red-100/20">
-
-                    <div class="flex items-center gap-4 flex-1">
-
-                        <span class="text-3xl flex-shrink-0">💬</span>
-
-                        <div class="text-left flex-1">
-
-                            <h2 class="text-xl font-bold text-gray-800">บทสนทนาพื้นฐาน</h2>
-
-                            <p class="text-sm text-gray-600 font-medium">16 ประโยค</p>
-
-                        </div>
-
-                    </div>
-
-                    <div class="flex items-center gap-2 flex-shrink-0 ml-4">
-
-                        <span class="text-gray-400 transition-transform duration-300 text-xl font-bold rotate-180">
-
-                            ▼
-
-                        </span>
-
-                    </div>
-
-                </button>
-
-
-
-
-
-                <div class="px-6 pb-6 space-y-3 bg-gray-50 border-t border-gray-200 animate-fadeIn">
-
-
-
-                    <div
-                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
-
-                        <div class="flex items-start justify-between gap-4">
-
-                            <div class="flex-1 min-w-0">
-
-                                <div class="flex items-start gap-3 mb-3">
-
-                                    <button onclick="speak('我来自泰国，是泰国人。')"
-                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
-                                        title="ฟังเสียงจีน">
-
-                                        <span class="text-sm font-bold">▶</span>
-
-                                    </button>
-
-                                    <div class="flex-1 min-w-0">
-
-                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">我来自泰国，是泰国人。
-                                        </p>
-
-                                        <p class="text-red-600 font-medium text-sm mt-1">Wǒ láizì Tàiguó, shì Tàiguó
-                                            rén.</p>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
-
-                            <p class="text-gray-800 font-semibold leading-relaxed">ฉันมาจากประเทศไทย เป็นคนไทย</p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div
-                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
-
-                        <div class="flex items-start justify-between gap-4">
-
-                            <div class="flex-1 min-w-0">
-
-                                <div class="flex items-start gap-3 mb-3">
-
-                                    <button onclick="speak('你是从哪里来的？')"
-                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
-                                        title="ฟังเสียงจีน">
-
-                                        <span class="text-sm font-bold">▶</span>
-
-                                    </button>
-
-                                    <div class="flex-1 min-w-0">
-
-                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">你是从哪里来的？</p>
-
-                                        <p class="text-red-600 font-medium text-sm mt-1">Nǐ shì cóng nǎlǐ lái de?</p>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
-
-                            <p class="text-gray-800 font-semibold leading-relaxed">คุณมาจากที่ไหนเหรอ?</p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div
-                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
-
-                        <div class="flex items-start justify-between gap-4">
-
-                            <div class="flex-1 min-w-0">
-
-                                <div class="flex items-start gap-3 mb-3">
-
-                                    <button onclick="speak('请问，我可以问你一个问题吗？')"
-                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
-                                        title="ฟังเสียงจีน">
-
-                                        <span class="text-sm font-bold">▶</span>
-
-                                    </button>
-
-                                    <div class="flex-1 min-w-0">
-
-                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
-                                            请问，我可以问你一个问题吗？</p>
-
-                                        <p class="text-red-600 font-medium text-sm mt-1">Qǐngwèn, wǒ kěyǐ wèn nǐ yí gè
-                                            wèntí ma?</p>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
-
-                            <p class="text-gray-800 font-semibold leading-relaxed">ขอถามหน่อย
-                                ฉันขอถามอะไรคุณสักอย่างได้ไหม</p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div
-                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
-
-                        <div class="flex items-start justify-between gap-4">
-
-                            <div class="flex-1 min-w-0">
-
-                                <div class="flex items-start gap-3 mb-3">
-
-                                    <button onclick="speak('不好意思，我听不懂，可以再解释一下吗？')"
-                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
-                                        title="ฟังเสียงจีน">
-
-                                        <span class="text-sm font-bold">▶</span>
-
-                                    </button>
-
-                                    <div class="flex-1 min-w-0">
-
-                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
-                                            不好意思，我听不懂，可以再解释一下吗？</p>
-
-                                        <p class="text-red-600 font-medium text-sm mt-1">Bù hǎoyìsi, wǒ tīng bù dǒng,
-                                            kěyǐ zài jiěshì yíxià ma?</p>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
-
-                            <p class="text-gray-800 font-semibold leading-relaxed">ขอโทษนะ ฉันฟังไม่เข้าใจ
-                                ช่วยอธิบายอีกครั้งได้ไหม</p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div
-                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
-
-                        <div class="flex items-start justify-between gap-4">
-
-                            <div class="flex-1 min-w-0">
-
-                                <div class="flex items-start gap-3 mb-3">
-
-                                    <button onclick="speak('请问，你会说英文吗？我中文不太好。')"
-                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
-                                        title="ฟังเสียงจีน">
-
-                                        <span class="text-sm font-bold">▶</span>
-
-                                    </button>
-
-                                    <div class="flex-1 min-w-0">
-
-                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
-                                            请问，你会说英文吗？我中文不太好。</p>
-
-                                        <p class="text-red-600 font-medium text-sm mt-1">Qǐngwèn, nǐ huì shuō Yīngwén
-                                            ma? Wǒ Zhōngwén bú tài hǎo.</p>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
-
-                            <p class="text-gray-800 font-semibold leading-relaxed">ขอถามหน่อย คุณพูดภาษาอังกฤษได้ไหม
-                                ภาษาจีนฉันยังไม่ค่อยดี</p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div
-                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
-
-                        <div class="flex items-start justify-between gap-4">
-
-                            <div class="flex-1 min-w-0">
-
-                                <div class="flex items-start gap-3 mb-3">
-
-                                    <button onclick="speak('不好意思，可以帮我一下吗？')"
-                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
-                                        title="ฟังเสียงจีน">
-
-                                        <span class="text-sm font-bold">▶</span>
-
-                                    </button>
-
-                                    <div class="flex-1 min-w-0">
-
-                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
-                                            不好意思，可以帮我一下吗？</p>
-
-                                        <p class="text-red-600 font-medium text-sm mt-1">Bù hǎoyìsi, kěyǐ bāng wǒ yíxià
-                                            ma?</p>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
-
-                            <p class="text-gray-800 font-semibold leading-relaxed">ขอโทษนะ ช่วยฉันหน่อยได้ไหม</p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div
-                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
-
-                        <div class="flex items-start justify-between gap-4">
-
-                            <div class="flex-1 min-w-0">
-
-                                <div class="flex items-start gap-3 mb-3">
-
-                                    <button onclick="speak('如果方便的话，可以给我你的联系方式吗？')"
-                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
-                                        title="ฟังเสียงจีน">
-
-                                        <span class="text-sm font-bold">▶</span>
-
-                                    </button>
-
-                                    <div class="flex-1 min-w-0">
-
-                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
-                                            如果方便的话，可以给我你的联系方式吗？</p>
-
-                                        <p class="text-red-600 font-medium text-sm mt-1">Rúguǒ fāngbiàn de huà, kěyǐ gěi
-                                            wǒ nǐ de liánxì fāngshì ma?</p>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
-
-                            <p class="text-gray-800 font-semibold leading-relaxed">ถ้าสะดวก ขอช่องทางติดต่อของคุณได้ไหม
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div
-                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
-
-                        <div class="flex items-start justify-between gap-4">
-
-                            <div class="flex-1 min-w-0">
-
-                                <div class="flex items-start gap-3 mb-3">
-
-                                    <button onclick="speak('不好意思，请说慢一点，我听得不太清楚。')"
-                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
-                                        title="ฟังเสียงจีน">
-
-                                        <span class="text-sm font-bold">▶</span>
-
-                                    </button>
-
-                                    <div class="flex-1 min-w-0">
-
-                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
-                                            不好意思，请说慢一点，我听得不太清楚。</p>
-
-                                        <p class="text-red-600 font-medium text-sm mt-1">Bù hǎoyìsi, qǐng shuō màn
-                                            yìdiǎn, wǒ tīng de bú tài qīngchu.</p>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
-
-                            <p class="text-gray-800 font-semibold leading-relaxed">ขอโทษนะ ช่วยพูดช้าหน่อย
-                                ฉันฟังไม่ค่อยชัด</p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div
-                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
-
-                        <div class="flex items-start justify-between gap-4">
-
-                            <div class="flex-1 min-w-0">
-
-                                <div class="flex items-start gap-3 mb-3">
-
-                                    <button onclick="speak('可以给我看一下具体的内容吗？')"
-                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
-                                        title="ฟังเสียงจีน">
-
-                                        <span class="text-sm font-bold">▶</span>
-
-                                    </button>
-
-                                    <div class="flex-1 min-w-0">
-
-                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
-                                            可以给我看一下具体的内容吗？</p>
-
-                                        <p class="text-red-600 font-medium text-sm mt-1">Kěyǐ gěi wǒ kàn yíxià jùtǐ de
-                                            nèiróng ma?</p>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
-
-                            <p class="text-gray-800 font-semibold leading-relaxed">ขอดูรายละเอียดหน่อยได้ไหม</p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div
-                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
-
-                        <div class="flex items-start justify-between gap-4">
-
-                            <div class="flex-1 min-w-0">
-
-                                <div class="flex items-start gap-3 mb-3">
-
-                                    <button onclick="speak('如果可以的话，能写下来给我吗？')"
-                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
-                                        title="ฟังเสียงจีน">
-
-                                        <span class="text-sm font-bold">▶</span>
-
-                                    </button>
-
-                                    <div class="flex-1 min-w-0">
-
-                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
-                                            如果可以的话，能写下来给我吗？</p>
-
-                                        <p class="text-red-600 font-medium text-sm mt-1">Rúguǒ kěyǐ de huà, néng xiě
-                                            xiàlái gěi wǒ ma?</p>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
-
-                            <p class="text-gray-800 font-semibold leading-relaxed">หากไม่รบกวนช่วยเขียนให้ฉันหน่อยได้ไหม
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div
-                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
-
-                        <div class="flex items-start justify-between gap-4">
-
-                            <div class="flex-1 min-w-0">
-
-                                <div class="flex items-start gap-3 mb-3">
-
-                                    <button onclick="speak('请问，这里可以拍照留念吗？')"
-                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
-                                        title="ฟังเสียงจีน">
-
-                                        <span class="text-sm font-bold">▶</span>
-
-                                    </button>
-
-                                    <div class="flex-1 min-w-0">
-
-                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
-                                            请问，这里可以拍照留念吗？</p>
-
-                                        <p class="text-red-600 font-medium text-sm mt-1">Qǐngwèn, zhèlǐ kěyǐ pāizhào
-                                            liúniàn ma?</p>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
-
-                            <p class="text-gray-800 font-semibold leading-relaxed">ขอถามหน่อย
-                                ที่นี่สามารถถ่ายรูปเป็นที่ระลึกได้ไหม</p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div
-                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
-
-                        <div class="flex items-start justify-between gap-4">
-
-                            <div class="flex-1 min-w-0">
-
-                                <div class="flex items-start gap-3 mb-3">
-
-                                    <button onclick="speak('可以帮我看看这个东西应该怎么用吗？')"
-                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
-                                        title="ฟังเสียงจีน">
-
-                                        <span class="text-sm font-bold">▶</span>
-
-                                    </button>
-
-                                    <div class="flex-1 min-w-0">
-
-                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
-                                            可以帮我看看这个东西应该怎么用吗？</p>
-
-                                        <p class="text-red-600 font-medium text-sm mt-1">Kěyǐ bāng wǒ kàn kan zhège
-                                            dōngxi yīnggāi zěnme yòng ma?</p>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
-
-                            <p class="text-gray-800 font-semibold leading-relaxed">ช่วยดูให้หน่อยว่าสิ่งนี้ควรใช้อย่างไร
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div
-                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
-
-                        <div class="flex items-start justify-between gap-4">
-
-                            <div class="flex-1 min-w-0">
-
-                                <div class="flex items-start gap-3 mb-3">
-
-                                    <button onclick="speak('请问，这附近有什么值得去的地方推荐吗？')"
-                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
-                                        title="ฟังเสียงจีน">
-
-                                        <span class="text-sm font-bold">▶</span>
-
-                                    </button>
-
-                                    <div class="flex-1 min-w-0">
-
-                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
-                                            请问，这附近有什么值得去的地方推荐吗？</p>
-
-                                        <p class="text-red-600 font-medium text-sm mt-1">Qǐngwèn, zhè fùjìn yǒu shénme
-                                            zhídé qù de dìfang tuījiàn ma?</p>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
-
-                            <p class="text-gray-800 font-semibold leading-relaxed">แถวนี้มีสถานที่น่าเที่ยวที่แนะนำไหม
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div
-                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
-
-                        <div class="flex items-start justify-between gap-4">
-
-                            <div class="flex-1 min-w-0">
-
-                                <div class="flex items-start gap-3 mb-3">
-
-                                    <button onclick="speak('如果以后有问题，我可以再联系你吗？')"
-                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
-                                        title="ฟังเสียงจีน">
-
-                                        <span class="text-sm font-bold">▶</span>
-
-                                    </button>
-
-                                    <div class="flex-1 min-w-0">
-
-                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
-                                            如果以后有问题，我可以再联系你吗？</p>
-
-                                        <p class="text-red-600 font-medium text-sm mt-1">Rúguǒ yǐhòu yǒu wèntí, wǒ kěyǐ
-                                            zài liánxì nǐ ma?</p>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
-
-                            <p class="text-gray-800 font-semibold leading-relaxed">ถ้าในภายหลังมีปัญหา
-                                ฉันสามารถติดต่อคุณอีกได้ไหม</p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div
-                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
-
-                        <div class="flex items-start justify-between gap-4">
-
-                            <div class="flex-1 min-w-0">
-
-                                <div class="flex items-start gap-3 mb-3">
-
-                                    <button onclick="speak('如果现在不方便的话，也没有关系。')"
-                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
-                                        title="ฟังเสียงจีน">
-
-                                        <span class="text-sm font-bold">▶</span>
-
-                                    </button>
-
-                                    <div class="flex-1 min-w-0">
-
-                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
-                                            如果现在不方便的话，也没有关系。</p>
-
-                                        <p class="text-red-600 font-medium text-sm mt-1">Rúguǒ xiànzài bù fāngbiàn de
-                                            huà, yě méiyǒu guānxi.</p>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
-
-                            <p class="text-gray-800 font-semibold leading-relaxed">ถ้าตอนนี้ไม่สะดวก ก็ไม่เป็นไร</p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div
-                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
-
-                        <div class="flex items-start justify-between gap-4">
-
-                            <div class="flex-1 min-w-0">
-
-                                <div class="flex items-start gap-3 mb-3">
-
-                                    <button onclick="speak('如果方便的话，可以麻烦你带我过去一下吗？')"
-                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
-                                        title="ฟังเสียงจีน">
-
-                                        <span class="text-sm font-bold">▶</span>
-
-                                    </button>
-
-                                    <div class="flex-1 min-w-0">
-
-                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
-                                            如果方便的话，可以麻烦你带我过去一下吗？</p>
-
-                                        <p class="text-red-600 font-medium text-sm mt-1">Rúguǒ fāngbiàn de huà, kěyǐ
-                                            máfan nǐ dài wǒ guòqù yíxià ma?</p>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
-
-                            <p class="text-gray-800 font-semibold leading-relaxed">ถ้าสะดวก รบกวนพาฉันไปหน่อยได้ไหม</p>
-
-                        </div>
-
-                    </div>
-
-
-
-                </div>
-
-
-
-            </section>
-
-
-
-            <section
-                class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-300 hover:border-red-400 transition-colors">
-
-                <button onclick="toggleCategory('shopping')"
-                    class="w-full px-6 py-5 flex items-center justify-between hover:bg-red-50/30 transition-colors active:bg-red-100/20">
-
-                    <div class="flex items-center gap-4 flex-1">
-
-                        <span class="text-3xl flex-shrink-0">🛍️</span>
-
-                        <div class="text-left flex-1">
-
-                            <h2 class="text-xl font-bold text-gray-800">การช้อปปิ้ง</h2>
-
-                            <p class="text-sm text-gray-600 font-medium">20 ประโยค</p>
-
-                        </div>
-
-                    </div>
-
-                    <div class="flex items-center gap-2 flex-shrink-0 ml-4">
-
-                        <span class="text-gray-400 transition-transform duration-300 text-xl font-bold rotate-180">
-
-                            ▼
-
-                        </span>
-
-                    </div>
-
-                </button>
-
-
-
-
-
-                <div class="px-6 pb-6 space-y-3 bg-gray-50 border-t border-gray-200 animate-fadeIn">
-
-
-
-                    <div
-                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
-
-                        <div class="flex items-start justify-between gap-4">
-
-                            <div class="flex-1 min-w-0">
-
-                                <div class="flex items-start gap-3 mb-3">
-
-                                    <button onclick="speak('这个可以便宜一点吗？')"
-                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
-                                        title="ฟังเสียงจีน">
-
-                                        <span class="text-sm font-bold">▶</span>
-
-                                    </button>
-
-                                    <div class="flex-1 min-w-0">
-
-                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">这个可以便宜一点吗？
-                                        </p>
-
-                                        <p class="text-red-600 font-medium text-sm mt-1">Zhège kěyǐ piányí yìdiǎn ma?
-                                        </p>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
-
-                            <p class="text-gray-800 font-semibold leading-relaxed">อันนี้ลดราคาได้อีกหน่อยไหม</p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div
-                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
-
-                        <div class="flex items-start justify-between gap-4">
-
-                            <div class="flex-1 min-w-0">
-
-                                <div class="flex items-start gap-3 mb-3">
-
-                                    <button onclick="speak('便宜一点，我马上付款。')"
-                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
-                                        title="ฟังเสียงจีน">
-
-                                        <span class="text-sm font-bold">▶</span>
-
-                                    </button>
-
-                                    <div class="flex-1 min-w-0">
-
-                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">便宜一点，我马上付款。
-                                        </p>
-
-                                        <p class="text-red-600 font-medium text-sm mt-1">Piányi yìdiǎn, wǒ mǎshàng
-                                            fùkuǎn.</p>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
-
-                            <p class="text-gray-800 font-semibold leading-relaxed">ลดอีกหน่อย เดี๋ยวจ่ายเลย</p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div
-                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
-
-                        <div class="flex items-start justify-between gap-4">
-
-                            <div class="flex-1 min-w-0">
-
-                                <div class="flex items-start gap-3 mb-3">
-
-                                    <button onclick="speak('请问，这个款式有小号吗？')"
-                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
-                                        title="ฟังเสียงจีน">
-
-                                        <span class="text-sm font-bold">▶</span>
-
-                                    </button>
-
-                                    <div class="flex-1 min-w-0">
-
-                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">请问，这个款式有小号吗？
-                                        </p>
-
-                                        <p class="text-red-600 font-medium text-sm mt-1">Qǐngwèn, zhège kuǎnshì yǒu xiǎo
-                                            hào ma?</p>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
-
-                            <p class="text-gray-800 font-semibold leading-relaxed">ขอสอบถาม รุ่นนี้มีไซซ์เล็กไหม</p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div
-                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
-
-                        <div class="flex items-start justify-between gap-4">
-
-                            <div class="flex-1 min-w-0">
-
-                                <div class="flex items-start gap-3 mb-3">
-
-                                    <button onclick="speak('这个有大号的吗？我想试一下。')"
-                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
-                                        title="ฟังเสียงจีน">
-
-                                        <span class="text-sm font-bold">▶</span>
-
-                                    </button>
-
-                                    <div class="flex-1 min-w-0">
-
-                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
-                                            这个有大号的吗？我想试一下。</p>
-
-                                        <p class="text-red-600 font-medium text-sm mt-1">Zhège yǒu dà hào de ma? Wǒ
-                                            xiǎng shì yíxià.</p>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
-
-                            <p class="text-gray-800 font-semibold leading-relaxed">รุ่นนี้มีไซซ์ใหญ่ไหม ฉันอยากลองดู</p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div
-                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
-
-                        <div class="flex items-start justify-between gap-4">
-
-                            <div class="flex-1 min-w-0">
-
-                                <div class="flex items-start gap-3 mb-3">
-
-                                    <button onclick="speak('请问，我可以试穿一下这件衣服吗？')"
-                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
-                                        title="ฟังเสียงจีน">
-
-                                        <span class="text-sm font-bold">▶</span>
-
-                                    </button>
-
-                                    <div class="flex-1 min-w-0">
-
-                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
-                                            请问，我可以试穿一下这件衣服吗？</p>
-
-                                        <p class="text-red-600 font-medium text-sm mt-1">Qǐngwèn, wǒ kěyǐ shìchuān yíxià
-                                            zhè jiàn yīfu ma?</p>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
-
-                            <p class="text-gray-800 font-semibold leading-relaxed">ขออนุญาตลองเสื้อตัวนี้ได้ไหม</p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div
-                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
-
-                        <div class="flex items-start justify-between gap-4">
-
-                            <div class="flex-1 min-w-0">
-
-                                <div class="flex items-start gap-3 mb-3">
-
-                                    <button onclick="speak('这个款式还有别的颜色可以选择吗？')"
-                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
-                                        title="ฟังเสียงจีน">
-
-                                        <span class="text-sm font-bold">▶</span>
-
-                                    </button>
-
-                                    <div class="flex-1 min-w-0">
-
-                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
-                                            这个款式还有别的颜色可以选择吗？</p>
-
-                                        <p class="text-red-600 font-medium text-sm mt-1">Zhège kuǎnshì hái yǒu bié de
-                                            yánsè kěyǐ xuǎnzé ma?</p>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
-
-                            <p class="text-gray-800 font-semibold leading-relaxed">รุ่นนี้มีสีอื่นให้เลือกไหม</p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div
-                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
-
-                        <div class="flex items-start justify-between gap-4">
-
-                            <div class="flex-1 min-w-0">
-
-                                <div class="flex items-start gap-3 mb-3">
-
-                                    <button onclick="speak('我要这个尺寸的，请帮我拿一件新的。')"
-                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
-                                        title="ฟังเสียงจีน">
-
-                                        <span class="text-sm font-bold">▶</span>
-
-                                    </button>
-
-                                    <div class="flex-1 min-w-0">
-
-                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
-                                            我要这个尺寸的，请帮我拿一件新的。</p>
-
-                                        <p class="text-red-600 font-medium text-sm mt-1">Wǒ yào zhège chǐcùn de, qǐng
-                                            bāng wǒ ná yí jiàn xīn de.</p>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
-
-                            <p class="text-gray-800 font-semibold leading-relaxed">ฉันเอาไซส์นี้ ช่วยหยิบตัวใหม่ให้หน่อย
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div
-                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
-
-                        <div class="flex items-start justify-between gap-4">
-
-                            <div class="flex-1 min-w-0">
-
-                                <div class="flex items-start gap-3 mb-3">
-
-                                    <button onclick="speak('如果不合适，可以退货或者换货吗？')"
-                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
-                                        title="ฟังเสียงจีน">
-
-                                        <span class="text-sm font-bold">▶</span>
-
-                                    </button>
-
-                                    <div class="flex-1 min-w-0">
-
-                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
-                                            如果不合适，可以退货或者换货吗？</p>
-
-                                        <p class="text-red-600 font-medium text-sm mt-1">Rúguǒ bú héshì, kěyǐ tuìhuò
-                                            huòzhě huàn huò ma?</p>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
-
-                            <p class="text-gray-800 font-semibold leading-relaxed">ถ้าใส่ไม่พอดี
-                                สามารถคืนหรือเปลี่ยนได้ไหม</p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div
-                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
-
-                        <div class="flex items-start justify-between gap-4">
-
-                            <div class="flex-1 min-w-0">
-
-                                <div class="flex items-start gap-3 mb-3">
-
-                                    <button onclick="speak('如果我多买几件，可以再给我优惠吗？')"
-                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
-                                        title="ฟังเสียงจีน">
-
-                                        <span class="text-sm font-bold">▶</span>
-
-                                    </button>
-
-                                    <div class="flex-1 min-w-0">
-
-                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
-                                            如果我多买几件，可以再给我优惠吗？</p>
-
-                                        <p class="text-red-600 font-medium text-sm mt-1">Rúguǒ wǒ duō mǎi jǐ jiàn, kěyǐ
-                                            zài gěi wǒ yōuhuì ma?</p>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
-
-                            <p class="text-gray-800 font-semibold leading-relaxed">ถ้าฉันซื้อหลายชิ้น
-                                สามารถลดเพิ่มได้ไหม</p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div
-                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
-
-                        <div class="flex items-start justify-between gap-4">
-
-                            <div class="flex-1 min-w-0">
-
-                                <div class="flex items-start gap-3 mb-3">
-
-                                    <button onclick="speak('这个产品的质量有保证吗？')"
-                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
-                                        title="ฟังเสียงจีน">
-
-                                        <span class="text-sm font-bold">▶</span>
-
-                                    </button>
-
-                                    <div class="flex-1 min-w-0">
-
-                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">这个产品的质量有保证吗？
-                                        </p>
-
-                                        <p class="text-red-600 font-medium text-sm mt-1">Zhège chǎnpǐn de zhìliàng yǒu
-                                            bǎozhèng ma?</p>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
-
-                            <p class="text-gray-800 font-semibold leading-relaxed">สินค้านี้มีการรับประกันคุณภาพไหม</p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div
-                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
-
-                        <div class="flex items-start justify-between gap-4">
-
-                            <div class="flex-1 min-w-0">
-
-                                <div class="flex items-start gap-3 mb-3">
-
-                                    <button onclick="speak('请问，可以帮我开一张收据吗？')"
-                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
-                                        title="ฟังเสียงจีน">
-
-                                        <span class="text-sm font-bold">▶</span>
-
-                                    </button>
-
-                                    <div class="flex-1 min-w-0">
-
-                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
-                                            请问，可以帮我开一张收据吗？</p>
-
-                                        <p class="text-red-600 font-medium text-sm mt-1">Qǐngwèn, kěyǐ bāng wǒ kāi yì
-                                            zhāng shōujù ma?</p>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
-
-                            <p class="text-gray-800 font-semibold leading-relaxed">ช่วยออกใบเสร็จให้หน่อยได้ไหม</p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div
-                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
-
-                        <div class="flex items-start justify-between gap-4">
-
-                            <div class="flex-1 min-w-0">
-
-                                <div class="flex items-start gap-3 mb-3">
-
-                                    <button onclick="speak('可以帮我量一下尺寸，看看合不合适吗？')"
-                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
-                                        title="ฟังเสียงจีน">
-
-                                        <span class="text-sm font-bold">▶</span>
-
-                                    </button>
-
-                                    <div class="flex-1 min-w-0">
-
-                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
-                                            可以帮我量一下尺寸，看看合不合适吗？</p>
-
-                                        <p class="text-red-600 font-medium text-sm mt-1">Kěyǐ bāng wǒ liáng yíxià
-                                            chǐcùn, kàn kan hé bú héshì ma?</p>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
-
-                            <p class="text-gray-800 font-semibold leading-relaxed">ช่วยวัดไซส์ให้หน่อย ดูว่าเหมาะไหม</p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div
-                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
-
-                        <div class="flex items-start justify-between gap-4">
-
-                            <div class="flex-1 min-w-0">
-
-                                <div class="flex items-start gap-3 mb-3">
-
-                                    <button onclick="speak('这个有现货吗？还是需要预订？')"
-                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
-                                        title="ฟังเสียงจีน">
-
-                                        <span class="text-sm font-bold">▶</span>
-
-                                    </button>
-
-                                    <div class="flex-1 min-w-0">
-
-                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
-                                            这个有现货吗？还是需要预订？</p>
-
-                                        <p class="text-red-600 font-medium text-sm mt-1">Zhège yǒu xiànhuò ma? Háishi
-                                            xūyào yùdìng?</p>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
-
-                            <p class="text-gray-800 font-semibold leading-relaxed">อันนี้มีของพร้อมขายไหม
-                                หรือว่าต้องสั่งจอง</p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div
-                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
-
-                        <div class="flex items-start justify-between gap-4">
-
-                            <div class="flex-1 min-w-0">
-
-                                <div class="flex items-start gap-3 mb-3">
-
-                                    <button onclick="speak('这是最后的价格吗？还能再便宜一点吗？')"
-                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
-                                        title="ฟังเสียงจีน">
-
-                                        <span class="text-sm font-bold">▶</span>
-
-                                    </button>
-
-                                    <div class="flex-1 min-w-0">
-
-                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
-                                            这是最后的价格吗？还能再便宜一点吗？</p>
-
-                                        <p class="text-red-600 font-medium text-sm mt-1">Zhè shì zuìhòu de jiàgé ma? Hái
-                                            néng zài piányí yìdiǎn ma?</p>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
-
-                            <p class="text-gray-800 font-semibold leading-relaxed">นี่ราคาสุดท้ายแล้วใช่ไหม
-                                ยังลดได้อีกไหม</p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div
-                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
-
-                        <div class="flex items-start justify-between gap-4">
-
-                            <div class="flex-1 min-w-0">
-
-                                <div class="flex items-start gap-3 mb-3">
-
-                                    <button onclick="speak('如果产品有问题，可以免费换货吗？')"
-                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
-                                        title="ฟังเสียงจีน">
-
-                                        <span class="text-sm font-bold">▶</span>
-
-                                    </button>
-
-                                    <div class="flex-1 min-w-0">
-
-                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
-                                            如果产品有问题，可以免费换货吗？</p>
-
-                                        <p class="text-red-600 font-medium text-sm mt-1">Rúguǒ chǎnpǐn yǒu wèntí, kěyǐ
-                                            miǎnfèi huàn huò ma?</p>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
-
-                            <p class="text-gray-800 font-semibold leading-relaxed">ถ้าสินค้ามีปัญหา
-                                สามารถเปลี่ยนฟรีได้ไหม</p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div
-                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
-
-                        <div class="flex items-start justify-between gap-4">
-
-                            <div class="flex-1 min-w-0">
-
-                                <div class="flex items-start gap-3 mb-3">
-
-                                    <button onclick="speak('可以帮我算一下总共多少钱吗？')"
-                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
-                                        title="ฟังเสียงจีน">
-
-                                        <span class="text-sm font-bold">▶</span>
-
-                                    </button>
-
-                                    <div class="flex-1 min-w-0">
-
-                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
-                                            可以帮我算一下总共多少钱吗？</p>
-
-                                        <p class="text-red-600 font-medium text-sm mt-1">Kěyǐ bāng wǒ suàn yíxià
-                                            zǒnggòng duōshǎo qián ma?</p>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
-
-                            <p class="text-gray-800 font-semibold leading-relaxed">ช่วยคำนวณราคารวมให้หน่อยได้ไหม</p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div
-                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
-
-                        <div class="flex items-start justify-between gap-4">
-
-                            <div class="flex-1 min-w-0">
-
-                                <div class="flex items-start gap-3 mb-3">
-
-                                    <button onclick="speak('这个有保修期吗？')"
-                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
-                                        title="ฟังเสียงจีน">
-
-                                        <span class="text-sm font-bold">▶</span>
-
-                                    </button>
-
-                                    <div class="flex-1 min-w-0">
-
-                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">这个有保修期吗？</p>
-
-                                        <p class="text-red-600 font-medium text-sm mt-1">Zhège yǒu bǎoxiū qī ma?</p>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
-
-                            <p class="text-gray-800 font-semibold leading-relaxed">อันนี้มีระยะเวลารับประกันไหม</p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div
-                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
-
-                        <div class="flex items-start justify-between gap-4">
-
-                            <div class="flex-1 min-w-0">
-
-                                <div class="flex items-start gap-3 mb-3">
-
-                                    <button onclick="speak('我想先看看其他款式，再做决定。')"
-                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
-                                        title="ฟังเสียงจีน">
-
-                                        <span class="text-sm font-bold">▶</span>
-
-                                    </button>
-
-                                    <div class="flex-1 min-w-0">
-
-                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
-                                            我想先看看其他款式，再做决定。</p>
-
-                                        <p class="text-red-600 font-medium text-sm mt-1">Wǒ xiǎng xiān kàn kan qítā
-                                            kuǎnshì, zài zuò juédìng.</p>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
-
-                            <p class="text-gray-800 font-semibold leading-relaxed">ฉันอยากดูรุ่นอื่นก่อน
-                                แล้วค่อยตัดสินใจ</p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div
-                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
-
-                        <div class="flex items-start justify-between gap-4">
-
-                            <div class="flex-1 min-w-0">
-
-                                <div class="flex items-start gap-3 mb-3">
-
-                                    <button onclick="speak('我再考虑一下，谢谢。')"
-                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
-                                        title="ฟังเสียงจีน">
-
-                                        <span class="text-sm font-bold">▶</span>
-
-                                    </button>
-
-                                    <div class="flex-1 min-w-0">
-
-                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">我再考虑一下，谢谢。
-                                        </p>
-
-                                        <p class="text-red-600 font-medium text-sm mt-1">Wǒ zài kǎolǜ yíxià, xièxie.</p>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
-
-                            <p class="text-gray-800 font-semibold leading-relaxed">ฉันขอคิดดูก่อน ขอบคุณนะ</p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div
-                        class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md hover:border-red-300 transition-all">
-
-                        <div class="flex items-start justify-between gap-4">
-
-                            <div class="flex-1 min-w-0">
-
-                                <div class="flex items-start gap-3 mb-3">
-
-                                    <button onclick="speak('可以帮我包一下吗？我要送人。')"
-                                        class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
-                                        title="ฟังเสียงจีน">
-
-                                        <span class="text-sm font-bold">▶</span>
-
-                                    </button>
-
-                                    <div class="flex-1 min-w-0">
-
-                                        <p class="chinese-text text-xl font-bold text-gray-900 break-words">
-                                            可以帮我包一下吗？我要送人。</p>
-
-                                        <p class="text-red-600 font-medium text-sm mt-1">Kěyǐ bāng wǒ bāo yíxià ma? Wǒ
-                                            yào sòng rén.</p>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="mt-4 pt-4 border-t border-gray-200 pl-13">
-
-                            <p class="text-gray-800 font-semibold leading-relaxed">ช่วยห่อให้หน่อยได้ไหม
-                                ฉันจะเอาไปเป็นของขวัญ</p>
-
-                        </div>
-
-                    </div>
-
-
-
-                </div>
-
-
-
-            </section>
-
-
-
-            <section
-                class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-300 hover:border-red-400 transition-colors">
-
-                <button onclick="toggleCategory('restaurant')"
-                    class="w-full px-6 py-5 flex items-center justify-between hover:bg-red-50/30 transition-colors active:bg-red-100/20">
-
-                    <div class="flex items-center gap-4 flex-1">
-
-                        <span class="text-3xl flex-shrink-0">🍜</span>
-
-                        <div class="text-left flex-1">
-
-                            <h2 class="text-xl font-bold text-gray-800">ร้านอาหาร</h2>
-
-                            <p class="text-sm text-gray-600 font-medium">20 ประโยค</p>
-
-                        </div>
-
-                    </div>
-
-                    <div class="flex items-center gap-2 flex-shrink-0 ml-4">
-
-                        <span class="text-gray-400 transition-transform duration-300 text-xl font-bold ">
-
-                            ▼
-
-                        </span>
-
-                    </div>
-
-                </button>
-
-
-
-
-
-            </section>
-
-
-
-            <section
-                class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-300 hover:border-red-400 transition-colors">
-
-                <button onclick="toggleCategory('hotel')"
-                    class="w-full px-6 py-5 flex items-center justify-between hover:bg-red-50/30 transition-colors active:bg-red-100/20">
-
-                    <div class="flex items-center gap-4 flex-1">
-
-                        <span class="text-3xl flex-shrink-0">🏨</span>
-
-                        <div class="text-left flex-1">
-
-                            <h2 class="text-xl font-bold text-gray-800">โรงแรม</h2>
-
-                            <p class="text-sm text-gray-600 font-medium">20 ประโยค</p>
-
-                        </div>
-
-                    </div>
-
-                    <div class="flex items-center gap-2 flex-shrink-0 ml-4">
-
-                        <span class="text-gray-400 transition-transform duration-300 text-xl font-bold ">
-
-                            ▼
-
-                        </span>
-
-                    </div>
-
-                </button>
-
-
-
-
-
-            </section>
-
-
-
-            <section
-                class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-300 hover:border-red-400 transition-colors">
-
-                <button onclick="toggleCategory('transport')"
-                    class="w-full px-6 py-5 flex items-center justify-between hover:bg-red-50/30 transition-colors active:bg-red-100/20">
-
-                    <div class="flex items-center gap-4 flex-1">
-
-                        <span class="text-3xl flex-shrink-0">🚄</span>
-
-                        <div class="text-left flex-1">
-
-                            <h2 class="text-xl font-bold text-gray-800">การเดินทาง</h2>
-
-                            <p class="text-sm text-gray-600 font-medium">15 ประโยค</p>
-
-                        </div>
-
-                    </div>
-
-                    <div class="flex items-center gap-2 flex-shrink-0 ml-4">
-
-                        <span class="text-gray-400 transition-transform duration-300 text-xl font-bold ">
-
-                            ▼
-
-                        </span>
-
-                    </div>
-
-                </button>
-
-
-
-
-
-            </section>
-
-
-
-            <section
-                class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-300 hover:border-red-400 transition-colors">
-
-                <button onclick="toggleCategory('airport')"
-                    class="w-full px-6 py-5 flex items-center justify-between hover:bg-red-50/30 transition-colors active:bg-red-100/20">
-
-                    <div class="flex items-center gap-4 flex-1">
-
-                        <span class="text-3xl flex-shrink-0">✈️</span>
-
-                        <div class="text-left flex-1">
-
-                            <h2 class="text-xl font-bold text-gray-800">สนามบิน</h2>
-
-                            <p class="text-sm text-gray-600 font-medium">20 ประโยค</p>
-
-                        </div>
-
-                    </div>
-
-                    <div class="flex items-center gap-2 flex-shrink-0 ml-4">
-
-                        <span class="text-gray-400 transition-transform duration-300 text-xl font-bold ">
-
-                            ▼
-
-                        </span>
-
-                    </div>
-
-                </button>
-
-
-
-
-
-            </section>
-
-
-
-            <section
-                class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-300 hover:border-red-400 transition-colors">
-
-                <button onclick="toggleCategory('Health')"
-                    class="w-full px-6 py-5 flex items-center justify-between hover:bg-red-50/30 transition-colors active:bg-red-100/20">
-
-                    <div class="flex items-center gap-4 flex-1">
-
-                        <span class="text-3xl flex-shrink-0">🏥</span>
-
-                        <div class="text-left flex-1">
-
-                            <h2 class="text-xl font-bold text-gray-800">สุขภาพ</h2>
-
-                            <p class="text-sm text-gray-600 font-medium">20 ประโยค</p>
-
-                        </div>
-
-                    </div>
-
-                    <div class="flex items-center gap-2 flex-shrink-0 ml-4">
-
-                        <span class="text-gray-400 transition-transform duration-300 text-xl font-bold ">
-
-                            ▼
-
-                        </span>
-
-                    </div>
-
-                </button>
-
-
-
-
-
-            </section>
-
-
-
-            <section
-                class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-300 hover:border-red-400 transition-colors">
-
-                <button onclick="toggleCategory('others')"
-                    class="w-full px-6 py-5 flex items-center justify-between hover:bg-red-50/30 transition-colors active:bg-red-100/20">
-
-                    <div class="flex items-center gap-4 flex-1">
-
-                        <span class="text-3xl flex-shrink-0">📌</span>
-
-                        <div class="text-left flex-1">
-
-                            <h2 class="text-xl font-bold text-gray-800">สถานการณ์อื่นๆ</h2>
-
-                            <p class="text-sm text-gray-600 font-medium">15 ประโยค</p>
-
-                        </div>
-
-                    </div>
-
-                    <div class="flex items-center gap-2 flex-shrink-0 ml-4">
-
-                        <span class="text-gray-400 transition-transform duration-300 text-xl font-bold ">
-
-                            ▼
-
-                        </span>
-
-                    </div>
-
-                </button>
-
-
-
-
-
-            </section>
-
-        </main><!-- Footer -->
-
-        <footer class="bg-gray-900 text-gray-100 py-10 px-4 border-t-4 border-red-600">
-
-            <div class="max-w-5xl mx-auto">
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8"><!-- Left Column -->
-
-                    <div class="border-r border-gray-700 pr-6">
-
-                        <h3 class="text-red-500 font-bold text-lg mb-3">เที่ยวจีนกับเรา</h3>
-
-                        <p class="font-semibold text-white mb-2">บริษัท รีจอยนิ่ง จำกัด</p>
-
-                    </div><!-- Right Column -->
-
-                    <div class="pl-6">
-
-                        <h3 class="text-red-500 font-bold text-lg mb-3">ติดต่อเรา</h3>
-
-                        <p class="text-sm"><span class="text-gray-400">📞</span> <span
-                                class="text-gray-300">083-786-5287, 096-257-6446 (จันทร์-พฤหัสบดี)</span></p>
-
-                        <p class="text-sm mt-2"><span class="text-gray-400">✉️</span> <span
-                                class="text-gray-300">contact@rejoiningtravel.com</span></p>
-
-                    </div>
-
-                </div><!-- Divider -->
-
-                <div class="border-t border-gray-700 pt-6">
-
-                    <p class="text-center text-gray-500 text-xs">
-                        ขอให้การเดินทางของคุณเต็มไปด้วยความสุขและช่วงเวลาที่น่าประทับใจ</p>
-
-                </div>
-
-            </div>
-
-        </footer>
-
+            <!-- Dynamic Content Injected Here -->
+        </main>
     </div>
 
     <script>
+        const sentenceData = {
+    "basic": {
+        "id": "basic",
+        "title": "บทสนทนาพื้นฐาน",
+        "icon": "💬",
+        "sentences": [
+            { "chinese": "我来自泰国，是泰国人。", "pinyin": "Wǒ láizì Tàiguó, shì Tàiguó rén.", "thai": "ฉันมาจากประเทศไทย เป็นคนไทย" },
+            { "chinese": "你是从哪里来的？", "pinyin": "Nǐ shì cóng nǎ lǐ lái de?", "thai": "คุณมาจากที่ไหนเหรอ" },
+            { "chinese": "请问，我可以问你一个问题吗？", "pinyin": "Qǐngwèn, wǒ kěyǐ wèn nǐ yí gè wèntí ma?", "thai": "ขอถามหน่อย ฉันขอถามอะไรคุณสักอย่างได้ไหม" },
+            { "chinese": "不好意思，我听不懂，可以再解释一下吗？", "pinyin": "Bù hǎoyìsi, wǒ tīng bù dǒng, kěyǐ zài jiěshì yíxià ma?", "thai": "ขอโทษนะ ฉันฟังไม่เข้าใจ ช่วยอธิบายอีกครั้งได้ไหม" },
+            { "chinese": "请问，你会说英文吗？我中文不太好。", "pinyin": "Qǐngwèn, nǐ huì shuō Yīngwén ma? Wǒ Zhōngwén bú tài hǎo.", "thai": "คุณพูดภาษาอังกฤษได้ไหม ภาษาจีนฉันยังไม่ค่อยดี" },
+            { "chinese": "不好意思，可以帮我一下吗？", "pinyin": "Bù hǎoyìsi, kěyǐ bāng wǒ yíxià ma?", "thai": "ขอโทษนะ ช่วยฉันหน่อยได้ไหม" },
+            { "chinese": "如果方便的话，可以给我你的联系方式吗？", "pinyin": "Rúguǒ fāngbiàn de huà, kěyǐ gěi wǒ nǐ de liánxì fāngshì ma?", "thai": "ถ้าสะดวก ขอช่องทางติดต่อของคุณได้ไหม" },
+            { "chinese": "不好意思，请说慢一点，我听得不太清楚。", "pinyin": "Bù hǎoyìsi, qǐng shuō màn yìdiǎn, wǒ tīng de bú tài qīngchu.", "thai": "ขอโทษนะ ช่วยพูดช้าหน่อย ฉันฟังไม่ค่อยชัด" },
+            { "chinese": "可以给我看一下具体的内容吗？", "pinyin": "Kěyǐ gěi wǒ kàn yíxià jùtǐ de nèiróng ma?", "thai": "ขอดูรายละเอียดหน่อยได้ไหม" },
+            { "chinese": "如果可以的话，能写下来给我吗？", "pinyin": "Rúguǒ kěyǐ de huà, néng xiě xiàlái gěi wǒ ma?", "thai": "ช่วยเขียนให้ฉันหน่อยได้ไหม" },
+            { "chinese": "请问，这里可以拍照留念吗？", "pinyin": "Qǐngwèn, zhèlǐ kěyǐ pāizhào liúniàn ma?", "thai": "ที่นี่ถ่ายรูปได้ไหม" }
+        ]
+    },
+    "shopping": {
+        "id": "shopping",
+        "title": "การช้อปปิ้ง",
+        "icon": "🛍️",
+        "sentences": [
+            { "chinese": "这个可以便宜一点吗？", "pinyin": "Zhège kěyǐ piányí yìdiǎn ma?", "thai": "อันนี้ลดราคาได้อีกหน่อยไหม" },
+            { "chinese": "可以便宜一点吗？我马上付款。", "pinyin": "Kěyǐ piányí yìdiǎn ma? Wǒ mǎshàng fùkuǎn.", "thai": "ลดได้อีกหน่อยไหม ถ้าลดฉันจ่ายเลย" },
+            { "chinese": "请问，这个款式有小号吗？", "pinyin": "Qǐngwèn, zhège kuǎnshì yǒu xiǎo hào ma?", "thai": "ขอสอบถาม รุ่นนี้มีไซส์เล็กไหม" },
+            { "chinese": "这个有大号的吗？我想试一下。", "pinyin": "Zhège yǒu dà hào de ma? Wǒ xiǎng shì yíxià.", "thai": "รุ่นนี้มีไซส์ใหญ่ไหม ฉันอยากลองดู" },
+            { "chinese": "请问，我可以试穿一下这件衣服吗？", "pinyin": "Qǐngwèn, wǒ kěyǐ shìchuān yíxià zhè jiàn yīfu ma?", "thai": "ขออนุญาตลองเสื้อตัวนี้ได้ไหม" },
+            { "chinese": "这个款式还有别的颜色可以选择吗？", "pinyin": "Zhège kuǎnshì hái yǒu bié de yánsè kěyǐ xuǎnzé ma?", "thai": "รุ่นนี้มีสีอื่นให้เลือกไหม" },
+            { "chinese": "我要这个尺寸的，可以给我拿一件新的吗？", "pinyin": "Wǒ yào zhège chǐcùn de, kěyǐ gěi wǒ ná yí jiàn xīn de ma?", "thai": "ฉันเอาไซส์นี้ ช่วยหยิบตัวใหม่ให้หน่อยได้ไหม" },
+            { "chinese": "如果不合适，可以退货或者换货吗？", "pinyin": "Rúguǒ bú héshì, kěyǐ tuìhuò huòzhě huàn huò ma?", "thai": "ถ้าใส่ไม่พอดี สามารถคืนหรือเปลี่ยนได้ไหม" },
+            { "chinese": "如果我多买几件，可以再给我优惠吗？", "pinyin": "Rúguǒ wǒ duō mǎi jǐ jiàn, kěyǐ zài gěi wǒ yōuhuì ma?", "thai": "ถ้าฉันซื้อหลายชิ้น สามารถลดเพิ่มได้ไหม" },
+            { "chinese": "这个产品的质量有保证吗？", "pinyin": "Zhège chǎnpǐn de zhìliàng yǒu bǎozhèng ma?", "thai": "สินค้านี้มีการรับประกันคุณภาพไหม" },
+            { "chinese": "可以开发票吗？", "pinyin": "Kěyǐ kāi fāpiào ma?", "thai": "สามารถออกใบกำกับภาษี / ใบเสร็จได้ไหม" },
+            { "chinese": "可以帮我看一下这个尺寸合不合适吗？", "pinyin": "Kěyǐ bāng wǒ kàn yíxià zhège chǐcùn hé bú héshì ma?", "thai": "ช่วยดูให้หน่อยได้ไหมว่าไซส์นี้เหมาะหรือเปล่า" },
+            { "chinese": "这个有现货吗？还是需要预订？", "pinyin": "Zhège yǒu xiànhuò ma? Háishi xūyào yùdìng?", "thai": "อันนี้มีของพร้อมขายไหม หรือว่าต้องสั่งจอง" },
+            { "chinese": "这是最后的价格吗？还能再便宜一点吗？", "pinyin": "Zhè shì zuìhòu de jiàgé ma? Hái néng zài piányí yìdiǎn ma?", "thai": "นี่ราคาสุดท้ายแล้วใช่ไหม ยังลดได้อีกไหม" },
+            { "chinese": "如果产品有问题，可以免费换货吗？", "pinyin": "Rúguǒ chǎnpǐn yǒu wèntí, kěyǐ miǎnfèi huàn huò ma?", "thai": "ถ้าสินค้ามีปัญหา สามารถเปลี่ยนฟรีได้ไหม" },
+            { "chinese": "可以帮我算一下总共多少钱吗？", "pinyin": "Kěyǐ bāng wǒ suàn yíxià zǒnggòng duōshǎo qián ma?", "thai": "ช่วยคำนวณราคารวมให้หน่อยได้ไหม" },
+            { "chinese": "这个有保修期嗎？", "pinyin": "Zhège yǒu bǎoxiū qī ma?", "thai": "อันนี้มีระยะเวลารับประกันไหม" },
+            { "chinese": "我想先看看其他款式，再做决定。", "pinyin": "Wǒ xiǎng xiān kàn kan qítā kuǎnshì, zài zuò juédìng.", "thai": "ฉันอยากดูรุ่นอื่นก่อน แล้วค่อยตัดสินใจ" },
+            { "chinese": "我再考虑一下，谢谢。", "pinyin": "Wǒ zài kǎolǜ yíxià, xièxie.", "thai": "ฉันขอคิดดูก่อน ขอบคุณนะ" },
+            { "chinese": "可以帮我包一下吗？我要送人。", "pinyin": "Kěyǐ bāng wǒ bāo yíxià ma? Wǒ yào sòng rén.", "thai": "ช่วยห่อให้หน่อยได้ไหม ฉันจะเอาไปเป็นของขวัญ" }
+        ]
+    },
+    "restaurant": {
+        "id": "restaurant",
+        "title": "ร้านอาหาร",
+        "icon": "🍜",
+        "sentences": [
+            { "chinese": "请问，有菜单可以给我看看吗？", "pinyin": "Qǐngwèn, yǒu càidān kěyǐ gěi wǒ kàn kan ma?", "thai": "ขอสอบถามมีเมนูให้ดูไหม" },
+            { "chinese": "我们在等朋友，到了再点菜。", "pinyin": "Wǒmen zài děng péngyou, dàole zài diǎn cài.", "thai": "พวกเรากำลังรอเพื่อนมาถึงแล้วค่อยสั่งอาหาร" },
+            { "chinese": "你好，我想点菜。", "pinyin": "Nǐ hǎo, wǒ xiǎng diǎn cài.", "thai": "สวัสดีค่ะ/ครับ ฉันต้องการสั่งอาหาร" },
+            { "chinese": "请问，这个菜是什么做的？", "pinyin": "Qǐngwèn, zhège cài shì shénme zuò de?", "thai": "ขอถามหน่อย เมนูนี้ทำจากอะไร" },
+            { "chinese": "这个菜不要辣，可以吗？", "pinyin": "Zhège cài bú yào là, kěyǐ ma?", "thai": "เมนูนี้ไม่เอาเผ็ดได้ไหม" },
+            { "chinese": "可以做成少辣吗？", "pinyin": "Kěyǐ zuò chéng shǎo là ma?", "thai": "ทำเผ็ดน้อยได้ไหม" },
+            { "chinese": "请问，有什么推荐的招牌菜吗？", "pinyin": "Qǐngwèn, yǒu shénme tuījiàn de zhāopái cài ma?", "thai": "มีเมนูแนะนำหรือเมนูเด็ดไหม" },
+            { "chinese": "服务员，麻烦结账。", "pinyin": "Fúwùyuán, máfan jiézhàng.", "thai": "พนักงานคะ/ครับ รบกวนคิดเงินด้วย" },
+            { "chinese": "这个饮料不要冰，谢谢。", "pinyin": "Zhège yǐnliào bú yào bīng, xièxie.", "thai": "เครื่องดื่มนี้ไม่เอาน้ำแข็ง ขอบคุณ" },
+            { "chinese": "这个很好吃，再来一份。", "pinyin": "Zhège hěn hǎochī, zài lái yí fèn.", "thai": "อันนี้อร่อยมาก เอาเพิ่มอีกหนึ่งที่" },
+            { "chinese": "可以快一点吗？我们有点赶时间。", "pinyin": "Kěyǐ kuài yìdiǎn ma? Wǒmen yǒudiǎn gǎn shíjiān.", "thai": "ช่วยเร็วหน่อยได้ไหม พวกเราค่อนข้างรีบ" },
+            { "chinese": "请问，这个菜多少钱一份？", "pinyin": "Qǐngwèn, zhège cài duōshǎo qián yí fèn?", "thai": "ขอถามหน่อย จานนี้ราคาเท่าไหร่" },
+            { "chinese": "请问，上菜大概需要多久？", "pinyin": "Qǐngwèn, shàng cài dàgài xūyào duō jiǔ?", "thai": "อาหารจะใช้เวลาประมาณเท่าไหร่" },
+            { "chinese": "我付现金，没有微信和支付宝。", "pinyin": "Wǒ fù xiànjīn, méiyǒu Wēixìn hé Zhīfùbǎo.", "thai": "ฉันจ่ายเป็นเงินสด ไม่มี WeChat และ Alipay" },
+            { "chinese": "我是穆斯林，请不要给我猪肉。", "pinyin": "Wǒ shì Mùsīlín, qǐng búyào gěi wǒ zhūròu.", "thai": "ฉันเป็นมุสลิม กรุณาอย่าเสิร์ฟเมนูที่มีหมู" },
+            { "chinese": "请不要放香菜。", "pinyin": "Qǐng búyào fàng xiāngcài.", "thai": "กรุณาไม่ใส่ผักชี" },
+            { "chinese": "我对虾过敏，请不要放虾。", "pinyin": "Wǒ duì xiā guòmǐn, qǐng búyào fàng xiā.", "thai": "ฉันแพ้กุ้ง กรุณาไม่ใส่กุ้ง" },
+            { "chinese": "这个菜适合几个人一起吃？", "pinyin": "Zhège cài shìhé jǐ gè rén yìqǐ chī?", "thai": "จานนี้เหมาะสำหรับกี่คน" },
+            { "chinese": "请问，可以刷国际信用卡吗？", "pinyin": "Qǐngwèn, kěyǐ shuā guójì xìnyòngkǎ ma?", "thai": "สามารถใช้บัตรเครดิตต่างประเทศได้ไหม" }
+        ]
+    },
+    "hotel": {
+        "id": "hotel",
+        "title": "โรงแรม",
+        "icon": "🏨",
+        "sentences": [
+            { "chinese": "请问，可以帮我换一个房间吗？", "pinyin": "Qǐngwèn, kěyǐ bāng wǒ huàn yí gè fángjiān ma?", "thai": "ขอสอบถามหน่อยค่ะ/ครับ สามารถช่วยเปลี่ยนห้องให้ได้ไหม" },
+            { "chinese": "不好意思，房间的空调坏了，可以找人来修一下吗？", "pinyin": "Bù hǎoyìsi, fángjiān de kōngtiáo huài le, kěyǐ zhǎo rén lái xiū yíxià ma?", "thai": "ขอโทษค่ะ/ครับ แอร์ในห้องเสีย ช่วยส่งช่างมาซ่อมหน่อยได้ไหม" },
+            { "chinese": "可以再给我一条毛巾吗？", "pinyin": "Kěyǐ zài gěi wǒ yì tiáo máojīn ma?", "thai": "ขอผ้าเช็ดตัวเพิ่มอีกผืนได้ไหม" },
+            { "chinese": "不好意思，洗手间堵了，可以帮我处理一下吗？", "pinyin": "Bù hǎoyìsi, xǐshǒujiān dǔ le, kěyǐ bāng wǒ chǔlǐ yíxià ma?", "thai": "ขอโทษค่ะ/ครับ ห้องน้ำตัน ช่วยจัดการให้หน่อยได้ไหม" },
+            { "chinese": "请问，可以帮我叫一辆出租车吗？", "pinyin": "Qǐngwèn, kěyǐ bāng wǒ jiào yí liàng chūzūchē ma?", "thai": "ช่วยเรียกรถแท็กซี่ให้หน่อยได้ไหม" },
+            { "chinese": "不好意思，我把房卡弄丢了，可以补办一张吗？", "pinyin": "Bù hǎoyìsi, wǒ bǎ fángkǎ nòng diū le, kěyǐ bǔbàn yì zhāng ma?", "thai": "ขอโทษค่ะ/ครับ ฉันทำคีย์การ์ดหาย สามารถออกใบใหม่ให้ได้ไหม" },
+            { "chinese": "不好意思，这个房间不太干净，可以重新打扫一下吗？", "pinyin": "Bù hǎoyìsi, zhège fángjiān bú tài gānjìng, kěyǐ chóngxīn dǎsǎo yíxià ma?", "thai": "ขอโทษค่ะ/ครับ ห้องนี้ไม่ค่อยสะอาด ช่วยทำความสะอาดใหม่ได้ไหม" },
+            { "chinese": "床单看起来不太干净，可以帮我更换一下吗？", "pinyin": "Chuángdān kàn qǐlái bú tài gānjìng, kěyǐ bāng wǒ gēnghuàn yíxià ma?", "thai": "ผ้าปูเตียงดูไม่ค่อยสะอาด ช่วยเปลี่ยนให้หน่อยได้ไหม" },
+            { "chinese": "房间里没有吹风机，可以送一个过来吗？", "pinyin": "Fángjiān lǐ méiyǒu chuīfēngjī, kěyǐ sòng yí gè guòlái ma?", "thai": "ในห้องไม่มีไดร์เป่าผม ช่วยนำมาให้หน่อยได้ไหม" },
+            { "chinese": "我想要一间无烟房，我对烟味比较敏感。", "pinyin": "Wǒ xiǎng yào yì jiān wúyān fáng, wǒ duì yānwèi bǐjiào mǐngǎn.", "thai": "ฉันต้องการห้องปลอดบุหรี่ เพราะค่อนข้างไวต่อกลิ่นควัน" },
+            { "chinese": "我想寄存行李，我要出去玩，晚一点再回来拿。", "pinyin": "Wǒ xiǎng jìcún xíngli, wǒ yào chūqù wán, wǎn yìdiǎn zài huílái ná.", "thai": "ฉันขอฝากกระเป๋า จะออกไปเที่ยว แล้วจะกลับมารับทีหลัง" },
+            { "chinese": "可以给我一个一次性剃须刀吗？谢谢。", "pinyin": "Kěyǐ gěi wǒ yí gè yícìxìng tìxūdāo ma? Xièxie.", "thai": "ขอมีดโกนแบบใช้ครั้งเดียวหน่อยได้ไหม ขอบคุณค่ะ/ครับ" },
+            { "chinese": "这个房间包含早餐吗？餐厅在哪里？几点开始用餐？", "pinyin": "Zhège fángjiān bāohán zǎocān ma? Cāntīng zài nǎlǐ? Jǐ diǎn kāishǐ yòngcān?", "thai": "ห้องนี้รวมอาหารเช้าไหม ห้องอาหารอยู่ที่ไหน เริ่มทานได้กี่โมง" },
+            { "chinese": "房间的洗发水和沐浴露用完了。", "pinyin": "Fángjiān de xǐfàshuǐ hé mùyùlù yòng wán le.", "thai": "แชมพูและสบู่อาบน้ำในห้องหมดแล้ว" },
+            { "chinese": "可以帮我把行李送到房间吗？", "pinyin": "Kěyǐ bāng wǒ bǎ xíngli sòng dào fángjiān ma?", "thai": "ช่วยนำกระเป๋าไปส่งที่ห้องให้หน่อยได้ไหม" },
+            { "chinese": "不好意思，房间的灯不亮，可以检查一下嗎？", "pinyin": "Bù hǎoyìsi, fángjiān de dēng bù liàng, kěyǐ jiǎnchá yíxià ma?", "thai": "ขอโทษค่ะ/ครับ ไฟในห้องไม่ติด ช่วยตรวจสอบหน่อยได้ไหม" },
+            { "chinese": "如果可以的话，我想要高一点的楼层。", "pinyin": "Rúguǒ kěyǐ de huà, wǒ xiǎng yào gāo yìdiǎn de lóucéng.", "thai": "ถ้าเป็นไปได้ ขอห้องชั้นสูงหน่อย" },
+            { "chinese": "房间今天还没有打扫，可以安排清洁吗？", "pinyin": "Fángjiān jīntiān hái méiyǒu dǎsǎo, kěyǐ ānpái qīngjié ma?", "thai": "วันนี้ห้องยังไม่ได้ทำความสะอาด ช่วยจัดแม่บ้านได้ไหม" },
+            { "chinese": "空调不太制冷，房间有点热，可以帮我看看吗？", "pinyin": "Kōngtiáo bú tài zhìlěng, fángjiān yǒudiǎn rè, kěyǐ bāng wǒ kàn kan ma?", "thai": "แอร์ไม่ค่อยเย็น ห้องค่อนข้างร้อน ช่วยตรวจสอบให้หน่อยได้ไหม" },
+            { "chinese": "我想换到一个比较安静的房间，可以帮我安排吗？", "pinyin": "Wǒ xiǎng huàn dào yí gè bǐjiào ānjìng de fángjiān, kěyǐ bāng wǒ ānpái ma?", "thai": "ฉันอยากเปลี่ยนไปห้องที่เงียบกว่านี้ ช่วยจัดการให้ได้ไหม" }
+        ]
+    },
+    "transport": {
+        "id": "transport",
+        "title": "การเดินทาง",
+        "icon": "🚄",
+        "sentences": [
+            { "chinese": "请问，这个地方怎么去？", "pinyin": "Qǐngwèn, zhège dìfang zěnme qù?", "thai": "ขอถามหน่อย ที่นี่ไปยังไง" },
+            { "chinese": "不好意思，请问洗手间在哪里？", "pinyin": "Bù hǎoyìsi, qǐngwèn xǐshǒujiān zài nǎlǐ?", "thai": "ขอโทษนะคะ/ครับ ห้องน้ำอยู่ตรงไหน" },
+            { "chinese": "从这里走路大概需要多久？", "pinyin": "Cóng zhèlǐ zǒulù dàgài xūyào duō jiǔ?", "thai": "จากตรงนี้เดินไปใช้เวลาประมาณกี่นาที" },
+            { "chinese": "谢谢你帮我指路。", "pinyin": "Xièxie nǐ bāng wǒ zhǐlù.", "thai": "ขอบคุณที่ช่วยบอกทาง" },
+            { "chinese": "不好意思，我好像迷路了，可以帮我吗？", "pinyin": "Bù hǎoyìsi, wǒ hǎoxiàng mílù le, kěyǐ bāng wǒ ma?", "thai": "ขอโทษนะคะ/ครับ เหมือนฉันจะหลงทาง ช่วยหน่อยได้ไหม" },
+            { "chinese": "可以帮我看一下地图嗎？", "pinyin": "Kěyǐ bāng wǒ kàn yíxià dìtú ma?", "thai": "ช่วยดูแผนที่ให้หน่อยได้ไหม" },
+            { "chinese": "请问，是一直直走吗？", "pinyin": "Qǐngwèn, shì yìzhí zhí zǒu ma?", "thai": "ขอถามหน่อย ต้องเดินตรงไปเรื่อย ๆ ใช่ไหม" },
+            { "chinese": "是在右边吗？", "pinyin": "Shì zài yòubiān ma?", "thai": "อยู่ทางขวาใช่ไหม" },
+            { "chinese": "是在左边吗？", "pinyin": "Shì zài zuǒbiān ma?", "thai": "อยู่ทางซ้ายใช่ไหม" },
+            { "chinese": "离这里远吗？", "pinyin": "Lí zhèlǐ yuǎn ma?", "thai": "จากที่นี่ไกลไหม" },
+            { "chinese": "请问，最近的地铁站在哪里？", "pinyin": "Qǐngwèn, zuìjìn de dìtiě zhàn zài nǎlǐ?", "thai": "สถานีรถไฟใต้ดินที่ใกล้ที่สุดอยู่ไหน" },
+            { "chinese": "如果坐地铁的话，应该怎么走？", "pinyin": "Rúguǒ zuò dìtiě de huà, yīnggāi zěnme zǒu?", "thai": "ถ้าจะนั่งรถไฟใต้ดิน ควรไปทางไหน" },
+            { "chinese": "如果方便的话，可以带我过去吗？", "pinyin": "Rúguǒ fāngbiàn de huà, kěyǐ dài wǒ guòqù ma?", "thai": "ถ้าสะดวก ช่วยพาไปหน่อยได้ไหม" },
+            { "chinese": "到了以后，请告诉我一声。", "pinyin": "Dàole yǐhòu, qǐng gàosu wǒ yì shēng.", "thai": "พอถึงแล้ว ช่วยบอกฉันด้วย" },
+            { "chinese": "请问，出口在哪里？", "pinyin": "Qǐngwèn, chūkǒu zài nǎlǐ?", "thai": "ขอถามหน่อย ทางออกอยู่ตรงไหน" }
+        ]
+    },
+    "health": {
+        "id": "health",
+        "title": "สุขภาพ",
+        "icon": "🏥",
+        "sentences": [
+            { "chinese": "这两天身体有点不舒服。", "pinyin": "Zhè liǎng tiān shēntǐ yǒudiǎn bù shūfu.", "thai": "ช่วงสองวันนี้ฉันรู้สึกไม่ค่อยสบายตัว" },
+            { "chinese": "我生病了，这几天身体不太好。", "pinyin": "Wǒ shēngbìng le, zhè jǐ tiān shēntǐ bú tài hǎo.", "thai": "ฉันป่วย หลายวันนี้ร่างกายไม่ค่อยดี" },
+            { "chinese": "我需要看医生，因为感觉不太舒服。", "pinyin": "Wǒ xūyào kàn yīshēng, yīnwèi gǎnjué bú tài shūfu.", "thai": "ฉันต้องการพบหมอ เพราะรู้สึกไม่ค่อยสบาย" },
+            { "chinese": "我感冒了，有点咳嗽和流鼻涕。", "pinyin": "Wǒ gǎnmào le, yǒudiǎn késòu hé liú bítì.", "thai": "ฉันเป็นหวัด มีอาการไอและน้ำมูกไหลเล็กน้อย" },
+            { "chinese": "我发烧了，体温有点高。", "pinyin": "Wǒ fāshāo le, tǐwēn yǒudiǎn gāo.", "thai": "ฉันมีไข้ อุณหภูมิร่างกายค่อนข้างสูง" },
+            { "chinese": "我头痛，感觉头很沉。", "pinyin": "Wǒ tóutòng, gǎnjué tóu hěn chén.", "thai": "ฉันปวดหัว รู้สึกหนักศีรษะ" },
+            { "chinese": "我肚子痛，肚子有点不舒服。", "pinyin": "Wǒ dùzi tòng, dùzi yǒudiǎn bù shūfu.", "thai": "ฉันปวดท้อง รู้สึกไม่ค่อยสบายท้อง" },
+            { "chinese": "我拉肚子，这两天常常上厕所。", "pinyin": "Wǒ lādùzi, zhè liǎng tiān chángcháng shàng cèsuǒ.", "thai": "ฉันท้องเสีย สองวันนี้เข้าห้องน้ำบ่อย" },
+            { "chinese": "有治拉肚子的药吗？我一直拉肚子。", "pinyin": "Yǒu zhì lādùzi de yào ma? Wǒ yìzhí lādùzi.", "thai": "มียาแก้ท้องเสียไหม ฉันท้องเสียตลอด" },
+            { "chinese": "我过敏，身上有点痒。", "pinyin": "Wǒ guòmǐn, shēnshang yǒudiǎn yǎng.", "thai": "ฉันแพ้ รู้สึกคันตามร่างกายเล็กน้อย" },
+            { "chinese": "有退烧药嗎？我现在发烧了。", "pinyin": "Yǒu tuìshāo yào ma? Wǒ xiànzài fāshāo le.", "thai": "มียาลดไข้ไหม ตอนนี้ฉันมีไข้" },
+            { "chinese": "有止痛药嗎？我现在很痛。", "pinyin": "Yǒu zhǐtòng yào ma? Wǒ xiànzài hěn tòng.", "thai": "มียาแก้ปวดไหม ตอนนี้ฉันปวดมาก" },
+            { "chinese": "有感冒药嗎？我有点感冒。", "pinyin": "Yǒu gǎnmào yào ma? Wǒ yǒudiǎn gǎnmào.", "thai": "มียาแก้หวัดไหม ฉันเป็นหวัดเล็กน้อย" },
+            { "chinese": "我咳嗽，还有喉咙痛。", "pinyin": "Wǒ késòu, hái yǒu hóulóng tòng.", "thai": "ฉันไอ และเจ็บคอ" },
+            { "chinese": "这个怎么吃？要怎么服用？", "pinyin": "Zhège zěnme chī? Yào zěnme fúyòng?", "thai": "ยานี้ต้องกินอย่างไร ควรรับประทานแบบไหน" },
+            { "chinese": "一天吃几次？一次吃多少？", "pinyin": "Yì tiān chī jǐ cì? Yí cì chī duōshao?", "thai": "ต้องกินวันละกี่ครั้ง และครั้งละเท่าไหร่" },
+            { "chinese": "我现在需要医生，请帮我叫救护车。", "pinyin": "Wǒ xiànzài xūyào yīshēng, qǐng bāng wǒ jiào jiùhùchē.", "thai": "ตอนนี้ฉันต้องการหมอ ช่วยเรียกรถพยาบาลให้หน่อย" },
+            { "chinese": "请问，最近的医院在哪里？", "pinyin": "Qǐngwèn, zuìjìn de yīyuàn zài nǎlǐ?", "thai": "ขอถามหน่อย โรงพยาบาลที่ใกล้ที่สุดอยู่ที่ไหน" },
+            { "chinese": "我受伤了，需要马上处理伤口。", "pinyin": "Wǒ shòushāng le, xūyào mǎshàng chǔlǐ shāngkǒu.", "thai": "ฉันบาดเจ็บ ต้องทำแผลด่วน" },
+            { "chinese": "请问，这附近有药店吗？我需要买药。", "pinyin": "Qǐngwèn, zhè fùjìn yǒu yàodiàn ma? Wǒ xūyào mǎi yào.", "thai": "ขอถามหน่อย แถวนี้มีร้านขายยาไหม ฉันต้องการซื้อยา" }
+        ]
+    },
+    "airport": {
+        "id": "airport",
+        "title": "สนามบิน",
+        "icon": "✈️",
+        "sentences": [
+            { "chinese": "我是来旅游的。", "pinyin": "Wǒ shì lái lǚyóu de.", "thai": "ฉันเดินทางมาท่องเที่ยว" },
+            { "chinese": "我会在这里待几天。", "pinyin": "Wǒ huì zài zhèlǐ dài jǐ tiān.", "thai": "ฉันจะอยู่ที่นี่แค่ไม่กี่วัน" },
+            { "chinese": "我只是来短期旅游。", "pinyin": "Wǒ zhǐ shì lái duǎnqī lǚyóu.", "thai": "ฉันมาเที่ยวระยะสั้นเท่านั้น" },
+            { "chinese": "我是免签入境。", "pinyin": "Wǒ shì miǎnqiān rùjìng.", "thai": "ฉันเข้าประเทศแบบฟรีวีซ่า" },
+            { "chinese": "我是跟旅游团一起来的。", "pinyin": "Wǒ shì gēn lǚyóutuán yìqǐ lái de.", "thai": "ฉันเดินทางมากับคณะทัวร์" },
+            { "chinese": "这是我们的团队行程表。", "pinyin": "Zhè shì wǒmen de tuánduì xíngchéng biǎo.", "thai": "นี่คือตารางการเดินทางของคณะทัวร์" },
+            { "chinese": "我们的导游在外面等我们。", "pinyin": "Wǒmen de dǎoyóu zài wàimiàn děng wǒmen.", "thai": "ไกด์ของพวกเรารออยู่ด้านนอก" },
+            { "chinese": "我会跟着团队一起行动。", "pinyin": "Wǒ huì gēnzhe tuánduì yìqǐ xíngdòng.", "thai": "ฉันจะเดินทางพร้อมกับคณะทัวร์" },
+            { "chinese": "这是团队的酒店预订单。", "pinyin": "Zhè shì tuánduì de jiǔdiàn yùdìng dān.", "thai": "นี่คือใบจองโรงแรมของคณะ" },
+            { "chinese": "这是我的酒店地址。", "pinyin": "Zhè shì wǒ de jiǔdiàn dìzhǐ.", "thai": "นี่คือที่อยู่โรงแรมของฉัน" },
+            { "chinese": "这是我的往返机票。", "pinyin": "Zhè shì wǒ de wǎngfǎn jīpiào.", "thai": "นี่คือตั๋วไป-กลับของฉัน" },
+            { "chinese": "我的回程机票已经安排好了。", "pinyin": "Wǒ de huíchéng jīpiào yǐjīng ānpái hǎo le.", "thai": "ตั๋วขากลับของฉันจัดการเรียบร้อยแล้ว" },
+            { "chinese": "我是第一次来中国。", "pinyin": "Wǒ shì dì yī cì lái Zhōngguó.", "thai": "นี่เป็นครั้งแรกที่ฉันมาประเทศจีน" },
+            { "chinese": "我只是在这里转机。", "pinyin": "Wǒ zhǐ shì zài zhèlǐ zhuǎnjī.", "thai": "ฉันแค่แวะเปลี่ยนเครื่องที่นี่" },
+            { "chinese": "我喜欢中国，所以我又来了。", "pinyin": "Wǒ xǐhuān Zhōngguó, suǒyǐ wǒ yòu lái le.", "thai": "ฉันชอบประเทศจีน เลยกลับมาอีกครั้ง" },
+            { "chinese": "这是我的学校录取通知书。", "pinyin": "Zhè shì wǒ de xuéxiào lùqǔ tōngzhīshū.", "thai": "นี่คือหนังสือตอบรับเข้าเรียนของฉัน" },
+            { "chinese": "我已经买了保险。", "pinyin": "Wǒ yǐjīng mǎi le bǎoxiǎn.", "thai": "ฉันได้ทำประกันการเดินทางแล้ว" },
+            { "chinese": "我有足够的资金。", "pinyin": "Wǒ yǒu zúgòu de zījīn.", "thai": "ฉันมีเงินเพียงพอสำหรับการเดินทาง" },
+            { "chinese": "我会按时离境。", "pinyin": "Wǒ huì ànshí líjìng.", "thai": "ฉันจะออกนอกประเทศตามกำหนด" },
+            { "chinese": "请问，还需要别的材料嗎？", "pinyin": "Qǐngwèn, hái xūyào bié de cáiliào ma?", "thai": "ต้องใช้เอกสารอย่างอื่นอีกไหม" }
+        ]
+    },
+    "internet": {
+        "id": "internet",
+        "title": "อินเทอร์เน็ต & การติดต่อ",
+        "icon": "📱",
+        "sentences": [
+            { "chinese": "我的手机没电了。", "pinyin": "Wǒ de shǒujī méi diàn le.", "thai": "โทรศัพท์ฉันแบตหมดแล้ว" },
+            { "chinese": "可以借用一下充电器嗎？", "pinyin": "Kěyǐ jièyòng yíxià chōngdiànqì ma?", "thai": "ขอยืมที่ชาร์จได้ไหม" },
+            { "chinese": "这里有充电的地方嗎？", "pinyin": "Zhèlǐ yǒu chōngdiàn de dìfang ma?", "thai": "ที่นี่มีจุดชาร์จไหม" },
+            { "chinese": "我的手机没有信号。", "pinyin": "Wǒ de shǒujī méiyǒu xìnhào.", "thai": "มือถือฉันไม่มีสัญญาณ" },
+            { "chinese": "这里有WiFi嗎？", "pinyin": "Zhèlǐ yǒu WiFi ma?", "thai": "ที่นี่มี WiFi ไหม" },
+            { "chinese": "WiFi密码是多少？", "pinyin": "WiFi mìmǎ xhì duōshao?", "thai": "รหัส WiFi คืออะไร" },
+            { "chinese": "我的手机连不上WiFi。", "pinyin": "Wǒ de shǒujī lián bú shàng WiFi.", "thai": "มือถือฉันเชื่อม WiFi ไม่ได้" },
+            { "chinese": "网络断了，可以帮我看一下嗎？", "pinyin": "Wǎngluò duàn le, kěyǐ bāng wǒ kàn yíxià ma?", "thai": "อินเทอร์เน็ตหลุด ช่วยดูให้หน่อยได้ไหม" },
+            { "chinese": "这是我导游的电话，可以帮我联系一下嗎？", "pinyin": "Zhè shì wǒ dǎoyóu de diànhuà, kěyǐ bāng wǒ liánxì yíxià ma?", "thai": "นี่คือเบอร์ไกด์ของฉัน ช่วยติดต่อให้หน่อยได้ไหม" },
+            { "chinese": "这是我司机的电话，可以帮我联系一下嗎？", "pinyin": "Zhè shì wǒ sījī de diànhuà, kěyǐ bāng wǒ liánxì yíxià ma?", "thai": "นี่คือเบอร์ของคนขับรถของฉัน ช่วยติดต่อเขาให้หน่อยได้ไหม" }
+        ]
+    },
+    "others": {
+        "id": "others",
+        "title": "สถานการณ์อื่นๆ",
+        "icon": "📌",
+        "sentences": [
+            { "chinese": "你可以帮我翻译一下嗎？", "pinyin": "Nǐ kěyǐ bāng wǒ fānyì yíxià ma?", "thai": "คุณช่วยแปลให้หน่อยได้ไหม" },
+            { "chinese": "这个是做什么用的？", "pinyin": "Zhège shì zuò shénme yòng de?", "thai": "อันนี้ใช้ทำอะไรเหรอ" },
+            { "chinese": "可以帮我拍一张照片嗎？", "pinyin": "Kěyǐ bāng wǒ pāi yì zhāng zhàopiàn ma?", "thai": "ช่วยถ่ายรูปให้หน่อยได้ไหม" },
+            { "chinese": "请帮我们拍一张合照。", "pinyin": "Qǐng bāng wǒmen pāi yì zhāng hézhào.", "thai": "ช่วยถ่ายรูปหมู่ให้หน่อย" },
+            { "chinese": "你可以告诉他，我现在的位置嗎？", "pinyin": "Nǐ kěyǐ gàosu tā, wǒ xiànzài de wèizhì ma?", "thai": "คุณช่วยบอกเขาได้ไหมว่าตอนนี้ฉันอยู่ที่ไหน" },
+            { "chinese": "我好像迷路了，可以帮我一下嗎？", "pinyin": "Wǒ hǎoxiàng mílù le, kěyǐ bāng wǒ yíxià ma?", "thai": "ฉันเหมือนจะหลงทาง ช่วยฉันหน่อยได้ไหม" },
+            { "chinese": "不好意思，我来晚了。", "pinyin": "Bù hǎoyìsi, wǒ lái wǎn le.", "thai": "ขอโทษที่ฉันมาสาย" },
+            { "chinese": "需要排队嗎？", "pinyin": "Xūyào páiduì ma?", "thai": "ต้องต่อคิวไหม" },
+            { "chinese": "还要等多久？", "pinyin": "Hái yào děng duō jiǔ?", "thai": "ต้องรออีกนานไหม" },
+            { "chinese": "可以帮我预约嗎？", "pinyin": "Kěyǐ bāng wǒ yùyuē ma?", "thai": "ช่วยจองให้หน่อยได้ไหม" },
+            { "chinese": "非常感谢你的帮助。", "pinyin": "Fēicháng gǎnxiè nǐ de bāngzhù.", "thai": "ขอบคุณมากสำหรับความช่วยเหลือของคุณ" }
+        ]
+    }
+};
 
-        const defaultConfig = {
-
-            main_title: "ทริปนี้ต้องมีภาษาจีนติดตัว",
-
-            subtitle: "สำหรับนักท่องเที่ยวไทยในประเทศจีน"
-
+        const expandedCategories = {
+            "basic": true, "shopping": false, "restaurant": false, "hotel": false,
+            "transport": false, "health": false, "airport": false, "internet": false, "others": false
         };
-
-
-
-                const sentenceData = {
-            "basic": {
-                "id": "basic",
-                "title": "บทสนทนาพื้นฐาน",
-                "icon": "💬",
-                "sentences": [
-                    {
-                        "chinese": "我来自泰国，是泰国人。",
-                        "pinyin": "Wǒ láizì Tàiguó, shì Tàiguó rén.",
-                        "thai": "ฉันมาจากประเทศไทย เป็นคนไทย"
-                    },
-                    {
-                        "chinese": "你是从哪里来的？",
-                        "pinyin": "Nǐ shì cóng nǎlǐ lái de?",
-                        "thai": "คุณมาจากที่ไหนเหรอ"
-                    },
-                    {
-                        "chinese": "请问，我可以问你一个问题吗？",
-                        "pinyin": "Qǐngwèn, wǒ kěyǐ wèn nǐ yí gè wèntí ma?",
-                        "thai": "ขอถามหน่อย ฉันขอถามอะไรคุณสักอย่างได้ไหม"
-                    },
-                    {
-                        "chinese": "不好意思，我听不懂，可以再解释一下吗？",
-                        "pinyin": "Bù hǎoyìsi, wǒ tīng bù dǒng, kěyǐ zài jiěshì yíxià ma?",
-                        "thai": "ขอโทษนะ ฉันฟังไม่เข้าใจ ช่วยอธิบายอีกครั้งได้ไหม"
-                    },
-                    {
-                        "chinese": "请问，你会说英文吗？我中文不太好。",
-                        "pinyin": "Qǐngwèn, nǐ huì shuō Yīngwén ma? Wǒ Zhōngwén bú tài hǎo.",
-                        "thai": "คุณพูดภาษาอังกฤษได้ไหม ภาษาจีนฉันยังไม่ค่อยดี"
-                    },
-                    {
-                        "chinese": "不好意思，可以帮我一下吗？",
-                        "pinyin": "Bù hǎoyìsi, kěyǐ bāng wǒ yíxià ma?",
-                        "thai": "ขอโทษนะ ช่วยฉันหน่อยได้ไหม"
-                    },
-                    {
-                        "chinese": "如果方便的话，可以给我你的联系方式吗？",
-                        "pinyin": "Rúguǒ fāngbiàn de huà, kěyǐ gěi wǒ nǐ de liánxì fāngshì ma?",
-                        "thai": "ถ้าสะดวก ขอช่องทางติดต่อของคุณได้ไหม"
-                    },
-                    {
-                        "chinese": "不好意思，请说慢一点，我听得不太清楚。",
-                        "pinyin": "Bù hǎoyìsi, qǐng shuō màn yìdiǎn, wǒ tīng de bú tài qīngchu.",
-                        "thai": "ขอโทษนะ ช่วยพูดช้าหน่อย ฉันฟังไม่ค่อยชัด"
-                    },
-                    {
-                        "chinese": "可以给我看一下具体的内容吗？",
-                        "pinyin": "Kěyǐ gěi wǒ kàn yíxià jùtǐ de nèiróng ma?",
-                        "thai": "ขอดูรายละเอียดหน่อยได้ไหม"
-                    },
-                    {
-                        "chinese": "如果可以的话，能写下来给我吗？",
-                        "pinyin": "Rúguǒ kěyǐ de huà, néng xiě xiàlái gěi wǒ ma?",
-                        "thai": "ช่วยเขียนให้ฉันหน่อยได้ไหม"
-                    },
-                    {
-                        "chinese": "请问，这里可以拍照留念吗？",
-                        "pinyin": "Qǐngwèn, zhèlǐ kěyǐ pāizhào liúniàn ma?",
-                        "thai": "ที่นี่ถ่ายรูปได้ไหม"
-                    }
-                ]
-            },
-            "shopping": {
-                "id": "shopping",
-                "title": "การช้อปปิ้ง",
-                "icon": "🛍️",
-                "sentences": [
-                    {
-                        "chinese": "这个可以便宜一点吗？",
-                        "pinyin": "Zhège kěyǐ piányí yìdiǎn ma?",
-                        "thai": "อันนี้ลดราคาได้อีกหน่อยไหม"
-                    },
-                    {
-                        "chinese": "可以便宜一点吗？我马上付款。",
-                        "pinyin": "Kěyǐ piányí yìdiǎn ma? Wǒ mǎshàng fùkuǎn.",
-                        "thai": "ลดได้อีกหน่อยไหม ถ้าลดฉันจ่ายเลย"
-                    },
-                    {
-                        "chinese": "请问，这个款式有小号吗？",
-                        "pinyin": "Qǐngwèn, zhège kuǎnshì yǒu xiǎo hào ma?",
-                        "thai": "ขอสอบถาม รุ่นนี้มีไซส์เล็กไหม"
-                    },
-                    {
-                        "chinese": "这个有大号的吗？我想试一下。",
-                        "pinyin": "Zhège yǒu dà hào de ma? Wǒ xiǎng shì yíxià.",
-                        "thai": "รุ่นนี้มีไซส์ใหญ่ไหม ฉันอยากลองดู"
-                    },
-                    {
-                        "chinese": "请问，我可以试穿一下这件衣服吗？",
-                        "pinyin": "Qǐngwèn, wǒ kěyǐ shìchuān yíxià zhè jiàn yīfu ma?",
-                        "thai": "ขออนุญาตลองเสื้อตัวนี้ได้ไหม"
-                    },
-                    {
-                        "chinese": "这个款式还有别的颜色可以选择吗？",
-                        "pinyin": "Zhège kuǎnshì hái yǒu bié de yánsè kěyǐ xuǎnzé ma?",
-                        "thai": "รุ่นนี้มีสีอื่นให้เลือกไหม"
-                    },
-                    {
-                        "chinese": "我要这个尺寸的，可以给我拿一件新的吗？",
-                        "pinyin": "Wǒ yào zhège chǐcùn de, kěyǐ gěi wǒ ná yí jiàn xīn de ma?",
-                        "thai": "ฉันเอาไซส์นี้ ช่วยหยิบตัวใหม่ให้หน่อยได้ไหม"
-                    },
-                    {
-                        "chinese": "如果不合适，可以退货或者换货吗？",
-                        "pinyin": "Rúguǒ bú héshì, kěyǐ tuìhuò huòzhě huàn huò ma?",
-                        "thai": "ถ้าใส่ไม่พอดี สามารถคืนหรือเปลี่ยนได้ไหม"
-                    },
-                    {
-                        "chinese": "如果我多买几件，可以再给我优惠吗？",
-                        "pinyin": "Rúguǒ wǒ duō mǎi jǐ jiàn, kěyǐ zài gěi wǒ yōuhuì ma?",
-                        "thai": "ถ้าฉันซื้อหลายชิ้น สามารถลดเพิ่มได้ไหม"
-                    },
-                    {
-                        "chinese": "这个产品的质量有保证吗？",
-                        "pinyin": "Zhège chǎnpǐn de zhìliàng yǒu bǎozhèng ma?",
-                        "thai": "สินค้านี้มีการรับประกันคุณภาพไหม"
-                    },
-                    {
-                        "chinese": "可以开发票吗？",
-                        "pinyin": "Kěyǐ kāi fāpiào ma?",
-                        "thai": "สามารถออกใบกำกับภาษี / ใบเสร็จได้ไหม"
-                    },
-                    {
-                        "chinese": "可以帮我看一下这个尺寸合不合适吗？",
-                        "pinyin": "Kěyǐ bāng wǒ kàn yíxià zhège chǐcùn hé bú héshì ma?",
-                        "thai": "ช่วยดูให้หน่อยได้ไหมว่าไซส์นี้เหมาะหรือเปล่า"
-                    },
-                    {
-                        "chinese": "这个有现货吗？还是需要预订？",
-                        "pinyin": "Zhège yǒu xiànhuò ma? Háishi xūyào yùdìng?",
-                        "thai": "อันนี้มีของพร้อมขายไหม หรือว่าต้องสั่งจอง"
-                    },
-                    {
-                        "chinese": "这是最后的价格吗？还能再便宜一点吗？",
-                        "pinyin": "Zhè shì zuìhòu de jiàgé ma? Hái néng zài piányí yìdiǎn ma?",
-                        "thai": "นี่ราคาสุดท้ายแล้วใช่ไหม ยังลดได้อีกไหม"
-                    },
-                    {
-                        "chinese": "如果产品有问题，可以免费换货吗？",
-                        "pinyin": "Rúguǒ chǎnpǐn yǒu wèntí, kěyǐ miǎnfèi huàn huò ma?",
-                        "thai": "ถ้าสินค้ามีปัญหา สามารถเปลี่ยนฟรีได้ไหม"
-                    },
-                    {
-                        "chinese": "可以帮我算一下总共多少钱吗？",
-                        "pinyin": "Kěyǐ bāng wǒ suàn yíxià zǒnggòng duōshǎo qián ma?",
-                        "thai": "ช่วยคำนวณราคารวมให้หน่อยได้ไหม"
-                    },
-                    {
-                        "chinese": "这个有保修期吗？",
-                        "pinyin": "Zhège yǒu bǎoxiū qī ma?",
-                        "thai": "อันนี้มีระยะเวลารับประกันไหม"
-                    },
-                    {
-                        "chinese": "我想先看看其他款式，再做决定。",
-                        "pinyin": "Wǒ xiǎng xiān kàn kan qítā kuǎnshì, zài zuò juédìng.",
-                        "thai": "ฉันอยากดูรุ่นอื่นก่อน แล้วค่อยตัดสินใจ"
-                    },
-                    {
-                        "chinese": "我再考虑一下，谢谢。",
-                        "pinyin": "Wǒ zài kǎolǜ yíxià, xièxie.",
-                        "thai": "ฉันขอคิดดูก่อน ขอบคุณนะ"
-                    },
-                    {
-                        "chinese": "可以帮我包一下吗？我要送人。",
-                        "pinyin": "Kěyǐ bāng wǒ bāo yíxià ma? Wǒ yào sòng rén.",
-                        "thai": "ช่วยห่อให้หน่อยได้ไหม ฉันจะเอาไปเป็นของขวัญ"
-                    }
-                ]
-            },
-            "restaurant": {
-                "id": "restaurant",
-                "title": "ร้านอาหาร",
-                "icon": "🍜",
-                "sentences": [
-                    {
-                        "chinese": "请问，有菜单可以给我看看吗？",
-                        "pinyin": "Qǐngwèn, yǒu càidān kěyǐ gěi wǒ kàn kan ma?",
-                        "thai": "ขอสอบถามมีเมนูให้ดูไหม"
-                    },
-                    {
-                        "chinese": "我们在等朋友，到了再点菜。",
-                        "pinyin": "Wǒmen zài děng péngyou, dàole zài diǎn cài.",
-                        "thai": "พวกเรากำลังรอเพื่อนมาถึงแล้วค่อยสั่งอาหาร"
-                    },
-                    {
-                        "chinese": "你好，我想点菜。",
-                        "pinyin": "Nǐ hǎo, wǒ xiǎng diǎn cài.",
-                        "thai": "สวัสดีค่ะ/ครับ ฉันต้องการสั่งอาหาร"
-                    },
-                    {
-                        "chinese": "请问，这个菜是什么做的？",
-                        "pinyin": "Qǐngwèn, zhège cài shì shénme zuò de?",
-                        "thai": "ขอถามหน่อย เมนูนี้ทำจากอะไร"
-                    },
-                    {
-                        "chinese": "这个菜不要辣，可以吗？",
-                        "pinyin": "Zhège cài bú yào là, kěyǐ ma?",
-                        "thai": "เมนูนี้ไม่เอาเผ็ดได้ไหม"
-                    },
-                    {
-                        "chinese": "可以做成少辣吗？",
-                        "pinyin": "Kěyǐ zuò chéng shǎo là ma?",
-                        "thai": "ทำเผ็ดน้อยได้ไหม"
-                    },
-                    {
-                        "chinese": "请问，有什么推荐的招牌菜吗？",
-                        "pinyin": "Qǐngwèn, yǒu shénme tuījiàn de zhāopái cài ma?",
-                        "thai": "มีเมนูแนะนำหรือเมนูเด็ดไหม"
-                    },
-                    {
-                        "chinese": "服务员，麻烦结账。",
-                        "pinyin": "Fúwùyuán, máfan jiézhàng.",
-                        "thai": "พนักงานคะ/ครับ รบกวนคิดเงินด้วย"
-                    },
-                    {
-                        "chinese": "这个饮料不要冰，谢谢。",
-                        "pinyin": "Zhège yǐnliào bú yào bīng, xièxie.",
-                        "thai": "เครื่องดื่มนี้ไม่เอาน้ำแข็ง ขอบคุณ"
-                    },
-                    {
-                        "chinese": "这个很好吃，再来一份。",
-                        "pinyin": "Zhège hěn hǎochī, zài lái yí fèn.",
-                        "thai": "อันนี้อร่อยมาก เอาเพิ่มอีกหนึ่งที่"
-                    },
-                    {
-                        "chinese": "可以快一点吗？我们有点赶时间。",
-                        "pinyin": "Kěyǐ kuài yìdiǎn ma? Wǒmen yǒudiǎn gǎn shíjiān.",
-                        "thai": "ช่วยเร็วหน่อยได้ไหม พวกเราค่อนข้างรีบ"
-                    },
-                    {
-                        "chinese": "请问，这个菜多少钱一份？",
-                        "pinyin": "Qǐngwèn, zhège cài duōshǎo qián yí fèn?",
-                        "thai": "ขอถามหน่อย จานนี้ราคาเท่าไหร่"
-                    },
-                    {
-                        "chinese": "请问，上菜大概需要多久？",
-                        "pinyin": "Qǐngwèn, shàng cài dàgài xūyào duōjiǔ?",
-                        "thai": "อาหารจะใช้เวลาประมาณเท่าไหร่"
-                    },
-                    {
-                        "chinese": "我付现金，没有微信和支付宝。",
-                        "pinyin": "Wǒ fù xiànjīn, méiyǒu Wēixìn hé Zhīfùbǎo.",
-                        "thai": "ฉันจ่ายเป็นเงินสด ไม่มี WeChat และ Alipay"
-                    },
-                    {
-                        "chinese": "我是穆斯林，请不要给我猪肉。",
-                        "pinyin": "Wǒ shì Mùsīlín, qǐng búyào gěi wǒ zhūròu.",
-                        "thai": "ฉันเป็นมุสลิม กรุณาอย่าเสิร์ฟเมนูที่มีหมู"
-                    },
-                    {
-                        "chinese": "请不要放香菜。",
-                        "pinyin": "Qǐng búyào fàng xiāngcài.",
-                        "thai": "กรุณาไม่ใส่ผักชี"
-                    },
-                    {
-                        "chinese": "我对虾过敏，请不要放虾。",
-                        "pinyin": "Wǒ duì xiā guòmǐn, qǐng búyào fàng xiā.",
-                        "thai": "ฉันแพ้กุ้ง กรุณาไม่ใส่กุ้ง"
-                    },
-                    {
-                        "chinese": "这个菜适合几个人一起吃？",
-                        "pinyin": "Zhège cài shìhé jǐ gè rén yìqǐ chī?",
-                        "thai": "จานนี้เหมาะสำหรับกี่คน"
-                    },
-                    {
-                        "chinese": "请问，可以刷国际信用卡吗？",
-                        "pinyin": "Qǐngwèn, kěyǐ shuā guójì xìnyòngkǎ ma?",
-                        "thai": "สามารถใช้บัตรเครดิตต่างประเทศได้ไหม"
-                    }
-                ]
-            },
-            "hotel": {
-                "id": "hotel",
-                "title": "โรงแรม",
-                "icon": "🏨",
-                "sentences": [
-                    {
-                        "chinese": "请问，可以帮我换一个房间吗？",
-                        "pinyin": "Qǐngwèn, kěyǐ bāng wǒ huàn yí gè fángjiān ma?",
-                        "thai": "ขอสอบถามหน่อยค่ะ/ครับ สามารถช่วยเปลี่ยนห้องให้ได้ไหม"
-                    },
-                    {
-                        "chinese": "不好意思，房间的空调坏了，可以找人来修一下吗？",
-                        "pinyin": "Bù hǎoyìsi, fángjiān de kōngtiáo huài le, kěyǐ zhǎo rén lái xiū yíxià ma?",
-                        "thai": "ขอโทษค่ะ/ครับ แอร์ในห้องเสีย ช่วยส่งช่างมาซ่อมหน่อยได้ไหม"
-                    },
-                    {
-                        "chinese": "可以再给我一条毛巾吗？",
-                        "pinyin": "Kěyǐ zài gěi wǒ yì tiáo máojīn ma?",
-                        "thai": "ขอผ้าเช็ดตัวเพิ่มอีกผืนได้ไหม"
-                    },
-                    {
-                        "chinese": "不好意思，洗手间堵了，可以帮我处理一下吗？",
-                        "pinyin": "Bù hǎoyìsi, xǐshǒujiān dǔ le, kěyǐ bāng wǒ chǔlǐ yíxià ma?",
-                        "thai": "ขอโทษค่ะ/ครับ ห้องน้ำตัน ช่วยจัดการให้หน่อยได้ไหม"
-                    },
-                    {
-                        "chinese": "请问，可以帮我叫一辆出租车吗？",
-                        "pinyin": "Qǐngwèn, kěyǐ bāng wǒ jiào yí liàng chūzūchē ma?",
-                        "thai": "ช่วยเรียกรถแท็กซี่ให้หน่อยได้ไหม"
-                    },
-                    {
-                        "chinese": "不好意思，我把房卡弄丢了，可以补办一张吗？",
-                        "pinyin": "Bù hǎoyìsi, wǒ bǎ fángkǎ nòng diū le, kěyǐ bǔbàn yì zhāng ma?",
-                        "thai": "ขอโทษค่ะ/ครับ ฉันทำคีย์การ์ดหาย สามารถออกใบใหม่ให้ได้ไหม"
-                    },
-                    {
-                        "chinese": "不好意思，这个房间不太干净，可以重新打扫一下吗？",
-                        "pinyin": "Bù hǎoyìsi, zhège fángjiān bú tài gānjìng, kěyǐ chóngxīn dǎsǎo yíxià ma?",
-                        "thai": "ขอโทษค่ะ/ครับ ห้องนี้ไม่ค่อยสะอาด ช่วยทำความสะอาดใหม่ได้ไหม"
-                    },
-                    {
-                        "chinese": "床单看起来不太干净，可以帮我更换一下吗？",
-                        "pinyin": "Chuángdān kàn qǐlái bú tài gānjìng, kěyǐ bāng wǒ gēnghuàn yíxià ma?",
-                        "thai": "ผ้าปูเตียงดูไม่ค่อยสะอาด ช่วยเปลี่ยนให้หน่อยได้ไหม"
-                    },
-                    {
-                        "chinese": "房间里没有吹风机，可以送一个过来吗？",
-                        "pinyin": "Fángjiān lǐ méiyǒu chuīfēngjī, kěyǐ sòng yí gè guòlái ma?",
-                        "thai": "ในห้องไม่มีไดร์เป่าผม ช่วยนำมาให้หน่อยได้ไหม"
-                    },
-                    {
-                        "chinese": "我想要一间无烟房，我对烟味比较敏感。",
-                        "pinyin": "Wǒ xiǎng yào yì jiān wúyān fáng, wǒ duì yānwèi bǐjiào mǐngǎn.",
-                        "thai": "ฉันต้องการห้องปลอดบุหรี่ เพราะค่อนข้างไวต่อกลิ่นควัน"
-                    },
-                    {
-                        "chinese": "我想寄存行李，我要出去玩，晚一点再回来拿。",
-                        "pinyin": "Wǒ xiǎng jìcún xíngli, wǒ yào chūqù wán, wǎn yìdiǎn zài huílái ná.",
-                        "thai": "ฉันขอฝากกระเป๋า จะออกไปเที่ยว แล้วจะกลับมารับทีหลัง"
-                    },
-                    {
-                        "chinese": "可以给我一个一次性剃须刀吗？谢谢。",
-                        "pinyin": "Kěyǐ gěi wǒ yí gè yícìxìng tìxūdāo ma? Xièxie.",
-                        "thai": "ขอมีดโกนแบบใช้ครั้งเดียวหน่อยได้ไหม ขอบคุณค่ะ/ครับ"
-                    },
-                    {
-                        "chinese": "这个房间包含早餐吗？餐厅在哪里？几点开始用餐？",
-                        "pinyin": "Zhège fángjiān bāohán zǎocān ma? Cāntīng zài nǎlǐ? Jǐ diǎn kāishǐ yòngcān?",
-                        "thai": "ห้องนี้รวมอาหารเช้าไหม ห้องอาหารอยู่ที่ไหน เริ่มทานได้กี่โมง"
-                    },
-                    {
-                        "chinese": "房间的洗发水和沐浴露用完了。",
-                        "pinyin": "Fángjiān de xǐfàshuǐ hé mùyùlù yòng wán le.",
-                        "thai": "แชมพูและสบู่อาบน้ำในห้องหมดแล้ว"
-                    },
-                    {
-                        "chinese": "可以帮我把行李送到房间吗？",
-                        "pinyin": "Kěyǐ bāng wǒ bǎ xíngli sòng dào fángjiān ma?",
-                        "thai": "ช่วยนำกระเป๋าไปส่งที่ห้องให้หน่อยได้ไหม"
-                    },
-                    {
-                        "chinese": "不好意思，房间的灯不亮，可以检查一下吗？",
-                        "pinyin": "Bù hǎoyìsi, fángjiān de dēng bù liàng, kěyǐ jiǎnchá yíxià ma?",
-                        "thai": "ขอโทษค่ะ/ครับ ไฟในห้องไม่ติด ช่วยตรวจสอบหน่อยได้ไหม"
-                    },
-                    {
-                        "chinese": "如果可以的话，我想要高一点的楼层。",
-                        "pinyin": "Rúguǒ kěyǐ de huà, wǒ xiǎng yào gāo yìdiǎn de lóucéng.",
-                        "thai": "ถ้าเป็นไปได้ ขอห้องชั้นสูงหน่อย"
-                    },
-                    {
-                        "chinese": "房间今天还没有打扫，可以安排清洁吗？",
-                        "pinyin": "Fángjiān jīntiān hái méiyǒu dǎsǎo, kěyǐ ānpái qīngjié ma?",
-                        "thai": "วันนี้ห้องยังไม่ได้ทำความสะอาด ช่วยจัดแม่บ้านได้ไหม"
-                    },
-                    {
-                        "chinese": "空调不太制冷，房间有点热，可以帮我看看吗？",
-                        "pinyin": "Kōngtiáo bú tài zhìlěng, fángjiān yǒudiǎn rè, kěyǐ bāng wǒ kàn kan ma?",
-                        "thai": "แอร์ไม่ค่อยเย็น ห้องค่อนข้างร้อน ช่วยตรวจสอบให้หน่อยได้ไหม"
-                    },
-                    {
-                        "chinese": "我想换到一个比较安静的房间，可以帮我安排吗？",
-                        "pinyin": "Wǒ xiǎng huàn dào yí gè bǐjiào ānjìng de fángjiān, kěyǐ bāng wǒ ānpái ma?",
-                        "thai": "ฉันอยากเปลี่ยนไปห้องที่เงียบกว่านี้ ช่วยจัดการให้ได้ไหม"
-                    }
-                ]
-            },
-            "transport": {
-                "id": "transport",
-                "title": "การเดินทาง",
-                "icon": "🚄",
-                "sentences": [
-                    {
-                        "chinese": "请问，这个地方怎么去？",
-                        "pinyin": "Qǐngwèn, zhège dìfang zěnme qù?",
-                        "thai": "ขอถามหน่อย ที่นี่ไปยังไง"
-                    },
-                    {
-                        "chinese": "不好意思，请问洗手间在哪里？",
-                        "pinyin": "Bù hǎoyìsi, qǐngwèn xǐshǒujiān zài nǎlǐ?",
-                        "thai": "ขอโทษนะคะ/ครับ ห้องน้ำอยู่ตรงไหน"
-                    },
-                    {
-                        "chinese": "从这里走路大概需要多久？",
-                        "pinyin": "Cóng zhèlǐ zǒulù dàgài xūyào duōjiǔ?",
-                        "thai": "จากตรงนี้เดินไปใช้เวลาประมาณกี่นาที"
-                    },
-                    {
-                        "chinese": "谢谢你帮我指路。",
-                        "pinyin": "Xièxie nǐ bāng wǒ zhǐlù.",
-                        "thai": "ขอบคุณที่ช่วยบอกทาง"
-                    },
-                    {
-                        "chinese": "不好意思，我好像迷路了，可以帮我吗？",
-                        "pinyin": "Bù hǎoyìsi, wǒ hǎoxiàng mílù le, kěyǐ bāng wǒ ma?",
-                        "thai": "ขอโทษนะคะ/ครับ เหมือนฉันจะหลงทาง ช่วยหน่อยได้ไหม"
-                    },
-                    {
-                        "chinese": "可以帮我看一下地图吗？",
-                        "pinyin": "Kěyǐ bāng wǒ kàn yíxià dìtú ma?",
-                        "thai": "ช่วยดูแผนที่ให้หน่อยได้ไหม"
-                    },
-                    {
-                        "chinese": "请问，是一直直走吗？",
-                        "pinyin": "Qǐngwèn, shì yìzhí zhí zǒu ma?",
-                        "thai": "ขอถามหน่อย ต้องเดินตรงไปเรื่อย ๆ ใช่ไหม"
-                    },
-                    {
-                        "chinese": "是在右边吗？",
-                        "pinyin": "Shì zài yòubiān ma?",
-                        "thai": "อยู่ทางขวาใช่ไหม"
-                    },
-                    {
-                        "chinese": "是在左边吗？",
-                        "pinyin": "Shì zài zuǒbiān ma?",
-                        "thai": "อยู่ทางซ้ายใช่ไหม"
-                    },
-                    {
-                        "chinese": "离这里远吗？",
-                        "pinyin": "Lí zhèlǐ yuǎn ma?",
-                        "thai": "จากที่นี่ไกลไหม"
-                    },
-                    {
-                        "chinese": "请问，最近的地铁站在哪里？",
-                        "pinyin": "Qǐngwèn, zuìjìn de dìtiě zhàn zài nǎlǐ?",
-                        "thai": "สถานีรถไฟใต้ดินที่ใกล้ที่สุดอยู่ไหน"
-                    },
-                    {
-                        "chinese": "如果坐地铁的话，应该怎么走？",
-                        "pinyin": "Rúguǒ zuò dìtiě de huà, yīnggāi zěnme zǒu?",
-                        "thai": "ถ้าจะนั่งรถไฟใต้ดิน ควรไปทางไหน"
-                    },
-                    {
-                        "chinese": "如果方便的话，可以带我过去吗？",
-                        "pinyin": "Rúguǒ fāngbiàn de huà, kěyǐ dài wǒ guòqù ma?",
-                        "thai": "ถ้าสะดวก ช่วยพาไปหน่อยได้ไหม"
-                    },
-                    {
-                        "chinese": "到了以后，请告诉我一声。",
-                        "pinyin": "Dào le yǐhòu, qǐng gàosu wǒ yì shēng.",
-                        "thai": "พอถึงแล้ว ช่วยบอกฉันด้วย"
-                    },
-                    {
-                        "chinese": "请问，出口在哪里？",
-                        "pinyin": "Qǐngwèn, chūkǒu zài nǎlǐ?",
-                        "thai": "ขอถามหน่อย ทางออกอยู่ตรงไหน"
-                    }
-                ]
-            }
-        };
-
-
-
-        let expandedCategories = {"basic": true, "shopping": false, "restaurant": false, "hotel": false, "transport": false};
 
         let currentPlayingId = null;
+        let ttsAudio = new Audio();
+
+        ttsAudio.addEventListener('ended', () => {
+            resetButtons();
+            currentPlayingId = null;
+        });
+
+        ttsAudio.addEventListener('pause', () => {
+            resetButtons();
+        });
+
+        ttsAudio.addEventListener('play', () => {
+            if (currentPlayingId) {
+                const btn = document.getElementById(currentPlayingId);
+                if (btn) btn.innerHTML = '<span class="text-sm font-bold">⏸</span>';
+            }
+        });
+
+        function resetButtons() {
+            const buttons = document.querySelectorAll('[id^="play-btn-"]');
+            buttons.forEach(btn => {
+                btn.innerHTML = '<span class="text-sm font-bold">▶</span>';
+            });
+        }
 
         function toggleTheme() {
             document.documentElement.classList.toggle('dark');
@@ -3496,101 +327,46 @@
             const sun = document.getElementById('theme-sun');
             const moon = document.getElementById('theme-moon');
             
-            if(isDark) {
-                thumb.classList.add('translate-x-8', 'bg-gray-800');
-                thumb.classList.remove('bg-white');
+            if (isDark) {
+                thumb.classList.add('translate-x-8');
                 sun.classList.add('hidden');
                 moon.classList.remove('hidden');
             } else {
-                thumb.classList.remove('translate-x-8', 'bg-gray-800');
-                thumb.classList.add('bg-white');
+                thumb.classList.remove('translate-x-8');
                 sun.classList.remove('hidden');
                 moon.classList.add('hidden');
             }
         }
 
-        var ttsAudio = document.createElement('audio');
-
-        ttsAudio.setAttribute('preload', 'auto');
-
-        document.body && document.body.appendChild(ttsAudio);
-
-        ttsAudio.addEventListener('ended', function() {
-            if (currentPlayingId) {
-                const btn = document.getElementById(currentPlayingId);
-                if (btn) btn.innerHTML = '<span class="text-sm font-bold">▶</span>';
-                currentPlayingId = null;
-            }
-        });
-        ttsAudio.addEventListener('pause', function() {
-            if (currentPlayingId) {
-                const btn = document.getElementById(currentPlayingId);
-                if (btn) btn.innerHTML = '<span class="text-sm font-bold">▶</span>';
-            }
-        });
-        ttsAudio.addEventListener('play', function() {
-            if (currentPlayingId) {
-                const btn = document.getElementById(currentPlayingId);
-                if (btn) btn.innerHTML = '<span class="text-sm font-bold">⏸</span>';
-            }
-        });
         function playAudio(filename, btnId) {
             if (currentPlayingId === btnId) {
                 if (ttsAudio.paused) {
-                    let p = ttsAudio.play();
-                    if (p && p.catch) {
-                        p.catch(function(e) {
-                            console.error("Playback failed:", e);
-                            const btn = document.getElementById(currentPlayingId);
-                            if (btn) btn.innerHTML = '<span class="text-sm font-bold">▶</span>';
-                            currentPlayingId = null;
-                        });
-                    }
+                    ttsAudio.play().catch(e => console.error("Playback failed:", e));
                 } else {
                     ttsAudio.pause();
                 }
                 return;
             }
 
-            if (currentPlayingId && currentPlayingId !== btnId) {
+            if (currentPlayingId) {
                 const oldBtn = document.getElementById(currentPlayingId);
                 if (oldBtn) oldBtn.innerHTML = '<span class="text-sm font-bold">▶</span>';
             }
 
             currentPlayingId = btnId;
-            ttsAudio.pause();
             ttsAudio.src = filename;
             ttsAudio.currentTime = 0;
-
-            ttsAudio.onerror = function() {
-                console.error("Failed to load audio:", filename);
-                const btn = document.getElementById(currentPlayingId);
-                if (btn) btn.innerHTML = '<span class="text-sm font-bold">▶</span>';
+            ttsAudio.play().catch(e => {
+                console.error("Failed to load/play audio:", filename, e);
                 currentPlayingId = null;
-            };
-
-            let p = ttsAudio.play();
-            if (p && p.catch) {
-                p.catch(function(e) {
-                    console.error("Playback failed:", e);
-                    const btn = document.getElementById(currentPlayingId);
-                    if (btn) btn.innerHTML = '<span class="text-sm font-bold">▶</span>';
-                    currentPlayingId = null;
-                });
-            }
+                resetButtons();
+            });
         }
-
-
 
         function toggleCategory(categoryId) {
-
             expandedCategories[categoryId] = !expandedCategories[categoryId];
-
             renderCategories();
-
         }
-
-
 
         function createSentenceItem(sentence, index, categoryId) {
             const btnId = `play-btn-${categoryId}-${index}`;
@@ -3598,233 +374,76 @@
             const icon = isPlaying ? '⏸' : '▶';
 
             return `
-
-        <div class="bg-white dark:bg-gray-800 rounded-xl p-5 shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md hover:border-red-300 dark:hover:border-red-500 transition-all">
-
-          <div class="flex items-start justify-between gap-4">
-
-            <div class="flex-1 min-w-0">
-
-              <div class="flex items-start gap-3 mb-3">
-
-                <button id="${btnId}" onclick="playAudio('audio/${categoryId}_${index}.mp3', '${btnId}')" class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg" title="ฟังเสียงจีน">
-
-                  <span class="text-sm font-bold">${icon}</span>
-
-                </button>
-
-                <div class="flex-1 min-w-0">
-
-                  <p class="chinese-text text-xl font-bold text-gray-900 dark:text-gray-100 break-words">${sentence.chinese}</p>
-
-                  <p class="text-red-600 dark:text-red-400 font-medium text-sm mt-1">${sentence.pinyin}</p>
-
+                <div class="bg-white dark:bg-gray-800 rounded-xl p-5 shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md hover:border-red-300 transition-all">
+                    <div class="flex items-start gap-4">
+                        <button id="${btnId}" onclick="playAudio('audio/${categoryId}_${index}.mp3', '${btnId}')"
+                            class="flex-shrink-0 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md hover:shadow-lg"
+                            title="ฟังเสียงจีน">
+                            <span class="text-sm font-bold">${icon}</span>
+                        </button>
+                        <div class="flex-1 min-w-0">
+                            <p class="chinese-text text-xl font-bold text-gray-900 dark:text-gray-100 break-words">${sentence.chinese}</p>
+                            <p class="text-red-600 dark:text-red-400 font-medium text-sm mt-1">${sentence.pinyin}</p>
+                        </div>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700 pl-13">
+                        <p class="text-gray-800 dark:text-gray-300 font-semibold leading-relaxed">${sentence.thai}</p>
+                    </div>
                 </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          
-
-          <div class="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700 pl-13">
-
-            <p class="text-gray-800 dark:text-gray-300 font-semibold leading-relaxed">${sentence.thai}</p>
-
-          </div>
-
-        </div>
-
-      `;
-
+            `;
         }
-
-
 
         function createCategory(categoryId, category) {
-
             const isExpanded = expandedCategories[categoryId];
-
-            const itemsHtml = isExpanded ? category.sentences.map((sentence, idx) => createSentenceItem(sentence, idx, categoryId)).join('') : '';
-
-
+            const sentencesHtml = isExpanded ? category.sentences.map((s, idx) => createSentenceItem(s, idx, categoryId)).join('') : '';
 
             return `
-
-        <section class="bg-white dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden border border-gray-300 dark:border-gray-700 hover:border-red-400 transition-colors">
-
-          <button onclick="toggleCategory('${categoryId}')" class="w-full px-6 py-5 flex items-center justify-between hover:bg-red-50/30 dark:hover:bg-gray-700/50 transition-colors active:bg-red-100/20 dark:active:bg-gray-700/80">
-
-            <div class="flex items-center gap-4 flex-1">
-
-              <span class="text-3xl flex-shrink-0">${category.icon}</span>
-
-              <div class="text-left flex-1">
-
-                <h2 class="text-xl font-bold text-gray-800 dark:text-gray-100">${category.title}</h2>
-
-                <p class="text-sm text-gray-600 dark:text-gray-400 font-medium">${category.sentences.length} ประโยค</p>
-
-              </div>
-
-            </div>
-
-            <div class="flex items-center gap-2 flex-shrink-0 ml-4">
-
-              <span class="text-gray-400 dark:text-gray-500 transition-transform duration-300 text-xl font-bold ${isExpanded ? 'rotate-180' : ''}">
-
-                ▼
-
-              </span>
-
-            </div>
-
-          </button>
-
-          
-
-          ${isExpanded ? `
-
-            <div class="px-6 pb-6 space-y-3 bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 animate-fadeIn">
-
-              ${itemsHtml}
-
-            </div>
-
-          ` : ''}
-
-        </section>
-
-      `;
-
+                <section class="bg-white dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden border border-gray-300 dark:border-gray-700 hover:border-red-400 transition-colors">
+                    <button onclick="toggleCategory('${categoryId}')"
+                        class="w-full px-6 py-5 flex items-center justify-between hover:bg-red-50/30 dark:hover:bg-gray-700/50 transition-colors">
+                        <div class="flex items-center gap-4 flex-1">
+                            <span class="text-3xl flex-shrink-0">${category.icon}</span>
+                            <div class="text-left flex-1">
+                                <h2 class="text-xl font-bold text-gray-800 dark:text-gray-100">${category.title}</h2>
+                                <p class="text-sm text-gray-600 dark:text-gray-400 font-medium">${category.sentences.length} ประโยค</p>
+                            </div>
+                        </div>
+                        <span class="text-gray-400 dark:text-gray-500 transition-transform duration-300 text-xl font-bold ${isExpanded ? 'rotate-180' : ''}">▼</span>
+                    </button>
+                    ${isExpanded ? `<div class="px-6 pb-6 space-y-3 bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 animate-fadeIn">${sentencesHtml}</div>` : ''}
+                </section>
+            `;
         }
-
-
 
         function renderCategories() {
-
             const container = document.getElementById('categories-container');
-
-            const categories = ["basic", "shopping", "restaurant", "hotel", "transport"];
-
+            const categories = Object.keys(sentenceData);
             container.innerHTML = categories.map(catId => createCategory(catId, sentenceData[catId])).join('');
-
         }
 
-
-
+        // SDK Integration
         async function onConfigChange(config) {
-
             const mainTitle = document.getElementById('main-title');
-
             const subtitle = document.getElementById('subtitle');
-
-
-
-            if (mainTitle) {
-
-                mainTitle.textContent = config.main_title || defaultConfig.main_title;
-
-            }
-
-            if (subtitle) {
-
-                subtitle.textContent = config.subtitle || defaultConfig.subtitle;
-
-            }
-
+            if (mainTitle) mainTitle.textContent = config.main_title || 'ทริปนี้ต้องมีภาษาจีนติดตัว';
+            if (subtitle) subtitle.textContent = config.subtitle || 'รวมประโยคที่จำเป็นต้องใช้ สำหรับนักท่องเที่ยวไทย';
         }
 
-
-
-        function mapToCapabilities(config) {
-
-            return {
-
-                recolorables: [],
-
-                borderables: [],
-
-                fontEditable: undefined,
-
-                fontSizeable: undefined
-
-            };
-
-        }
-
-
-
-        function mapToEditPanelValues(config) {
-
-            return new Map([
-
-                ["main_title", config.main_title || defaultConfig.main_title],
-
-                ["subtitle", config.subtitle || defaultConfig.subtitle]
-
-            ]);
-
-        }
-
-
+        function mapToCapabilities(config) { return { recolorables: [], borderables: [], fontEditable: undefined, fontSizeable: undefined }; }
+        function mapToEditPanelValues(config) { return new Map([ ["main_title", config.main_title || 'ทริปนี้ต้องมีภาษาจีนติดตัว'], ["subtitle", config.subtitle || 'รวมประโยคที่จำเป็นต้องใช้ สำหรับนักท่องเที่ยวไทย'] ]); }
 
         // Initialize
-
-        renderCategories();
-
-
-
-        if (window.elementSdk) {
-
-            window.elementSdk.init({
-
-                defaultConfig,
-
-                onConfigChange,
-
-                mapToCapabilities,
-
-                mapToEditPanelValues
-
-            });
-
-        }
-
-
-
-        // Add fade-in animation
-
-        const style = document.createElement('style');
-
-        style.textContent = `
-
-      @keyframes fadeIn {
-
-        from { opacity: 0; transform: translateY(-10px); }
-
-        to { opacity: 1; transform: translateY(0); }
-
-      }
-
-      .animate-fadeIn {
-
-        animation: fadeIn 0.3s ease-out;
-
-      }
-
-    `;
-
-        document.head.appendChild(style);
-
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCategories();
+            if (window.elementSdk) {
+                window.elementSdk.init({
+                    defaultConfig: { main_title: 'ทริปนี้ต้องมีภาษาจีนติดตัว', subtitle: 'รวมประโยคที่จำเป็นต้องใช้ สำหรับนักท่องเที่ยวไทย' },
+                    onConfigChange,
+                    mapToCapabilities,
+                    mapToEditPanelValues
+                });
+            }
+        });
     </script>
-
-    <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'9d151e1dc7c5a072',t:'MTc3MTY2NTEwMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
-    <iframe height="1" width="1"
-        style="position: absolute; top: 0px; left: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; visibility: hidden;"></iframe>
-
 </body>
-
 </html>
